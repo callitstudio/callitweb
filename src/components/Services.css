@@ -1,0 +1,14 @@
+.services {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .service-item {
+    margin: 20px 0;
+  }
+  

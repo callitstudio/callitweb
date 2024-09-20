@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: linear-gradient(135deg, #19141a, #68015f);
+    animation: gradientAnimation 5s ease infinite;
+  color: white; /* White text color */
+
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo-img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+  }
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+  text-align: justify;
+  
+}
+
+.nav li {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  word-spacing: 10px; /* Adds spacing between words */
+
+}
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(135deg, #19141a, #68015f);
+  }
+  50% {
+    background: linear-gradient(135deg, #68015f, #70034c);
+  }
+  100% {
+    background: linear-gradient(135deg, #19141a, #68015f);
+  }
+}

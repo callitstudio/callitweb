@@ -1,0 +1,23 @@
+.projects {
+    padding: 50px;
+    background-color: #282828;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .project-card {
+    background-color: #4d4dff;
+    padding: 20px;
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
