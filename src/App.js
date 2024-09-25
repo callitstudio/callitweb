@@ -1,22 +1,42 @@
 import React from 'react';
-import {Header} from './components/Header';
-import {Footer} from './components/Footer';
-import {MainSection} from './components/MainSection';
-import {Services} from './components/Services';
-import {ProjectsSlider} from './components/ProjectsSlider';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { MainSection } from './components/MainSection';
+import { Services } from './components/Services';
+import { ProjectsSlider } from './components/ProjectsSlider';
+import Marketing from './components/Marketing';
+import IT from './components/IT';
+import Media from './components/Media';
+import ContactUs from './components/ContactUs';
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <MainSection />
-      <Services />
-      <ProjectsSlider />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header /> {/* The header should stay on all pages */}
+        
+        <Routes>
+          <Route path="/" element={
+            <>
+              <MainSection />
+              <Services /> {/* This renders on the home page */}
+              <ProjectsSlider />
+            </>
+          } />
+          <Route path="/marketing" element={<Marketing />} /> {/* Marketing page route */}
+          <Route path="/it" element={<IT />} /> {/* IT page route */}
+          <Route path="/media" element={<Media />} /> {/* IT page route */}
+          <Route path="/contact_us" element={<ContactUs />} /> {/* Contact us page route */}
+
+        </Routes>
+
+        <Footer /> {/* The footer should stay on all pages */}
+      </div>
+    </Router>
   );
 }
 

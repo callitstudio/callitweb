@@ -2,29 +2,31 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
-  background: linear-gradient(135deg, #19141a, #68015f);
-    animation: gradientAnimation 5s ease infinite;
+  background-image: linear-gradient(150deg, rgb(219, 206, 219), rgb(80, 39, 92));
   color: white; /* White text color */
-
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
 }
+
 .logo-img {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 10px; /* Space between logo and text */
-  }
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.nav {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
 
 .nav ul {
   display: flex;
   gap: 20px;
-
   list-style: none;
   text-align: justify;
-  
 }
 
 .nav li {
@@ -33,16 +35,33 @@
   font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   word-spacing: 10px; /* Adds spacing between words */
-
 }
-@keyframes gradientAnimation {
-  0% {
-    background: linear-gradient(135deg, #19141a, #68015f);
+
+/* Mobile Styles */
+.menu-icon {
+  display: none; /* Hidden by default */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav ul {
+    display: none; /* Hide navigation links by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Positioning for dropdown */
+    background: #74416f; /* Background for dropdown */
+    top: 80px; /* Position below the header */
+    right: 20px; /* Align to the right */
+    width: 200px; /* Width of dropdown */
+    padding: 10px; /* Padding inside dropdown */
   }
-  50% {
-    background: linear-gradient(135deg, #68015f, #70034c);
+
+  .nav.active ul {
+    display: flex; /* Show navigation links when active */
   }
-  100% {
-    background: linear-gradient(135deg, #19141a, #68015f);
+
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
   }
 }

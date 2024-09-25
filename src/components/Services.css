@@ -1,14 +1,97 @@
+/* General Styles for the Services Section */
 .services {
-    padding: 50px;
-    text-align: center;
-  }
-  
-  .services h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
+  background-color: #1c1b1f; 
+  color: white;
+  padding: 50px 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #282828; /* Similar to the purple header in the image */
+  background: linear-gradient(180deg, #bb8fee, #dcdae2, #bb8fee); /* Three gradient colors */
+  /* padding: 10px 0; */
+  border-radius: 0; /* Remove rounded edges if needed */
+  width: 100vw; /* Make it full width */
+  text-align: center; /* Center the text */
+  margin-left: calc(-50vw + 50%); /* Center the background gradient */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure it's above other content */
+}
+
+.service-item {
+  background-color: #3e3b47; /* Slightly lighter than the background */
+  border: 2px solid #CDA0FF; /* Purple border */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  width: 50%; /* Ensure services are not too wide */
+  text-align: left;
+  position: relative; /* To position numbers */
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #CDA0FF;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.service-item:hover {
+  cursor: pointer;
+  background-color: #282828; /* Slight change on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* For Service Numbers */
+.service-item::before {
+  content: attr(data-number);
+  position: absolute;
+  top: -25px;
+  left: -40px;
+  background-color: #CDA0FF;
+  color: #1c1b1f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Connecting Dots/Lines */
+.service-item::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 50px;
+  background-color: #CDA0FF;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.service-item:last-child::after {
+  display: none; /* No line after the last item */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .service-item {
-    margin: 20px 0;
+    width: 80%; /* On mobile, make the service items narrower */
   }
-  
+}

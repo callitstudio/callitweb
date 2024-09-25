@@ -7,14 +7,18 @@
 
 .intro h1 {
   font-size: 3em;
-  margin-bottom: 20px;
-  position: absolute;
+  margin-top: 180px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .intro p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 30px;
+  margin-right: 50%;
+  text-align: justify;
 }
 
 .cta-btn {
@@ -24,23 +28,27 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-align: left;
+  align-self: flex-start; /* Align the button to the left */
+  margin-top: 20px;
 }
 
 .up {
   position: absolute; /* Allows precise positioning */
   top: 20%;           /* Move the circle down from the top */
-  left: 10%;         /* Align it to the right */
-  width: 200px;       /* Width for a perfect circle */
-  height: 200px;      /* Same as width for a circle */
+  left: 0%;          /* Align it to the right */
+  width: 200px;      /* Width for a perfect circle */
+  height: 200px;     /* Same as width for a circle */
   background-color: #61295c; /* The color of the circle */
   border-radius: 50%; /* Makes it a perfect circle */
   filter: blur(30px); /* Adds the blur effect */
-  z-index: 1;        /* Ensures it stays behind the text */
+  z-index: 0;        /* Ensures it stays behind the text */
+  animation: moveUpDown 5s infinite alternate; /* Add animation */
 }
 
 .down {
   position: absolute; /* Allows precise positioning */
-  bottom: 20%;           /* Move the circle down from the top */
+  bottom: 20%;        /* Move the circle down from the top */
   right: 10%;         /* Align it to the right */
   width: 400px;       /* Width for a perfect circle */
   height: 400px;      /* Same as width for a circle */
@@ -48,6 +56,18 @@
   border-radius: 50%; /* Makes it a perfect circle */
   filter: blur(30px); /* Adds the blur effect */
   z-index: 0;        /* Ensures it stays behind the text */
+  animation: moveLeftRight 5s infinite alternate; /* Add animation */
+}
+
+/* Animation keyframes */
+@keyframes moveUpDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+@keyframes moveLeftRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
 }
 
 /* Responsive Design */
@@ -58,5 +78,15 @@
 
   .intro p {
     font-size: 1em;
+  }
+
+  .up {
+    width: 150px;  /* Adjust size for smaller screens */
+    height: 150px;
+  }
+
+  .down {
+    width: 300px;  /* Adjust size for smaller screens */
+    height: 300px;
   }
 }

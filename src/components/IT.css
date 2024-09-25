@@ -1,0 +1,99 @@
+/* General Styling for the Marketing Section */
+.marketing-section {
+    padding: 50px;
+    background-color: #1c1b1f;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #CDA0FF;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #505050;
+    margin-bottom: 40px;
+    border: 2px solid #bb8fee;
+  }
+  
+  .marketing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the content */
+  }
+  
+  .card {
+    background-color: #505050;
+    border: 2px solid #bb8fee;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Styles for individual cards */
+  .card.full-width {
+    width: 100%; /* Full width for cards like Digital Marketing and Branding */
+  }
+  
+  .card.half-width {
+    width: calc(50% - 10px); /* Half-width for Product Design and Social Media Marketing */
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+
+  }
+  
+  /* Job Openings Section */
+  .job-openings-title {
+    font-size: 2rem;
+    margin: 50px 0 20px;
+  }
+  
+  .job-opening-card {
+    background-color: #4d4b55;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .job-opening-info {
+    flex: 1;
+    /* Add specific styles for job information */
+  }
+  
+  .job-opening-icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .share-icon, .heart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .marketing-cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+  
