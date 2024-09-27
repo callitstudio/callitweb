@@ -33,31 +33,52 @@
   margin-top: 20px;
 }
 
+@keyframes moveRight {
+  0% {
+    left: 10%; 
+  }
+  100% {
+    left: 60%; 
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    bottom: 20%; 
+  }
+  100% {
+    bottom: 5%; 
+  }
+}
+
 .up {
-  position: absolute; /* Allows precise positioning */
-  top: 20%;           /* Move the circle down from the top */
-  left: 0%;          /* Align it to the right */
-  width: 200px;      /* Width for a perfect circle */
-  height: 200px;     /* Same as width for a circle */
-  background-color: #61295c; /* The color of the circle */
-  border-radius: 50%; /* Makes it a perfect circle */
-  filter: blur(30px); /* Adds the blur effect */
-  z-index: 0;        /* Ensures it stays behind the text */
-  animation: moveUpDown 5s infinite alternate; /* Add animation */
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  background-color: #61295c;
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: 1;
+
+  animation: moveRight 1s ease-out forwards; 
 }
 
 .down {
-  position: absolute; /* Allows precise positioning */
-  bottom: 20%;        /* Move the circle down from the top */
-  right: 10%;         /* Align it to the right */
-  width: 400px;       /* Width for a perfect circle */
-  height: 400px;      /* Same as width for a circle */
-  background-color: #61295c; /* The color of the circle */
-  border-radius: 50%; /* Makes it a perfect circle */
-  filter: blur(30px); /* Adds the blur effect */
-  z-index: 0;        /* Ensures it stays behind the text */
-  animation: moveLeftRight 5s infinite alternate; /* Add animation */
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background-color: #61295c;
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: 0;
+
+  animation: moveDown 1s ease-out forwards;
 }
+
 
 /* Animation keyframes */
 @keyframes moveUpDown {

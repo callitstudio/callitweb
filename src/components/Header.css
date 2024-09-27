@@ -22,6 +22,8 @@
 .nav {
   display: flex;
   align-items: center; /* Center items vertically */
+  font-family: Montserrat;
+
 }
 
 .nav ul {
@@ -29,13 +31,15 @@
   gap: 20px;
   list-style: none;
   text-align: justify;
+  font-family: Montserrat;
+
 }
 
 .nav li {
   cursor: pointer;
   font-weight: bold;
   font-size: large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Montserrat;
   word-spacing: 10px; /* Adds spacing between words */
 }
 

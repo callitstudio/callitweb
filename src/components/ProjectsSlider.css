@@ -10,7 +10,8 @@
 :root {
   --primary: #6a59ff;
   --white: #ffffff;
-  --bg: #f5f5f5;
+  --bg: #1c1b1f;
+
 }
 
 html {
@@ -66,9 +67,21 @@ body {
 }
 
 .heading {
-  padding: 1rem 0;
-  font-size: 3.5rem;
-  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #282828; /* Similar to the purple header in the image */
+  background: linear-gradient(180deg, #bb8fee, #dcdae2, #bb8fee); /* Three gradient colors */
+  /* padding: 10px 0; */
+  border-radius: 0; /* Remove rounded edges if needed */
+  width: 100vw; /* Make it full width */
+  text-align: center; /* Center the text */
+  margin-left: calc(-50vw + 50%); /* Center the background gradient */
+  position: relative;
+  left: 50%;
+  font-family: Montserrat;
+
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure it's above other content */
 }
 
 .swiper_container {
