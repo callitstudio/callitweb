@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
+  font-family: Montserrat;
+
   background-image: linear-gradient(150deg, rgb(219, 206, 219), rgb(80, 39, 92));
   color: white; /* White text color */
 }

@@ -1,0 +1,115 @@
+.courses-page {
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: white;
+  }
+  
+  .search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .filters {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .filters button {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .filter-icon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .course-categories {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .course-categories h2 {
+    font-size: 28px;
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .category-card {
+    background-color: #aa75e0;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-card:hover {
+    background-color: #bb6bd9;
+  }
+  
+  .featured-courses {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .featured-courses h2 {
+    font-size: 28px;
+  }
+  
+  .courses-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .course-card {
+    background-color: #4f4f4f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .badge {
+    background-color: #4fa9ff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .rating {
+    color: #f4d35e;
+    margin: 10px 0;
+  }
+  
+  .start-learning-btn {
+    padding: 10px 20px;
+    background-color: #bb6bd9;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  

@@ -9,6 +9,8 @@ import Marketing from './components/Marketing';
 import IT from './components/IT';
 import Media from './components/Media';
 import ContactUs from './components/ContactUs';
+import Courses from './components/Courses';
+
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,6 +33,7 @@ function App() {
           <Route path="/it" element={<IT />} /> {/* IT page route */}
           <Route path="/media" element={<Media />} /> {/* IT page route */}
           <Route path="/contact_us" element={<ContactUs />} /> {/* Contact us page route */}
+          <Route path="/courses" element={<Courses />} /> {/* Contact us page route */}
 
         </Routes>
 
