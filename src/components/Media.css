@@ -1,99 +1,152 @@
 /* General Styling for the Marketing Section */
 .marketing-section {
-    padding: 50px;
-    background-color: #1c1b1f;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    border: 1px solid #CDA0FF;
-  }
-  
-  .section-title {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: #505050;
-    margin-bottom: 40px;
-    border: 2px solid #bb8fee;
-  }
-  
-  .marketing-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Center the content */
-  }
-  
-  .card {
-    background-color: #505050;
-    border: 2px solid #bb8fee;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  /* Styles for individual cards */
-  .card.full-width {
-    width: 100%; /* Full width for cards like Digital Marketing and Branding */
-  }
-  
-  .card.half-width {
-    width: calc(50% - 10px); /* Half-width for Product Design and Social Media Marketing */
-  }
-  
-  .card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: left;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: left;
+  padding: 50px;
+  background-color: #1c1b1f;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #CDA0FF;
+  text-align: center;
+}
 
+/* Title Styling */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for Marketing Cards */
+.marketing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(3, auto); /* Allow rows to auto-adjust */
+  gap: 20px; /* Space between cards */
+}
+
+/* Card Styling */
+.card {
+  background-color: #505050;
+  border: 2px solid #bb8fee;
+  border-radius: 10px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+/* Animation for Cards */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Start smaller */
   }
-  
-  /* Job Openings Section */
-  .job-openings-title {
-    font-size: 2rem;
-    margin: 50px 0 20px;
+  50% {
+    opacity: 1;
+    transform: scale(1.2); /* Pop up slightly */
   }
-  
-  .job-opening-card {
-    background-color: #4d4b55;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Return to original size */
   }
-  
-  .job-opening-info {
-    flex: 1;
-    /* Add specific styles for job information */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start invisible */
   }
-  
-  .job-opening-icons {
-    display: flex;
-    gap: 20px;
+  100% {
+    opacity: 1; /* End visible */
   }
-  
-  .share-icon, .heart-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
+}
+
+/* Specific card animations */
+.card.pop-up {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 0s; /* No delay for Product Shoot */
+  grid-column: 1; /* Occupies the first column */
+  grid-row: 1; /* Places it in the first row */
+  height: 240px; /* Increased height for PRODUCT SHOOT card */
+}
+
+.card.left {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 1s; /* Delay for remaining cards */
+  grid-column: 2; /* Occupies the second column */
+  grid-row: 1; /* Places it in the first row */
+  height: 200px; /* Adjust height for left card */
+}
+
+.card.right {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 1s; /* Delay for remaining cards */
+  grid-column: 3; /* Occupies the third column */
+  grid-row: 1; /* Places it in the first row */
+  height: 200px; /* Adjust height for right card */
+}
+
+/* Additional Cards */
+.card:nth-child(1) {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 1s; /* Delay for remaining cards */
+  grid-column: 1; /* Occupies the first column */
+  grid-row: 1; /* Places it in the second row */
+  height: 190px; /* Adjust height for this card */
+}
+
+.card:nth-child(3) {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 1s; /* Delay for remaining cards */
+  grid-column: 3 / span 2; /* Occupies the second and third columns in the first row */
+  grid-row: 1 / span 2;
+  height: 190px; /* Adjust height for this card */
+}
+
+.card:nth-child(4) {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 2.5s; /* Delay for this card */
+  grid-column: 1; /* Occupies the first column */
+  grid-row: 2; /* Places it in the second row */
+  height: 180px; /* Adjust height for this card */
+}
+
+.card:nth-child(5) {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 2.5s; /* Delay for this card */
+  grid-column: 2 / span 2; /* Occupies the second column */
+  grid-row: 2; /* Places it in the second row */
+  height: 180px; /* Adjust height for this card */
+}
+
+.card:nth-child(6) {
+  animation-name: popUp;
+  animation-duration: 1s;
+  animation-delay: 2.5s; /* Delay for this card */
+  grid-column: 1 / -1; /* Occupies the third column */
+  grid-row: 3 / span 2; /* Places it in the second row */
+  height: 180px; /* Adjust height for this card */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marketing-cards {
+    grid-template-columns: 1fr; /* One column on smaller screens */
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .marketing-cards {
-      flex-direction: column;
-    }
-  
-    .card {
-      width: 100%; /* Full width on mobile */
-    }
-  
-    .section-title {
-      font-size: 2.5rem;
-    }
+
+  .card {
+    width: 90%; /* Full width on mobile */
   }
-  
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 10px 30px;
   background-image: linear-gradient(150deg, rgb(219, 206, 219), rgb(80, 39, 92));
   color: white; /* White text color */
 }
@@ -12,7 +12,7 @@
 }
 
 .logo-img {
-  width: 80px; /* Adjust size as needed */
+  width: 40px; /* Adjust size as needed */
   height: auto;
   margin-right: 10px; /* Space between logo and text */
 }
