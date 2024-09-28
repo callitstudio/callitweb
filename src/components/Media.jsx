@@ -1,13 +1,21 @@
 import React from 'react';
 import './Media.css';
+import Shoot from "../assets/Media/shoot.jpeg"
 
 const Media = () => {
   return (
     <div className="marketing-section">
-      <h1 className="section-title">MEDIA</h1>
+      
 
       <div className="marketing-cards">
+
+        
+      {/* <div className='card left pop-up left'>
+      <h1 className="section-title">MEDIA</h1>
+      </div>
+       */}
         <div className="card center">
+          <img src={Shoot} alt="" className='img' />
           <h3>SOCIAL MEDIA MANAGEMENT</h3>
           <p>
             We manage your social media presence to build brand awareness
@@ -17,7 +25,14 @@ const Media = () => {
           </p>
         </div>
 
-        <div className="card pop-up left">
+        <div className='card left pop-up left'>
+      <h1 className="section-title">MEDIA</h1>
+      </div>
+      
+
+
+         <div className="card pop-up left">
+         <img src={Shoot} alt="" className='img' />
           <h3>PRODUCT SHOOT</h3>
           <p>
             Our professional product shoots capture the essence of your
@@ -28,6 +43,7 @@ const Media = () => {
         </div>
 
         <div className="card right">
+        <img src={Shoot} alt="" className='img' />
           <h3>DVC/TVC/DOCUMENTARY</h3>
           <p>
             We produce compelling digital and television commercials, as
@@ -36,8 +52,9 @@ const Media = () => {
             with your target audience.
           </p>
         </div>
-
+      
         <div className="card left">
+        <img src={Shoot} alt="" className='img' />
           <h3>PHOTO / VIDEO EDITING</h3>
           <p>
             We ensure high-quality visuals and narratives that resonate with
@@ -46,6 +63,7 @@ const Media = () => {
         </div>
 
         <div className="card right">
+        <img src={Shoot} alt="" className='img' />
           <h3>2D/3D ANIMATIONS</h3>
           <p>
             Our 2D and 3D Animation services add a dynamic touch to your
@@ -55,7 +73,9 @@ const Media = () => {
           </p>
         </div>
 
+
         <div className="card left">
+        <img src={Shoot} alt="" className='img' />
           <h3>VISUAL ARTS / GRAPHIC DESIGN</h3>
           <p>
             Our graphic design services bring your brand to life with
