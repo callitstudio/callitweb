@@ -1,6 +1,7 @@
 import React from 'react';
 import './Marketing.css';
 import Shoot from "../assets/Media/shoot.jpeg"
+import Card from './Card';
 
 
 export const Marketing = () => {
@@ -70,15 +71,15 @@ your brand’s voice, visuals, and strategy for long-term success."/>
 export default Marketing;
 
 
-const Card=(props)=>{
-  return(
+// const Card=(props)=>{
+//   return(
 
-    <>
-  <div>
-    <img src={props.img} alt="" />
-    <h1>{props.title}</h1>
-    <p>{props.des}</p>
-  </div>
-  </>
-  )
-}
+//     <>
+//   <div>
+//     <img src={props.img} alt="" />
+//     <h1>{props.title}</h1>
+//     <p>{props.des}</p>
+//   </div>
+//   </>
+//   )
+// }
