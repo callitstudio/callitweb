@@ -16,7 +16,7 @@ export const Services = () => {
         <h3>1. Media</h3>
         <p>We deliver creative media solutions...</p>
       </div>
-      <div className="service-item">
+      <div className="service-item" onClick={()=>{handleNavigate('/ContentWriting')}}>
         <h3>2. Content Writing</h3>
         <p>We craft narratives that inspire action...</p>
       </div>

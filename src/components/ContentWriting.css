@@ -1,0 +1,233 @@
+/* General Styling for the Marketing Section */
+
+.img{
+    height: 50%;
+    width: 100%;
+  }
+  
+  .cw-section {
+    padding: 50px;
+    background-color: #1c1b1f;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #CDA0FF;
+    text-align: center;
+    perspective: 1000px;  
+  }
+  
+  /* Title Styling */
+  /* .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  } */
+  
+  /* Grid Layout for Marketing Cards */
+  .cw-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto); 
+    gap: 20px; /* Space between cards */
+  }
+  
+  /* Card Styling */
+  .cw-card {
+    /* color: red; */
+    background-color: #505050;
+    border: 2px solid #bb8fee;
+    border-radius: 10px;
+    opacity: 0; 
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+    /* width: 100%-20; */
+  }
+  /* 
+  .section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border: none;
+  } */
+  
+  /* Animation for Cards */
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.5); /* Start smaller */
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2); /* Pop up slightly */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* Return to original size */
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Start invisible */
+    }
+    100% {
+      opacity: 1; /* End visible */
+    }
+  }
+  
+  
+  
+  
+  @keyframes moveIn {
+    0% {
+      opacity: 0; /* Start invisible */
+      filter: blur(10px); /* Start blurred */
+      transform: translateY(100px) translateZ(-100px) scale(0.5); /* Start off-screen and behind */
+    }
+    70% {
+      opacity: 1; /* Fully visible */
+      filter: blur(0); /* Remove blur */
+      transform: translateY(-20px) translateZ(0) scale(1); /* Slightly upward for effect */
+    }
+    100% {
+      opacity: 1; /* Fully visible */
+      filter: blur(0); /* Ensure no blur */
+      transform: translateY(0) translateZ(0) scale(1); /* Final position */
+    }
+  }
+  
+  /* 
+  @keyframes moveIn {
+    0% {
+      opacity: 0; 
+      filter: blur(10px); 
+      transform: translateY(100px); 
+    }
+    70% {
+      opacity: 1; 
+      filter: blur(0); 
+      transform: translateY(-20px); 
+    }
+    100% {
+      opacity: 1; 
+      filter: blur(0); 
+      transform: translateY(0); 
+    }
+  } */
+  
+  
+  
+  /* Specific card animations */
+  .cw-card.pop-up {
+    animation-name: popUp;
+    animation-duration: 1s;
+    animation-delay: 0s; /* No delay for Product Shoot */
+    grid-column: 1; /* Occupies the first column */
+    grid-row: 1; /* Places it in the first row */
+    height: 240px; /* Increased height for PRODUCT SHOOT card */
+  }
+  
+  .cw-card.left {
+    animation-name: popUp;
+    animation-duration: 1s;
+    animation-delay: 1s; 
+    grid-column: 2; 
+    grid-row: 1; 
+    height: 200px; 
+  }
+  
+  .cw-card.right {
+    animation-name: popUp;
+    
+    animation-duration: 1s;
+    animation-delay: 1s;
+    grid-column: 3; 
+    grid-row: 1; 
+    height: 200px; 
+  }
+  
+  /* Additional Cards */
+  .cw-card:nth-child(1) {
+    /* animation-name: popUp; */
+    animation-name: moveIn;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    grid-column: 2;     
+    grid-row:1; 
+    height: auto;       
+  }
+  
+  
+  .cw-card:nth-child(2) {
+    /* animation-name: popUp; */
+    /* border: 2px solid red; */
+    animation-name: moveIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    grid-column: 1;     
+    grid-row: 1/span 2; 
+    height: auto;       
+  }
+  
+  .cw-card:nth-child(3) {
+    /* animation-name: popUp; */
+    animation-name: moveIn;
+    animation-duration: 1s;
+    animation-delay: 1s; 
+    grid-column: 3 ; 
+    grid-row: 1 / span 2;
+    height: auto; 
+    /* width: 70%; */
+  }
+  
+  .cw-card:nth-child(4) {
+    /* animation-name: popUp; */
+    animation-name: moveIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    grid-column: 1;     
+    grid-row: 3;        
+    height: auto;       
+  }
+  
+  
+  .cw-card:nth-child(5) {
+    /* animation-name: popUp; */
+    animation-name: moveIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    grid-column: 2;     
+    grid-row: 2/span 3;        
+    height: auto;       
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 950px) {
+    .cw-cards {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .cw-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .section-title {
+      font-size: 2.5rem;
+    }
+  
+    /* Adjust the order of the cards on smaller screens */
+    .cw-card.left {
+      order: 0;
+    }
+  
+    .cw-card.center {
+      order: 0;
+    }
+  }
+  
+  

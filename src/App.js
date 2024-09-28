@@ -12,6 +12,7 @@ import ContactUs from './components/ContactUs';
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ContentWriting from './components/ContentWriting';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/marketing" element={<Marketing />} /> {/* Marketing page route */}
           <Route path="/it" element={<IT />} /> {/* IT page route */}
           <Route path="/media" element={<Media />} /> {/* IT page route */}
+          <Route path="/ContentWriting" element={<ContentWriting/>}/>
           <Route path="/contact_us" element={<ContactUs />} /> {/* Contact us page route */}
 
         </Routes>
