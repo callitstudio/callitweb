@@ -1,4 +1,10 @@
 /* General Styling for the Marketing Section */
+
+.img{
+  height: 50%;
+  width: 100%;
+}
+
 .marketing-section {
   padding: 50px;
   background-color: #1c1b1f;
@@ -6,21 +12,21 @@
   font-family: 'Arial', sans-serif;
   border: 1px solid #CDA0FF;
   text-align: center;
-  perspective: 1000px;
+  perspective: 1000px;  
 }
 
 /* Title Styling */
-.section-title {
+/* .section-title {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 40px;
-}
+} */
 
 /* Grid Layout for Marketing Cards */
 .marketing-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  grid-template-rows: repeat(3, auto); /* Allow rows to auto-adjust */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto); 
   gap: 20px; /* Space between cards */
 }
 
@@ -36,6 +42,14 @@
   justify-content: center;
   padding: 20px;
   transition: transform 0.3s ease; /* Add transition for hover effect */
+  /* width: 100%-20; */
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  border: none;
 }
 
 /* Animation for Cards */
@@ -45,7 +59,7 @@
     transform: scale(0.5); /* Start smaller */
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
     transform: scale(1.2); /* Pop up slightly */
   }
   100% {
@@ -118,20 +132,20 @@
 .card.left {
   animation-name: popUp;
   animation-duration: 1s;
-  animation-delay: 1s; /* Delay for remaining cards */
-  grid-column: 2; /* Occupies the second column */
-  grid-row: 1; /* Places it in the first row */
-  height: 200px; /* Adjust height for left card */
+  animation-delay: 1s; 
+  grid-column: 2; 
+  grid-row: 1; 
+  height: 200px; 
 }
 
 .card.right {
   animation-name: popUp;
   
   animation-duration: 1s;
-  animation-delay: 1s; /* Delay for remaining cards */
-  grid-column: 3; /* Occupies the third column */
-  grid-row: 1; /* Places it in the first row */
-  height: 200px; /* Adjust height for right card */
+  animation-delay: 1s;
+  grid-column: 3; 
+  grid-row: 1; 
+  height: 200px; 
 }
 
 /* Additional Cards */
@@ -139,63 +153,104 @@
   /* animation-name: popUp; */
   animation-name: moveIn;
   animation-duration: 1s;
-  animation-delay: 2s; /* Delay for remaining cards */
-  grid-column: 1; /* Occupies the first column */
-  grid-row: 1; /* Places it in the second row */
-  height: 190px; /* Adjust height for this card */
+  animation-delay: 2s;
+  grid-column: 1;     
+  grid-row: 1/span 2; 
+  height: auto;       
 }
+
 
 .card:nth-child(3) {
   /* animation-name: popUp; */
   animation-name: moveIn;
   animation-duration: 1s;
-  animation-delay: 2s; /* Delay for remaining cards */
-  grid-column: 3 / span 2; /* Occupies the second and third columns in the first row */
+  animation-delay: 2s; 
+  grid-column: 3 ; 
   grid-row: 1 / span 2;
-  height: 190px; /* Adjust height for this card */
+  height: auto; 
+  /* width: 70%; */
 }
 
 .card:nth-child(4) {
   /* animation-name: popUp; */
   animation-name: moveIn;
   animation-duration: 1s;
-  animation-delay: 2s; /* Delay for this card */
-  grid-column: 1; /* Occupies the first column */
-  grid-row: 2; /* Places it in the second row */
-  height: 180px; /* Adjust height for this card */
+  animation-delay: 2s;
+  grid-column: 2;     
+  grid-row: 2;        
+  height: auto;       
 }
 
 .card:nth-child(5) {
   /* animation-name: popUp; */
   animation-name: moveIn;
   animation-duration: 1s;
-  animation-delay: 2s; /* Delay for this card */
-  grid-column: 2 / span 2; /* Occupies the second column */
-  grid-row: 2; /* Places it in the second row */
-  height: 180px; /* Adjust height for this card */
+  animation-delay: 2s; 
+  grid-column: 3 ;     
+  grid-row: 3;         
+  height: auto;        
 }
 
 .card:nth-child(6) {
   /* animation-name: popUp; */
   animation-name: moveIn;
   animation-duration: 1s;
-  animation-delay: 2s; /* Delay for this card */
-  grid-column: 1 / -1; /* Occupies the third column */
-  grid-row: 3 / span 2; /* Places it in the second row */
-  height: 180px; /* Adjust height for this card */
+  animation-delay: 2s;  
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 2; 
+  height: auto; 
 }
 
+.card:nth-child(7) {
+  /* animation-name: popUp; */
+  animation-name: moveIn;
+  animation-duration: 1s;
+  animation-delay: 2s; /* Delay for this card */
+  grid-column: 2 ; /* Occupies the third column */
+  grid-row: 3; /* Places it in the second row */
+  height: auto; /* Adjust height for this card */
+}
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 800px) {
   .marketing-cards {
-    grid-template-columns: 1fr; /* One column on smaller screens */
+    display: flex;
+    flex-direction: column;
+  
   }
 
   .card {
-    width: 90%; /* Full width on mobile */
+    width: 90%; 
   }
 
   .section-title {
     font-size: 2.5rem;
+  }
+} */
+
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .marketing-cards {
+    display: flex;
+    flex-direction: column;
+    /* Ensures that the cards stack vertically */
+  }
+
+  .card {
+    width: 90%; /* Adjust card width for smaller screens */
+    margin: 0 auto; /* Center the cards */
+  }
+
+  .section-title {
+    font-size: 2.5rem; /* Reduce title size for mobile */
+  }
+
+  /* Adjust the order of the cards on smaller screens */
+  .card.left.pop-up.left {
+    order: -1; /* Move the MEDIA card to the top */
+  }
+
+  .card.center {
+    order: 0; /* Keep the SOCIAL MEDIA MANAGEMENT card below */
   }
 }

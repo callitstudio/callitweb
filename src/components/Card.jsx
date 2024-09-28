@@ -1,8 +1,13 @@
-const Card = ({ title, content }) => (
-    <div className="card">
-      <h2>{title}</h2>
-      <p>{content}</p>
-    </div>
-  );
+import React from 'react'
 
-  export default Card;
+const Card = (props) => {
+    return (
+        <div >
+          <img src={props.img} alt=""  className="it-img"/>
+          <h1>{props.title}</h1>
+          <p>{props.des}</p>
+        </div>
+      );
+}
+
+export default Card
