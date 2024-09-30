@@ -3,7 +3,7 @@
 
 
 .footer-container {
-  background: linear-gradient(90deg, #6e44ff, #c47aff);
+  background-image: linear-gradient(150deg,  rgb(80, 39, 92),rgb(219, 206, 219));
   padding: 20px;
 }
 
