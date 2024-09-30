@@ -46,3 +46,52 @@ function App() {
 }
 
 export default App;
+
+
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { Header } from './components/Header';
+// import { Footer } from './components/Footer';
+// import { MainSection } from './components/MainSection';
+// import { Services } from './components/Services';
+// import { ProjectsSlider } from './components/ProjectsSlider';
+// import Marketing from './components/Marketing';
+// import IT from './components/IT';
+// import Media from './components/Media';
+// import ContactUs from './components/ContactUs';
+// import Courses from './components/Courses';
+
+// import './App.css';
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import ContentWriting from './components/ContentWriting';
+
+// function App() {
+//   return (
+//     <Router>
+//       <div className="App">
+//         <Header /> {/* The header should stay on all pages */}
+        
+//         <Routes>
+//           <Route path="/" element={
+//             <>
+//               <MainSection />
+//               <Services /> {/* This renders only on the home page */}
+//               <ProjectsSlider />
+//             </>
+//           } />
+//           <Route path="/marketing" element={<Marketing />} /> {/* Marketing page route */}
+//           <Route path="/it" element={<IT />} /> {/* IT page route */}
+//           <Route path="/media" element={<Media />} /> {/* Media page route */}
+//           <Route path="/ContentWriting" element={<ContentWriting />} /> {/* Content Writing page route */}
+//           <Route path="/contact_us" element={<ContactUs />} /> {/* Contact us page route */}
+//           <Route path="/courses" element={<Courses />} /> {/* Courses page route */}
+//         </Routes>
+
+//         <Footer /> {/* The footer should stay on all pages */}
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;

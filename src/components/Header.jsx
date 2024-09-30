@@ -11,8 +11,20 @@ export const Header = () => {
   };
   const navigate = useNavigate(); // Hook for navigation
 
+  // const handleNavigate = (path) => {
+  //   navigate(path); 
+  // }
+
   const handleNavigate = (path) => {
-    navigate(path); // Function to navigate to a given path
+    if (path.startsWith('#')) {
+      // Smooth scroll to the section if it starts with #
+      const section = document.querySelector(path);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(path); // Function to navigate to a given path
+    }
   }
 
 
@@ -27,9 +39,10 @@ export const Header = () => {
           ☰
         </div>
         <ul>
-          <li>Projects</li>
-          <li onClick={() => handleNavigate('/contact-us')}>Contact Us </li>
-          <li>Services</li>
+          <li onClick={()=>{handleNavigate('/')}}>Home</li>
+          <li onClick={()=>{handleNavigate('#Projects')}}>Projects</li>
+          <li onClick={() => handleNavigate('/contact_us')}>ContactUs</li>
+          <li onClick={()=>{handleNavigate('#Services')}}>Services</li>
           <li onClick={() => handleNavigate('/courses')} >Courses</li>
           <li>Jobs</li>
         </ul>

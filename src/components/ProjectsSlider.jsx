@@ -18,7 +18,9 @@ import pic7 from '../assets/images/pic7.jpg';
 
 export function ProjectsSlider() {
   return (
-    <div className="container">
+    <section id='Projects'>
+
+    <div className="container" >
       <h1 className="heading">Projects</h1>
       <Swiper
         effect={'coverflow'}
@@ -40,7 +42,7 @@ export function ProjectsSlider() {
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
-      >
+        >
         <SwiperSlide>
           <img src={pic1} alt="slide_image" />
         </SwiperSlide>
@@ -74,6 +76,7 @@ export function ProjectsSlider() {
         </div>
       </Swiper>
     </div>
+        </section>
   );
 }
 
