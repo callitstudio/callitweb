@@ -30,6 +30,7 @@ export const Header = () => {
           <li>Projects</li>
           <li onClick={() => handleNavigate('/contact-us')}>Contact Us </li>
           <li>Services</li>
+          <li onClick={() => handleNavigate('/courses')} >Courses</li>
           <li>Jobs</li>
         </ul>
       </nav>

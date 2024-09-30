@@ -1,88 +1,15 @@
 /* General Styles for the Services Section */
-
-@keyframes popUp {
-  0% {
-    opacity: 0;
-    transform: scale(0.5); /* Start smaller */
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.2); /* Pop up slightly */
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1); /* Return to original size */
-  }
-}
-
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; /* Start invisible */
-  }
-  100% {
-    opacity: 1; /* End visible */
-  }
-}
-
-
-.heading {
-  background: #282424;
-  padding: 2%;
-  font-family: 'Arial','snas-serif';
-  color: white;
-  margin-bottom: -1px;
-}
-
-.services{
+.services {
   background-color: #1c1b1f; 
   color: white;
-  padding: 100px;
-  /* margin-left: 20px; */
-  font-family: 'Arial', sans-serif;
+  padding: 50px 0;
+  font-family: Montserrat;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2, auto); 
-  
 }
 
-.service-item:nth-child(1){
-  /* border: 2px solid red; */
-  animation-name: fadeIn;
-  animation-duration: 1.6s;
-  /* animation-delay: 2s; */
-  width: 70%;
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.service-item:nth-child(2){
-  /* border: 2px solid red; */
-  animation-name: fadeIn;
-  animation-duration: 2.6s;
-  width: 70%;
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.service-item:nth-child(3){
-  animation-name: fadeIn;
-  animation-duration: 3.2s;
-  width: 70%;
-  grid-column: 1;
-  grid-row: 2;
-}
-.service-item:nth-child(4){
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  width: 70%;
-  grid-column: 2;
-  grid-row: 2;
-}
 .services h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -92,10 +19,9 @@
   border-radius: 0; /* Remove rounded edges if needed */
   width: 100vw; /* Make it full width */
   text-align: center; /* Center the text */
-  /* margin-left: calc(-50vw + 50%);  */
-  /* Center the background gradient */
-  /* position: relative; */
-  /* left: 50%; */
+  margin-left: calc(-50vw + 50%); /* Center the background gradient */
+  position: relative;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 1; /* Ensure it's above other content */
 }
@@ -107,7 +33,7 @@
   margin: 20px 0;
   border-radius: 10px;
   width: 50%; /* Ensure services are not too wide */
-  /* text-align: center; */
+  text-align: left;
   position: relative; /* To position numbers */
 }
 
@@ -121,7 +47,6 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #e0e0e0;
-  text-align: justify;
 }
 
 .service-item:hover {
@@ -130,12 +55,8 @@
   transition: background-color 0.3s ease;
 }
 
-
-
-/* removing dots */
-
 /* For Service Numbers */
-/* .service-item::before {
+.service-item::before {
   content: attr(data-number);
   position: absolute;
   top: -25px;
@@ -150,13 +71,10 @@
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-} */
+}
 
-
-
-/* Removing connecting lines */
 /* Connecting Dots/Lines */
-/* .service-item::after {
+.service-item::after {
   content: '';
   position: absolute;
   width: 3px;
@@ -165,24 +83,15 @@
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-} */
+}
 
-/* .service-item:last-child::after {
-  display: none; 
-} */
+.service-item:last-child::after {
+  display: none; /* No line after the last item */
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .service-item {
     width: 80%; /* On mobile, make the service items narrower */
-  }
-  
-  .services{
-    display: flex;
-    flex-direction: column;
-  }
-  .service-item{
-    padding-left: 50px;
-  padding-right: 50px;
   }
 }
