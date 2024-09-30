@@ -14,27 +14,43 @@ const ContentWriting = () => {
                 </div>
                 <div className="it-card left">
                     <Card img={ITImage}  //image url
-                     title="SEARCH ENGINE OPTIMIZATION"   //add title here
+                     title="Engaging Content Creation"   //add title here
                      //write description below
-                     des="We optimize your online presence to rank higher in search engine results,  
-                     driving organic traffic to your website. Our SEO strategies are designed to improve visibility,
-                      boost engagement, and increase conversions. " 
+                     des="WWe craft content that not only resonates with your audience but also encourages 
+interaction and sharing. Our content is customized to align with your brand’s goals 
+and values.
+Key Features:
+• Blogs, Articles, and Website Copy
+• Social Media Posts and Campaigns
+• Email Marketing Copy
+• Product Descriptions " 
                       />
                 </div>
 
 
                 <div className="it-card right">
                     <Card img={ITImage} 
-                    title="WEB DEVELOPMENT" 
-                    des="Our web development services create responsive, 
-                    user-friendly websites tailored to your business needs. 
-                    We deliver high-performing websites that enhance your brand's 
-                    digital experience and drive growth."
+                    title="SEO-Optimized Writing" 
+                    des="We deliver SEO-optimized content that helps your website rank higher in search 
+engine results. Our writers use targeted keywords and SEO best practices to 
+increase organic traffic and improve search rankings.
+Key Features:
+• Keyword Research and Integration
+• On-Page SEO Optimization
+• Content for Landing Pages, Blog Posts, and Product Pages
+• Meta Descriptions and Title Tags"
                      />
                 </div>
 
                 <div className="it-card left">
-                    <Card img={ITImage} title="SHOPIFY STORES" des="We build and optimize Shopify stores to help you succeed in the e-commerce space. Our services include setup, customization, and management to ensure your online store attracts and retains customers." />
+                    <Card img={ITImage} title=" Strategic Storytelling" des="We use the power of storytelling to convey your brand’s message in a way that 
+captivates and connects with your audience. Our content aims to build emotional 
+connections and drive customer loyalty.
+Key Features:
+• Narrative-Driven Blog Posts and Articles
+• Brand Story Creation
+• Case Studies and Testimonials
+• Long-Form Storytelling for Campaigns and Ads" />
                 </div>
 
                 <div className="it-card left">
