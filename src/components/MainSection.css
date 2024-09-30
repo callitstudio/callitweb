@@ -1,22 +1,31 @@
-.intro {
+/* .container-fluid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}*/
+
+body {
+  margin: 0; 
   background-color: #333;
-  color: #fff;
-  padding: 50px;
-  margin-bottom: -20px;
+  color: #fff; 
 }
 
+.intro {
+  width: 50%;
+  height: 100vh; 
+  color: #fff; 
+  padding: 50px;
+  display: flex; 
+  align-items: start;
+  /* justify-content: center; */
+  text-align: justify;
+  /* margin: 0 auto;  */
+}
 .intro h1 {
   font-size: 3.5em;
   margin-top: 130px;
   margin-bottom: 30px;
-<<<<<<< HEAD
-  opacity: 1;
-  /* text-align: left; */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-=======
   text-align: left;
   font-family: Montserrat;
->>>>>>> 3014c7b479adfe810474a0ddc79421d1836acc20
 }
 
 .intro p {
@@ -38,9 +47,12 @@
   text-align: center;
   align-self: center; /* Align the button to the left */
   margin-top: 20px;
-  width: 20%;
+  width: 25%;
+  height: auto;
+  padding: 3%;
   font-size: 1.2rem;
   font-weight: bold;
+  transition: background-color 1s ease-in;
 }
 .cta-btn:hover{
   background-color: white;
@@ -66,7 +78,7 @@
   }
 }
 
-.up {
+/* .up {
   position: absolute;
   top: 20%;
   left: 10%;
@@ -81,19 +93,6 @@
 }
 
 .down {
-<<<<<<< HEAD
-  position: absolute; /* Allows precise positioning */
-  bottom: 20%;        /* Move the circle down from the top */
-  right: 10%;         /* Align it to the right */
-  width: 400px;       /* Width for a perfect circle */
-  height: 400px;      /* Same as width for a circle */
-  background-color: #61295c; /* The color of the circle */
-  border-radius: 50%; /* Makes it a perfect circle */
-  filter: blur(30px); /* Adds the blur effect */
-  z-index: 0;        /* Ensures it stays behind the text */
-  animation: moveLeftRight 5s infinite alternate; /* Add animation */
-  opacity: 0.8;
-=======
   position: absolute;
   bottom: 20%;
   right: 10%;
@@ -105,8 +104,7 @@
   z-index: 0;
 
   animation: moveDown 1s ease-out forwards;
->>>>>>> 3014c7b479adfe810474a0ddc79421d1836acc20
-}
+} */
 
 
 /* Animation keyframes */
@@ -130,18 +128,18 @@
     font-size: 1em;
   }
 
-  .up {
-    width: 150px;  /* Adjust size for smaller screens */
+  /* .up {
+    
     height: 150px;
     top: 9%;
   }
 
   .down {
-    width: 300px;  /* Adjust size for smaller screens */
+    
     height: 300px;
     top: 25%;
     right: 3%;
-  }
+  } */
 
   .cta-btn{
     width: 40%;

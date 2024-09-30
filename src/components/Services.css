@@ -3,64 +3,160 @@
   background-color: #1c1b1f; 
   color: white;
   padding: 50px 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative; /* For positioning the center line */
 }
 
 .services h2 {
   font-size: 3rem;
   font-weight: bold;
-  color: #282828; /* Similar to the purple header in the image */
-  background: linear-gradient(180deg, #bb8fee, #dcdae2, #bb8fee); /* Three gradient colors */
-  /* padding: 10px 0; */
-  border-radius: 0; /* Remove rounded edges if needed */
-  width: 100vw; /* Make it full width */
-  text-align: center; /* Center the text */
-  margin-left: calc(-50vw + 50%); /* Center the background gradient */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure it's above other content */
+  color: #bb8fee; 
+  /* position: absolute; */
+  /* top: 10%; */
+  /* margin-bottom: 30px; */
 }
 
 .service-item {
-  background-color: #3e3b47; /* Slightly lighter than the background */
-  border: 2px solid #CDA0FF; /* Purple border */
-  padding: 20px;
+  background-color: #3e3b47; 
+  border: 2px solid #CDA0FF; 
+  /* border: 2px solid red; */
+  border-radius: 10px; 
+  padding: 50px;
   margin: 20px 0;
-  border-radius: 10px;
-  width: 50%; /* Ensure services are not too wide */
+  width: 40%; /* Adjusted width */
+  /* height: calc(100%+400px); */
+  padding-bottom: 5%;
   text-align: left;
-  position: relative; /* To position numbers */
+  position: relative; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s; 
+}
+
+/* Center line */
+.services::before {
+  content: '';
+  position: absolute;
+  width: 3px; /* Line thickness */
+  height: 80%; /* Line height */
+  background-color: #CDA0FF; /* Line color */
+  left: 50%; /* Center it */
+  transform: translateX(-50%); /* Adjust for centering */
+  z-index: 0; /* Behind the items */
+}
+
+/* Positioning of service items */
+.service-item:nth-child(1) {
+  position: relative;
+  left: 22%; /* Move to the right */
+  z-index: 1; /* On top of the line */
+}
+
+/* Triangle pointing to the center line from the first item */
+.service-item:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  rotate: 180deg;
+  right: 100%; /* Position to the right */
+  top: 20px; /* Adjust vertical position */
+  width: 0;
+  height: 0;
+  border-left: 10px solid #CDA0FF; /* Triangle color */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Second item positioned to the left */
+.service-item:nth-child(2) {
+  position: relative;
+  right: 22%; /* Move to the left */
+  z-index: 1; /* On top of the line */
+}
+
+/* Triangle pointing to the center line from the second item */
+.service-item:nth-child(2)::after {
+  content: '';
+  position: absolute;
+  rotate: 180deg;
+  left: 100%; /* Position to the left */
+  top: 20px; /* Adjust vertical position */
+  width: 0;
+  height: 0;
+  border-right: 10px solid #CDA0FF; /* Triangle color */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Third and Fourth items positioned to the left */
+.service-item:nth-child(3) {
+  position: relative;
+  left: 22%; /* Aligned to the left */
+  z-index: 1; /* On top of the line */
+}
+
+/* Triangle pointing to the center line from the third item */
+.service-item:nth-child(3)::after {
+  content: '';
+  position: absolute;
+  right: 100%; /* Position to the right */
+  rotate: 180deg;
+  top: 20px; /* Adjust vertical position */
+  width: 0;
+  height: 0;
+  border-left: 10px solid #CDA0FF; /* Triangle color */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Fourth item */
+.service-item:nth-child(4) {
+  position: relative;
+  right: 22%; /* Aligned to the left */
+  z-index: 1; /* On top of the line */
+}
+
+/* Triangle pointing to the center line from the fourth item */
+.service-item:nth-child(4)::after {
+  content: '';
+  position: absolute;
+  left: 100%; /* Position to the right */
+  top: 20px; /* Adjust vertical position */
+  width: 0;
+  height: 0;
+  border-left: 10px solid #CDA0FF; /* Triangle color */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Service Item Hover Effects */
+.service-item:hover {
+  transform: scale(1.05); 
 }
 
 .service-item h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #CDA0FF;
+  /* color: #CDA0FF; */
+  color: white;
 }
 
 .service-item p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #e0e0e0;
-}
-
-.service-item:hover {
-  cursor: pointer;
-  background-color: #282828; /* Slight change on hover */
-  transition: background-color 0.3s ease;
 }
 
 /* For Service Numbers */
 .service-item::before {
   content: attr(data-number);
   position: absolute;
-  top: -25px;
-  left: -40px;
+  /* top: 8px; 
+  left: 14px; */
+  top: 5%;
+  left: 8%;
   background-color: #CDA0FF;
   color: #1c1b1f;
   width: 40px;
@@ -72,26 +168,27 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-/* Connecting Dots/Lines */
-.service-item::after {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 50px;
-  background-color: #CDA0FF;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-}
-
+/* 
 .service-item:last-child::after {
-  display: none; /* No line after the last item */
-}
+  display: none; 
+} */
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .service-item {
-    width: 80%; /* On mobile, make the service items narrower */
+      width: 45%; 
   }
+  
+  
+  .service-item:nth-child(odd){
+      margin-left: 20px;
+
+  }
+
+
+  
+  .service-item:nth-child(even){
+      margin-right: 20px;
+  }
+  
 }
