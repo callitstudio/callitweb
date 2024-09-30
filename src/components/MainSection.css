@@ -1,147 +1,82 @@
-/* .container-fluid{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-}*/
 
 body {
-  margin: 0; 
+  margin: 0;
   background-color: #333;
-  color: #fff; 
+  color: #fff;
 }
+
 
 .intro {
-  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 100vh; 
-  color: #fff; 
   padding: 50px;
-  display: flex; 
-  align-items: start;
-  /* justify-content: center; */
-  text-align: justify;
-  /* margin: 0 auto;  */
-}
-.intro h1 {
-  font-size: 3.5em;
-  margin-top: 130px;
-  margin-bottom: 30px;
-  text-align: left;
-  font-family: Montserrat;
+  box-sizing: border-box;
 }
 
-.intro p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  /* margin-right: 45%; */
-  text-align: justify;
+.left, .right {
+  flex: 1;
 }
 
+.left {
+  padding-right: 20px; /* Spacing between content and image */
+}
+
+.left h1{
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.left p{
+  justify-content: center;
+  text-align: center;
+}
+.right img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.right video{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Button styling */
 .cta-btn {
   background-color: #c25dba;
-
   color: white;
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  text-align: center;
-  align-self: center; /* Align the button to the left */
   margin-top: 20px;
-  width: 25%;
-  height: auto;
-  padding: 3%;
+  width: 50%; /* Button width */
   font-size: 1.2rem;
   font-weight: bold;
-  transition: background-color 1s ease-in;
+  transition: background-color 0.3s ease-in-out;
 }
-.cta-btn:hover{
+
+.cta-btn:hover {
   background-color: white;
   color: #c25dba;
 }
 
-
-@keyframes moveRight {
-  0% {
-    left: 10%; 
-  }
-  100% {
-    left: 60%; 
-  }
-}
-
-@keyframes moveDown {
-  0% {
-    bottom: 20%; 
-  }
-  100% {
-    bottom: 5%; 
-  }
-}
-
-/* .up {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  width: 200px;
-  height: 200px;
-  background-color: #61295c;
-  border-radius: 50%;
-  filter: blur(30px);
-  z-index: 1;
-
-  animation: moveRight 1s ease-out forwards; 
-}
-
-.down {
-  position: absolute;
-  bottom: 20%;
-  right: 10%;
-  width: 400px;
-  height: 400px;
-  background-color: #61295c;
-  border-radius: 50%;
-  filter: blur(30px);
-  z-index: 0;
-
-  animation: moveDown 1s ease-out forwards;
-} */
-
-
-/* Animation keyframes */
-@keyframes moveUpDown {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(20px); }
-}
-
-@keyframes moveLeftRight {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(20px); }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .intro h1 {
-    font-size: 2.5em;
+  .intro {
+    flex-direction: column-reverse;
   }
 
-  .intro p {
-    font-size: 1em;
+  .right {
+    order: -1; /* Push the image below the content */
+    /* margin-top: -50%; */
+    margin-bottom: -130%;
   }
 
-  /* .up {
-    
-    height: 150px;
-    top: 9%;
-  }
-
-  .down {
-    
-    height: 300px;
-    top: 25%;
-    right: 3%;
-  } */
-
-  .cta-btn{
-    width: 40%;
+  .cta-btn {
+    width: 100%;
   }
 }
