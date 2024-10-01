@@ -17,10 +17,9 @@ export const Header = () => {
     if (path.startsWith('#')) {
       const section = document.querySelector(path);
   
-      // Check if you're already on the home page ("/")
       if (window.location.pathname === '/') {
         if (section) {
-          section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll if already on home page
+          section.scrollIntoView({ behavior: 'smooth' }); 
         }
       } else {
         

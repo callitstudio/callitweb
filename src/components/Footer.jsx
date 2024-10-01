@@ -7,19 +7,37 @@ import { Link,useNavigate } from 'react-router-dom';
 export const Footer = () => {
   const navigate = useNavigate(); 
   
-  const handleNavigate = (path) => {
-    if (path.startsWith('#')) {
-      // Smooth scroll to the section if it starts with #
-      const section = document.querySelector(path);
+
+  
+
+
+
+
+
+
+
+const handleNavigate = (path) => {
+  if (path.startsWith('#')) {
+    const section = document.querySelector(path);
+
+    if (window.location.pathname === '/') {
       if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: 'smooth' }); 
       }
     } else {
-      navigate(path); // Function to navigate to a given path
+      
+      navigate('/');
+      setTimeout(() => {
+        const sectiononHome=document.querySelector(path);
+        if(sectiononHome){
+          sectiononHome.scrollIntoView({behavior:"smooth"})
+        }
+      }, 100);
     }
+  } else {
+    navigate(path);
   }
-
-
+};
 
   return (
     <footer className="footer-container">
