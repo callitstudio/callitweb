@@ -46,3 +46,15 @@ ul{
   border: none;
   width: 200px;
 }
+
+
+.quick-links li {
+  text-decoration: none; /* Removes the underline */
+  color: inherit;
+}
+
+.quick-links li:hover {
+  cursor: pointer;
+  font-size: 2rem;
+  
+}

@@ -1,13 +1,22 @@
+
 body {
+  margin: 0;
   margin: 0;
   background-color: #333;
   color: #fff;
+  color: #fff;
 }
+
 
 .container-fluid {
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; 
   padding: 50px;
 }
-
+}
 .intro {
   display: flex;
   justify-content: space-between;
@@ -20,20 +29,49 @@ body {
 .text-section {
   flex: 1;
   margin-right: 30px;
+  box-sizing: border-box;
+}
+
+.left, .right {
+  flex: 1;
+}
+
+.left {
+  padding-right: 20px; /* Spacing between content and image */
 }
 
 .text-section h1 {
   font-size: 3.5em;
   margin-bottom: 30px;
   font-family: Montserrat;
+
+.left h1{
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.left p{
+  justify-content: center;
+  text-align: center;
 }
 
 .text-section p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 30px;
+.right img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
+.right video{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Button styling */
 .cta-btn {
   background-color: #c25dba;
   color: white;
@@ -42,10 +80,13 @@ body {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
+  width: 50%; /* Button width */
   font-size: 1.2rem;
   font-weight: bold;
-  transition: background-color 1s ease-in;
+  transition: background-color 0.3s ease-in-out;
 }
+
+.cta-btn:hover {
 
 .cta-btn:hover {
   background-color: white;
@@ -80,6 +121,8 @@ body {
 
   .text-section h1 {
     font-size: 2.5em;
+  .intro {
+    flex-direction: column-reverse;
   }
 
   .text-section p {
@@ -88,6 +131,14 @@ body {
 
   .cta-btn {
     width: 40%;
+  .right {
+    order: -1; /* Push the image below the content */
+    /* margin-top: -50%; */
+    margin-bottom: -130%;
+  }
+
+  .cta-btn {
+    width: 100%;
   }
 
   .gif-section {

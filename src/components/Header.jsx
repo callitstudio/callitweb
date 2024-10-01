@@ -11,22 +11,31 @@ export const Header = () => {
   };
   const navigate = useNavigate(); // Hook for navigation
 
-  // const handleNavigate = (path) => {
-  //   navigate(path); 
-  // }
+  
 
   const handleNavigate = (path) => {
     if (path.startsWith('#')) {
-      // Smooth scroll to the section if it starts with #
       const section = document.querySelector(path);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+  
+      if (window.location.pathname === '/') {
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' }); 
+        }
+      } else {
+        
+        navigate('/');
+        setTimeout(() => {
+          const sectiononHome=document.querySelector(path);
+          if(sectiononHome){
+            sectiononHome.scrollIntoView({behavior:"smooth"})
+          }
+        }, 100);
       }
     } else {
-      navigate(path); // Function to navigate to a given path
+      navigate(path);
     }
-  }
-
+  };
+  
 
   return (
     <header className="header">
