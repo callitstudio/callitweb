@@ -13,9 +13,9 @@ export const MainSection = () => {
             <p>We’re a passionate team of creative and tech-savvy individuals who love working with digital solutions. With experts in media, IT, and marketing, each of us brings unique skills to the table. Together, we aim to combine creativity and technology to produce amazing results.</p>
             <button className="cta-btn">Learn More</button>
           </div>
-          <div className="col-md-6 col-sm-12 gif-section">
+          {/* <div className="col-md-6 col-sm-12 gif-section">
             <img   src={gif} alt="Creative Work GIF" className="responsive-gif" />
-          </div>
+          </div> */}
         </section>
 
         <section className='right '>
