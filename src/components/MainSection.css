@@ -13,8 +13,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  text-align: justify;
+  gap: 2%;
   padding: 20px;
 }
 
@@ -32,7 +31,12 @@ body {
   padding-right: 20px; /* Spacing between content and image */
 }
 
-.left h1 {
+.text-section h1 {
+  font-size: 3.5em;
+  margin-bottom: 30px;
+  font-family: Montserrat;
+}
+.left h1{
   font-size: 5rem;
   padding: 1rem;
 }
@@ -53,7 +57,6 @@ body {
   line-height: 1.6;
   margin-bottom: 30px;
 }
-
 .right img {
   width: 100%;
   height: auto;
@@ -76,10 +79,12 @@ body {
   cursor: pointer;
   margin-top: 20px;
   width: 50%; /* Button width */
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   transition: background-color 0.3s ease-in-out;
 }
+
+/* .cta-btn:hover { */
 
 .cta-btn:hover {
   background-color: white;
@@ -104,8 +109,12 @@ body {
   .intro {
     flex-direction: column-reverse;
     flex-wrap: wrap;
+    gap: 10%;
   }
+  .container-fluid{
+  height: 90vh;
 
+}
   .text-section {
     flex: 100%;
     margin-bottom: 20px;
@@ -114,6 +123,9 @@ body {
 
   .text-section h1 {
     font-size: 2.5em;
+  }
+  .intro {
+    flex-direction: column;
   }
 
   .text-section p {
@@ -133,4 +145,5 @@ body {
     flex: 100%;
     text-align: center;
   }
+}
 }
