@@ -14,6 +14,7 @@ export const Header = () => {
   
 
   const handleNavigate = (path) => {
+    setMenuActive(false);
     if (path.startsWith('#')) {
       const section = document.querySelector(path);
   

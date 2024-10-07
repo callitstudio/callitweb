@@ -22,6 +22,7 @@
   display: flex;
   align-items: center; /* Center items vertically */
   font-family: Montserrat;
+  z-index: 2;
 
 }
 
@@ -42,6 +43,9 @@
   word-spacing: 10px; /* Adds spacing between words */
 }
 
+.nav li:hover{
+  scale: 1.2;
+}
 /* Mobile Styles */
 .menu-icon {
   display: none; /* Hidden by default */

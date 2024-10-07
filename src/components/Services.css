@@ -211,7 +211,9 @@
   position: absolute;
   width: 3px; /* Line thickness */
   height: 80%; /* Line height */
-  background-color: #CDA0FF; /* Line color */
+  /* background: linear-gradient(to bottom, red, black, green); */
+  background: linear-gradient(to bottom, #8e44ad, #e056fd, #74b9ff);
+
   left: 50%; /* Center it */
   transform: translateX(-50%); /* Adjust for centering */
   z-index: 0; /* Behind the items */
@@ -308,14 +310,22 @@
 .service-item h3 {
   font-size: 2rem;
   font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 25%;
   /* color: #CDA0FF; */
   color: white;
+  margin-bottom: 20px;
 }
 
 .service-item p {
   font-size: 1.3rem;
   line-height: 1.6;
   color: #e0e0e0;
+  padding: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 /* For Service Numbers */
@@ -337,6 +347,25 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+
+
+ .number-circle {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  background-color: #CDA0FF;
+  color: #1c1b1f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* 
 .service-item:last-child::after {
   display: none; 
