@@ -58,3 +58,54 @@ ul{
   font-size: 2rem;
   
 }
+
+.social-icons a[href*="instagram"] i {
+  color: red; /* Change Instagram icon color to red */
+}
+
+/* Optional hover effect */
+.social-icons a[href*="instagram"]:hover i {
+  color: darkred; /* Darker red on hover */
+  scale: 1.2;
+}
+
+
+/* fb */
+
+
+.social-icons a[href*="facebook"] i {
+  color: blue;
+}
+
+
+.social-icons a[href*="facebook"]:hover i {
+  color: darkblue; 
+  scale: 1.2;
+}
+
+
+/* linked in */
+
+.social-icons a[href*="linkedin"] i {
+  color: darkblue;
+}
+
+
+.social-icons a[href*="linkedin"]:hover i {
+  color: darkblue; 
+  scale: 1.2;
+}
+
+
+/* github */
+
+
+.social-icons a[href*="github"] i {
+  color: black;
+}
+
+
+.social-icons a[href*="github"]:hover i {
+  color: black; 
+  scale: 1.2;
+}
