@@ -1,393 +1,161 @@
-/* 
+/* General Styles for the Services Section */
+.heading {
+  font-size: 4rem; /* Large font size for emphasis */
+  font-weight: bold; /* Make the text bold */
+  color: #333333; /* Dark color for good contrast */
+  text-transform: uppercase; /* Transform text to uppercase for a clean look */
+  letter-spacing: 2px; /* Increase the letter spacing for better readability */
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 20px; /* Add some space below the heading */
+  position: relative; /* To position any decorative elements if needed */
+  padding: 0 10px; /* Padding to make it look more spacious */
+}
+
+/* Optional: Adding a decorative underline effect */
+.heading::after {
+  content: ''; /* Empty content for the underline */
+  position: absolute;
+  bottom: 0; /* Place the line at the bottom */
+  left: 50%; /* Align it to the center */
+  width: 60%; /* Set the width of the underline */
+  height: 3px; /* Height of the underline */
+  background-color: #cecea4; /* Color of the underline */
+  transform: translateX(-50%); /* Center the line */
+}
+
 .services {
-  background-color: #1c1b1f; 
-  color: white;
+  background-color: #F5F5DC;
+  color: rgb(34, 31, 31);
   padding: 50px 0;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative; 
-}
-
-.services h2 {
-  font-size: 3rem;
   font-weight: bold;
-  color: #bb8fee; 
-}
-
-.service-item {
-  background-color: #3e3b47; 
-  border: 2px solid #CDA0FF; 
-  border-radius: 10px; 
-  padding: 50px;
-  margin: 20px 0;
-  width: 40%; 
-  text-align: left;
-  position: relative; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s; 
-  z-index: 1;
-}
-
-
-.services::before {
-  content: '';
-  position: absolute;
-  width: 2px; 
-  height: 66%;
-  margin-top: -0.3%;
-  background-color: white; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  z-index: 0; 
-}
-
-
-.service-item:nth-child(odd):before {
-  content: '';
-  position: absolute;
-  top: -26%; 
-  left: -6%; 
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  border: 3px solid #CDA0FF;   
-  background-color: transparent;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.service-item:nth-child(odd):after {
-  content: '';
-  position: absolute;
-  top: -16%; 
-  left: -6%; 
-  transform: translate(-50%, -50%);
-  width: 10px; 
-  height: 10px;
-  background-color: #CDA0FF; 
-  border-radius: 50%; 
-  z-index: 2; 
-}
-
-
-
-
-
-.service-item:nth-child(even):before {
-  content: '';
-  position: absolute;
-  top: -25%; 
-  left: 105%;
-  transform: translateX(-50%);
-  width: 40px; 
-  height: 40px;
-  border: 3px solid #CDA0FF; 
-  background-color: transparent;
-  border-radius: 50%; 
-  z-index: 1;
-}
-
-.service-item:nth-child(even):after {
-  content: '';
-  position: absolute;
-  top: -16%; 
-  left: 105%; 
-  transform: translate(-50%, -50%);
-  width: 10px; 
-  height: 10px;
-  background-color: #CDA0FF; 
-  border-radius: 50%; 
-  z-index: 2; 
-}
-
-
-
-.service-item .number-circle {
-  position: absolute;
-  top: 5%;
-  left: 8%;
-  background-color: #CDA0FF;
-  color: #1c1b1f;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-
-.service-item:nth-child(odd) {
-  position: relative;
-  left: 22%; 
-}
-
-.service-item:nth-child(even) {
-  position: relative;
-  right: 22%;
-}
-
-
-.service-item:hover {
-  transform: scale(1.05); 
-}
-
-.service-item h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-}
-
-.service-item p {
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: #e0e0e0;
-}
-
-
-@media (max-width: 768px) {
-  .service-item {
-    width: 90%; 
-    left: 0;
-    right: 0;
-    margin: 20px 0;
-  }
-
-  .services::before {
-    height: 100%;
-  }
-}
-
- */
-
-
-
- /* General Styles for the Services Section */
-.services {
-  background-color: #1c1b1f; 
-  color: white;
-  padding: 50px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 7rem;
+  font-family: Montserrat;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   position: relative; /* For positioning the center line */
 }
-
-.services h2 {
-  font-size: 3rem;
+/* .services h2 {
+  font-size: 4rem;
   font-weight: bold;
-  color: #3f3a44; 
-  /* position: absolute; */
-  /* top: 10%; */
-  /* margin-bottom: 30px; */
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  position: relative; /* Ensure it's above pseudo-element 
+  z-index: 1; /* Set z-index higher than the pseudo-element 
+} */
+
+/* Increased font size for headings */
+.service-item h3 {
+  font-size: 3rem; /* Increase font size for service item heading */
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  color: rgb(102, 95, 95);
+  color: rgb(45, 53, 18);
+  margin-bottom: 20px;
 }
 
+/* Increased font size for paragraph */
+.service-item p {
+  font-size: 1.6rem; /* Increased font size for the paragraph */
+  line-height: 1.6;
+  color: #7f7f7f; /* Grey text */
+  padding: 10px;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Service Item Styling */
 .service-item {
-  background-color: #f5c6f5; 
-  border: 2px solid #CDA0FF; 
-  /* border: 2px solid red; */
-  border-radius: 10px; 
+  background-color: #cecea4;
+  border: 2px solid #ceeea4;
+  border-radius: 10px;
   padding: 50px;
   margin: 20px 0;
   width: 40%; /* Adjusted width */
-  /* height: calc(100%+400px); */
   padding-bottom: 5%;
   text-align: left;
-  position: relative; 
+  position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s; 
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+}
+
+/* Service Item Hover Effects */
+.service-item:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+  background-color: #ecfa9c; /* Change background on hover */
+  color: #F5F5DC;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Number Circle Styling */
+.number-circle {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  background-color: #b4b47b;
+  color: #1c1b1f;
+  width: 50px; /* Increased size of circle */
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* Larger font size inside the circle */
+  font-weight: bold;
 }
 
 /* Center line */
 .services::before {
   content: '';
   position: absolute;
-  width: 3px; /* Line thickness */
-  height: 80%; /* Line height */
-  /* background: linear-gradient(to bottom, red, black, green); */
-  background: linear-gradient(to bottom, #8e44ad, #e056fd, #74b9ff);
-
-  left: 50%; /* Center it */
-  transform: translateX(-50%); /* Adjust for centering */
-  z-index: 0; /* Behind the items */
+  width: 3px;
+  height: 80%;
+  background: linear-gradient(to bottom,  #ceaea4,#cecea4, #cea4af);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
 /* Positioning of service items */
 .service-item:nth-child(1) {
   position: relative;
-  left: 22%; /* Move to the right */
-  z-index: 1; /* On top of the line */
+  left: 22%;
+  z-index: 1;
 }
 
-/* Triangle pointing to the center line from the first item */
-.service-item:nth-child(1)::after {
-  content: '';
-  position: absolute;
-  rotate: 180deg;
-  right: 100%; /* Position to the right */
-  top: 20px; /* Adjust vertical position */
-  width: 0;
-  height: 0;
-  border-left: 10px solid #CDA0FF; /* Triangle color */
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-/* Second item positioned to the left */
 .service-item:nth-child(2) {
   position: relative;
-  right: 22%; /* Move to the left */
-  z-index: 1; /* On top of the line */
+  right: 22%;
+  z-index: 1;
 }
 
-/* Triangle pointing to the center line from the second item */
-.service-item:nth-child(2)::after {
-  content: '';
-  position: absolute;
-  rotate: 180deg;
-  left: 100%; /* Position to the left */
-  top: 20px; /* Adjust vertical position */
-  width: 0;
-  height: 0;
-  border-right: 10px solid #CDA0FF; /* Triangle color */
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-/* Third and Fourth items positioned to the left */
 .service-item:nth-child(3) {
   position: relative;
-  left: 22%; /* Aligned to the left */
-  z-index: 1; /* On top of the line */
+  left: 22%;
+  z-index: 1;
 }
 
-/* Triangle pointing to the center line from the third item */
-.service-item:nth-child(3)::after {
-  content: '';
-  position: absolute;
-  right: 100%; /* Position to the right */
-  rotate: 180deg;
-  top: 20px; /* Adjust vertical position */
-  width: 0;
-  height: 0;
-  border-left: 10px solid #CDA0FF; /* Triangle color */
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-/* Fourth item */
 .service-item:nth-child(4) {
   position: relative;
-  right: 22%; /* Aligned to the left */
-  z-index: 1; /* On top of the line */
+  right: 22%;
+  z-index: 1;
 }
-
-/* Triangle pointing to the center line from the fourth item */
-.service-item:nth-child(4)::after {
-  content: '';
-  position: absolute;
-  left: 100%; /* Position to the right */
-  top: 20px; /* Adjust vertical position */
-  width: 0;
-  height: 0;
-  border-left: 10px solid #CDA0FF; /* Triangle color */
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-/* Service Item Hover Effects */
-.service-item:hover {
-  transform: scale(1.05); 
-}
-
-.service-item h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  position: absolute;
-  top: 10%;
-  left: 25%;
-  /* color: #CDA0FF; */
-  color: rgb(102, 95, 95);
-  color: white;
-  margin-bottom: 20px;
-}
-
-.service-item p {
-  font-size: 1.3rem;
-  line-height: 1.6;
-  color: #e0e0e0;
-  padding: 10px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-/* For Service Numbers */
-.service-item::before {
-  content: attr(data-number);
-  position: absolute;
-  /* top: 8px; 
-  left: 14px; */
-  top: 5%;
-  left: 8%;
-  background-color: #CDA0FF;
-  color: #1c1b1f;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-
-
- .number-circle {
-  position: absolute;
-  top: 5%;
-  left: 8%;
-  background-color: #CDA0FF;
-  color: #1c1b1f;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* 
-.service-item:last-child::after {
-  display: none; 
-} */
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .service-item {
-      width: 45%; 
-  }
-  
-  
-  .service-item:nth-child(odd){
-      margin-left: 20px;
-
+    width: 45%; 
   }
 
-
-  
-  .service-item:nth-child(even){
-      margin-right: 20px;
+  .service-item:nth-child(odd) {
+    margin-left: 20px;
   }
-  
+
+  .service-item:nth-child(even) {
+    margin-right: 20px;
+  }
 }
