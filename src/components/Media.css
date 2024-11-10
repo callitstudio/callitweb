@@ -6,7 +6,7 @@
 }
 
 .marketing-section {
-  padding: 50px;
+  /* padding: 50px; */
   background-color: #1c1b1f;
   color: white;
   font-family: 'Arial', sans-serif;
@@ -24,15 +24,17 @@
 
 /* Grid Layout for Marketing Cards */
 .marketing-cards {
+  margin-top: 8%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, auto); 
+  grid-template-rows: repeat(3, auto); 
   gap: 20px; /* Space between cards */
+  margin-bottom: 2%;
 }
 
 /* Card Styling */
 .card {
-  background-color: #505050;
+  background-color: #a4b59c;
   border: 2px solid #bb8fee;
   border-radius: 10px;
   opacity: 0;
@@ -61,10 +63,12 @@
   50% {
     opacity: 0.5;
     transform: scale(1.2); /* Pop up slightly */
+    background: #ecfa9c;
   }
   100% {
     opacity: 1;
     transform: scale(1); /* Return to original size */
+    background: #000;
   }
 }
 
@@ -85,16 +89,19 @@
     opacity: 0; /* Start invisible */
     filter: blur(10px); /* Start blurred */
     transform: translateY(100px) translateZ(-100px) scale(0.5); /* Start off-screen and behind */
+    background: #ecfa9c;
   }
   70% {
     opacity: 1; /* Fully visible */
     filter: blur(0); /* Remove blur */
     transform: translateY(-20px) translateZ(0) scale(1); /* Slightly upward for effect */
+    background: #ecfa9c;
   }
   100% {
     opacity: 1; /* Fully visible */
     filter: blur(0); /* Ensure no blur */
     transform: translateY(0) translateZ(0) scale(1); /* Final position */
+    background: #ecfa9c;
   }
 }
 
@@ -151,11 +158,22 @@
 /* Additional Cards */
 .card:nth-child(1) {
   /* animation-name: popUp; */
+  
+  animation-name: moveIn;
+  animation-duration: 1s;
+  /* animation-delay: 2s; */
+  grid-column: 2;     
+  grid-row: 1; 
+  height: auto;       
+}
+
+.card:nth-child(2) {
+  /* animation-name: popUp; */
   animation-name: moveIn;
   animation-duration: 1s;
   animation-delay: 2s;
-  grid-column: 1;     
-  grid-row: 1/span 2; 
+  grid-column: 2;     
+  grid-row: 2/span 3; 
   height: auto;       
 }
 
@@ -176,8 +194,8 @@
   animation-name: moveIn;
   animation-duration: 1s;
   animation-delay: 2s;
-  grid-column: 2;     
-  grid-row: 2;        
+  grid-column: 1;     
+  grid-row: 1/span 2;        
   height: auto;       
 }
 
