@@ -13,6 +13,7 @@ export const Header = () => {
   const navigate = useNavigate(); // Hook for navigation
 
   const handleNavigate = (path) => {
+    setMenuActive(false);
     if (path.startsWith('#')) {
       const section = document.querySelector(path);
   
