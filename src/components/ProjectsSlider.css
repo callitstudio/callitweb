@@ -10,7 +10,7 @@
 :root {
   --primary: #6a59ff;
   --white: #ffffff;
-  --bg: #1c1b1f;
+  --bg: linear-gradient(to right, #a6a6a6, #ffffff);
 
 }
 

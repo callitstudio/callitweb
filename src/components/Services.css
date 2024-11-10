@@ -1,7 +1,7 @@
 /* General Styles for the Services Section */
 .services {
-  background-color: #1c1b1f; 
-  color: white;
+  background: linear-gradient(to right, #a6a6a6, #ffffff);
+  color: rgb(12, 11, 11);
   padding: 50px 0;
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -14,14 +14,14 @@
 .services h2 {
   font-size: 3rem;
   font-weight: bold;
-  color: #bb8fee; 
+  color: #3f3a44; 
   /* position: absolute; */
   /* top: 10%; */
   /* margin-bottom: 30px; */
 }
 
 .service-item {
-  background-color: #3e3b47; 
+  background-color: #f5c6f5; 
   border: 2px solid #CDA0FF; 
   /* border: 2px solid red; */
   border-radius: 10px; 
@@ -140,7 +140,7 @@
   font-size: 2rem;
   font-weight: bold;
   /* color: #CDA0FF; */
-  color: white;
+  color: rgb(102, 95, 95);
 }
 
 .service-item p {

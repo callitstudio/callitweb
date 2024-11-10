@@ -10,7 +10,7 @@ export const MainSection = () => {
         <section className="row left">
           <div className="col-md-6 col-sm-12">
             <h1>CALL IT STUDIO</h1>
-            <p>We’re a passionate team of creative and tech-savvy individuals who love working with digital solutions. With experts in media, IT, and marketing, each of us brings unique skills to the table. Together, we aim to combine creativity and technology to produce amazing results.</p>
+            <p>Where Creativity Meets Technology to Craft Digital Excellence</p>
           </div>
             <button className="cta-btn">Learn More</button>
           {/* <div className="col-md-6 col-sm-12 gif-section">
@@ -18,10 +18,10 @@ export const MainSection = () => {
           </div> */}
         </section>
 
-        <section className='right '>
-            {/* <img src={mainImg} alt="" /> */}
+        {/* <section className='right '>
+            {/* <img src={mainImg} alt="" /> }
             <video src={video} autoPlay muted loop width="100%" height="auto"></video>
-        </section>
+        </section> */}
         <section className="up"></section>
         <section className="down"></section>
       </div>

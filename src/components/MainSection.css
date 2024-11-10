@@ -1,149 +1,139 @@
-body {
-  margin: 0;
-  background-color: #333;
-  color: #fff;
-}
-
+/* Full Page Background Image */
 .container-fluid {
+  margin: 0;
   padding: 0;
+  height: 100vh; /* Full viewport height */
+  background-image: url('../assets/images/mainbg.jpg'); /* Background image */
+  background-size: cover;  /* Make the image cover the entire screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;  /* To control overlay */
+  overflow: hidden; /* Prevents any unwanted overflow */
 }
 
+/* Overlay to fade the background image */
+.container-fluid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay to fade background */
+  z-index: 1;
+}
+
+/* The Main Section containing the content */
 .intro {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  gap: 2%;
-  padding: 20px;
+  height: 100%; /* Full height of the viewport */
+  z-index: 2;
+  position: relative;
+  padding: 0 20px; /* Add some padding */
+  color: #ffffff; /* White text */
+  text-align: center;
+  animation: fadeIn 1s ease-out; /* Add fade-in animation */
 }
 
-.text-section {
-  flex: 1;
-  margin-right: 30px;
-  box-sizing: border-box;
-}
-
-.left, .right {
-  flex: 1;
-}
-
+/* Left Section (Text Container) */
 .left {
-  padding-right: 20px; /* Spacing between content and image */
+  flex: 1;
+  background-color: rgba(196, 187, 187, 0.8); /* Lighter background for readability */
+  border-radius: 20px;  /* Rounded corners */
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(3px); /* Blur the background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  z-index: 3;
+  transition: transform 0.5s ease-out; /* Add transition effect */
 }
 
-.text-section h1 {
-  font-size: 3.5em;
-  margin-bottom: 30px;
-  font-family: Montserrat;
+.left:hover {
+  transform: translateY(-10px); /* Add hover effect for slight lift */
 }
-.left h1{
-  font-size: 5rem;
-  padding: 1rem;
+
+.left h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 4rem;
+  font-family: Montserrat;
+  color: #2b2b2b; /* Darker text for contrast */
+  letter-spacing: 1px; /* Slightly more spaced letters for better look */
 }
 
 .left p {
-  justify-content: center;
-  text-align: center;
-}
-
-.text-section h1 {
-  font-size: 3.5em;
-  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 2rem;
   font-family: Montserrat;
-}
-
-.text-section p {
-  font-size: 1.2em;
-  line-height: 1.6;
+  line-height: 1.8;
+  color: #5a5a5a;
   margin-bottom: 30px;
-}
-.right img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+  transition: color 0.3s ease; /* Smooth text color change */
 }
 
-.right video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.left p:hover {
+  color: #c25dba; /* Change text color on hover */
 }
 
-/* Button styling */
+/* Call to Action Button */
 .cta-btn {
-  background-color: #c25dba;
+  background-color: #5f5c5f;
   color: white;
-  padding: 15px 30px;
+  padding: 18px 40px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
-  width: 50%; /* Button width */
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 20%; /* Button width */
+  margin-top: 20px;
 }
-
-/* .cta-btn:hover { */
 
 .cta-btn:hover {
   background-color: white;
   color: #c25dba;
-}
-
-/* GIF Styling */
-.gif-section {
-  flex: 1;
-  text-align: right;
-}
-
-.responsive-gif {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
+  transform: scale(1.05); /* Slight scale up effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    gap: 10%;
+    flex-direction: column;  /* Stack content vertically */
+    gap: 20px;
   }
-  .container-fluid{
-  height: 90vh;
 
-}
-  .text-section {
+  .left {
     flex: 100%;
-    margin-bottom: 20px;
     text-align: center;
+    padding: 30px;
   }
 
-  .text-section h1 {
-    font-size: 2.5em;
-  }
-  .intro {
-    flex-direction: column;
+  .left h1 {
+    font-size: 2.5rem;
   }
 
-  .text-section p {
-    font-size: 1em;
+  .left p {
+    font-size: 1rem;
   }
 
   .cta-btn {
-    width: 100%;
-  }
-
-  .right {
-    order: -1; /* Push the image below the content */
-    margin-bottom: -130%;
-  }
-
-  .gif-section {
-    flex: 100%;
-    text-align: center;
+    width: 100%;  /* Full width on smaller screens */
+    padding: 15px;
+    font-size: 1.4rem;
   }
 }
+
+/* Fade-in animation for intro section */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal position */
+  }
 }
