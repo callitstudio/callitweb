@@ -1,40 +1,46 @@
 import React from 'react';
 import './AboutUs.css';
+import mainImage from '../assets/images/main.jpg';
 
 const AboutUs = () => {
   return (
     <section className="about-section">
+      {/* Motion background layer */}
+      <div className="motion-background"></div>
+
       <div className="about-content">
-        {/* Profile and Title */}
-        <div className="profile-header">
-          <img src="../assets/images/main.jpg" alt="Profile Main" className="profile-main-img" />
-          <h2 className="profile-name">Stephanie Olejarnik</h2>
-          <p className="profile-role">Art Director</p>
+        {/* Left Image Section with shadow and border */}
+        <div className="image-container">
+          <img src={mainImage} alt="Profile Main" className="profile-main-img" />
         </div>
 
-        {/* Text and Statistic Blocks */}
-        <div className="about-text-image">
-          <div className="text-block">
-            <p>Since the internship, she goes the extra mile for TOWA. Since July 2013, she is responsible as an Art Director for Graphics & Design.</p>
-            <p>Fight for each pixel and impressed by her boy’s obsession with detail and perfectionism.</p>
+        {/* Right Text Section */}
+        <div className="text-container">
+          <h2 className="profile-name">Call It Studio</h2>
+          <p className="profile-role">Your Desired Workplace</p>
+          
+          {/* WHO WE ARE Blurb */}
+          <div className="blurb">
+            <h3>WHO WE ARE</h3>
+            <p>
+              We are a passionate team of creative and tech-savvy individuals who love working with
+              digital solutions. With experts in media, IT, and marketing, each of us brings unique skills
+              to the table. Together, we aim to inculcate creativity in technology to produce amazing results.
+            </p>
           </div>
-
-          <div className="statistic-block">
-            <p><strong>4</strong><br />Sports time the week is mandatory</p>
-            <p><strong>97</strong><br />100 points for their bachelor thesis</p>
-            <p><strong>5</strong><br />Teas she has in the office stock</p>
+          
+          {/* WHAT WE DO Blurb */}
+          <div className="blurb">
+            <h3>WHAT WE DO</h3>
+            <p>
+              We offer a wide range of digital services designed to improve your brand. Our offerings are
+              divided into three primary areas: marketing strategies, which include corporate identity,
+              digital marketing, and content authoring; IT solutions, which include web and app development,
+              SEO, and e-commerce; and media creation, which includes social media management, films,
+              and animations. As a result, you receive unique designs that effectively blend imagination
+              and technology to help your business compete online.
+            </p>
           </div>
-
-          <div className="profile-block">
-            <img src="path/to/profile-thumb.jpg" alt="Profile Thumbnail" className="profile-img" />
-            <p className="profile-caption">Tanja and I co-authored and implemented the bachelor thesis.</p>
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="about-footer">
-          <button className="discover-btn">Discover More</button>
-          <span className="page-indicator">1 / 3</span>
         </div>
       </div>
     </section>
