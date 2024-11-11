@@ -12,7 +12,7 @@ export const Marketing = () => {
       <div className="market-cards">
 
         
-     <div className="market-card left mar-card pop-up left ">
+     <div className="market-card left mar-card pop-up right ">
       <Card title="MARKETING" />
      </div>
 

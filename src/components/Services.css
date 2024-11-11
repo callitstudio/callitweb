@@ -192,6 +192,29 @@
     animation: fromright 2s ease forwards;
     /* animation-duration: 2s; */
   }
+
+  .service-item:nth-child(2)>h3{
+    position: absolute;
+    left: 10%;
+    /* color: red; */
+  }
+
+
+  .service-item:nth-child(4)>h3{
+    position: absolute;
+    left: 50%;
+  }
+
+  .service-item:nth-child(5 )>h3{
+    position: absolute;
+    left: 35%;
+    
+  }
+
+  .service-item:nth-child(6)>p{
+    margin-top: 22%;
+  }
+
   .services{
     display: flex;
     justify-content: center;

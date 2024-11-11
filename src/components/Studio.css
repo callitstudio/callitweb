@@ -27,39 +27,22 @@
   grid-template-rows: repeat(3, auto); 
   gap: 20px;
   }
-  
-  /* .social-card {
-    color: red;
-    background-color: #505050;
-    border: 2px solid #bb8fee;
-    border-radius: 10px;
-    opacity: 0; 
-    animation-fill-mode: forwards;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid red;
-    justify-content: center;
-    padding: 20px;
-    transition: transform 0.3s ease; 
-  } */
-
-
-
-
 
   .img {
     height: 50%;
-    width: 100%;
+    width: auto;
   }
   
   .studio-section {
-    padding: 50px;
-    background-color: #1c1b1f;
+    padding: 10px;
+    background-color: #F5F5DC;
+    
     color: white;
     font-family: 'Arial', sans-serif;
-    border: 1px solid #CDA0FF;
+    /* border: 1px solid #CDA0FF; */
     text-align: center;
     perspective: 1000px;
+    padding-top: 15%;
   }
   
   .studio-cards {
@@ -68,11 +51,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto); 
     gap: 20px;
+
   }
   
   .studiocard {
-    background-color: #505050;
-    border: 2px solid #bb8fee;
+    background-color: #cecea4;
+  border: 2px solid #ceeea4;
     border-radius: 10px;
     opacity: 0;
     animation-fill-mode: forwards;

@@ -109,3 +109,18 @@ ul{
   color: black; 
   scale: 1.2;
 }
+
+@media (max-width: 800px) {
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    /* background: ; */
+  }
+
+  .footer-container{
+    /* background: #8c8c73; */
+    /* background: #8b8b70;  prefered*/
+    background: linear-gradient(180deg, #a9a98c, #8c8c73, #8b8b70);
+
+  }
+}  
