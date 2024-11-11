@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MainSection } from './components/MainSection';
 import { Services } from './components/Services';
+
 import { ProjectsSlider } from './components/ProjectsSlider';
 import Marketing from './components/Marketing';
 import IT from './components/IT';
@@ -11,7 +12,7 @@ import Media from './components/Media';
 import ContactUs from './components/ContactUs';
 import Courses from './components/Courses';
 import Events from "./components/Events"
-
+import AboutUs from'./components/AboutUs';
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/courses" element={<Courses />} /> {/* Contact us page route */}
           <Route path="/studio" element={<Studio />} />  
           <Route path='/events' element={<Events/>}/> 
+          <Route path='/aboutus' element={<AboutUs/>}/>
         </Routes>
 
         <Footer /> {/* The footer should stay on all pages */}

@@ -3,6 +3,7 @@
 import React from 'react';
 import Shoot from "../assets/Media/shoot.jpeg";
 import Card from "./Card";
+
 import "./Studio.css"
 const Studio = () => {
   return (

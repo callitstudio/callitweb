@@ -2,7 +2,7 @@
     font-size: 3rem;
     font-weight: bold;
     color: #282828; /* Similar to the purple header in the image */
-    background: linear-gradient(180deg, #bb8fee, #dcdae2, #bb8fee); /* Three gradient colors */
+    background: #F5F5DC; /* Beige Background */
     /* padding: 10px 0; */
     border-radius: 0; /* Remove rounded edges if needed */
     /* width: 100vw;  */
@@ -54,7 +54,10 @@
   
   .studio-section {
     padding: 50px;
-    background-color: #1c1b1f;
+    background: linear-gradient(45deg, #e0d254, #8d7c78, #dfaa9c, #c0c26a);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientAnimation 5s ease infinite;
     color: white;
     font-family: 'Arial', sans-serif;
     border: 1px solid #CDA0FF;
@@ -235,5 +238,10 @@
     .studiocard.center {
       order: 0;
     }
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   

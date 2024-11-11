@@ -1,3 +1,49 @@
+/* Services Section Styles */
+
+.service-item {
+  background-color: #cecea4;
+  border: 2px solid #ceeea4;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 20px 0;
+  width: 40%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* Start as invisible */
+  transform: scale(0.8); /* Start small */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for smooth effect */
+}
+
+/* When loaded, the item moves into place */
+.service-item.loaded {
+  opacity: 1; /* Make it visible */
+  transform: scale(1); /* Return to normal size */
+}
+
+/* Image positioning */
+.service-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust the size of the image */
+  height: 100px;
+  object-fit: cover;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.5s ease 0.5s; /* Delay for animation */
+}
+
+/* When loaded, images will fade in */
+.service-item.loaded .service-image {
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-item {
+    width: 80%; 
+  }
+}
 /* General Styles for the Services Section */
 .heading {
   font-size: 4rem; /* Large font size for emphasis */
