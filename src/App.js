@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ContentWriting from './components/ContentWriting';
 import Studio from './components/Studio';
-import AboutUs from './components/AboutUs';
+
 
 function App() {
   return (
