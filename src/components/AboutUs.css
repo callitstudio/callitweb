@@ -6,7 +6,7 @@
   background: linear-gradient(45deg, #e0d254, #8d7c78, #dfaa9c, #c0c26a);
   background-size: 400% 400%;
   z-index: -1;
-  animation: gradientAnimation 5s ease infinite;
+  animation: gradientAnimation 10s ease infinite;
 }
 
 .about-content {
