@@ -7,12 +7,14 @@
 
 .marketing-section {
   /* padding: 50px; */
-  background-color: #1c1b1f;
+  /* background-color: #1c1b1f; */
+  background-color: #F5F5DC;
   color: white;
   font-family: 'Arial', sans-serif;
-  border: 1px solid #CDA0FF;
+  /* border: 1px solid #CDA0FF; */
   text-align: center;
   perspective: 1000px;  
+  padding-top: 15%;
 }
 
 /* Title Styling */
@@ -28,14 +30,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto); 
-  gap: 20px; /* Space between cards */
+  gap: 10px; /* Space between cards */
   margin-bottom: 2%;
 }
 
 /* Card Styling */
 .card {
-  background-color: #a4b59c;
-  border: 2px solid #bb8fee;
+  /* background-color: #a4b59c;
+  border: 2px solid #141314; */
+  background-color: #cecea4;
+  border: 2px solid #ceeea4;
   border-radius: 10px;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -155,6 +159,9 @@
   height: 200px; 
 }
 
+.whiteColor{
+  color: white;
+}
 /* Additional Cards */
 .card:nth-child(1) {
   /* animation-name: popUp; */
@@ -251,8 +258,10 @@
   .marketing-cards {
     display: flex;
     flex-direction: column;
+    margin-top: 20%;
     /* Ensures that the cards stack vertically */
   }
+
 
   .card {
     width: 90%; /* Adjust card width for smaller screens */
@@ -271,4 +280,5 @@
   .card.center {
     order: 0; /* Keep the SOCIAL MEDIA MANAGEMENT card below */
   }
+
 }

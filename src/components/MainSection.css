@@ -2,7 +2,7 @@
 .container-fluid {
   margin: 0;
   padding: 0;
-  height: 100vh; /* Full viewport height */
+  height: 70vh; /* Full viewport height */
   background-image: url('../assets/images/mainbg.jpg'); /* Background image */
   background-size: cover;  /* Make the image cover the entire screen */
   background-position: center;
@@ -74,7 +74,8 @@
 }
 
 .left p:hover {
-  color: #c25dba; /* Change text color on hover */
+  color: white; /* Change text color on hover */
+  cursor: pointer;
 }
 
 /* Call to Action Button */
@@ -94,31 +95,34 @@
 
 .cta-btn:hover {
   background-color: white;
-  color: #c25dba;
+  color: #869433;
   transform: scale(1.05); /* Slight scale up effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro {
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: wrap;
     gap: 10%;
   }
   .container-fluid{
-  height: 90vh;
+  /* height: 90vh; */
 
   .left {
     flex: 100%;
     text-align: center;
     padding: 30px;
+    margin-left: 8%;
+    margin-top: 20%;
   }
   }
   .text-section h1 {
     font-size: 2.5em;
   }
   .intro {
-    flex-direction: column;
+    /* flex-direction: column; */
+    width: 100%;
   }
 
   .left p {

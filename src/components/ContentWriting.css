@@ -7,10 +7,10 @@
   
   .cw-section {
     /* padding: 50px; */
-    background-color: #1c1b1f;
+    background-color: #F5F5DC;
     color: white;
     font-family: 'Arial', sans-serif;
-    border: 1px solid #CDA0FF;
+    /* border: 1px solid #CDA0FF; */
     text-align: center;
     perspective: 1000px;  
   }
@@ -209,6 +209,7 @@
     .cw-cards {
       display: flex;
       flex-direction: column;
+      margin-top: 22%;
     }
   
     .cw-card {

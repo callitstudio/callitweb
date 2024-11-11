@@ -52,7 +52,7 @@
   text-transform: uppercase; /* Transform text to uppercase for a clean look */
   letter-spacing: 2px; /* Increase the letter spacing for better readability */
   text-align: center; /* Center-align the heading */
-  margin-bottom: 20px; /* Add some space below the heading */
+  /* margin-bottom: 20px;  */
   position: relative; /* To position any decorative elements if needed */
   padding: 0 10px; /* Padding to make it look more spacious */
 }
@@ -194,17 +194,76 @@
   z-index: 1;
 } */
 
+@keyframes fromleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromright {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Responsive Styles */
-@media (max-width: 768px) {
-  .service-item {
-    width: 45%; 
+@media (max-width: 710px) {
+
+  .services::before{
+    display: none;
+  }
+  .service-item:nth-child(odd) {
+    width: 80%; 
+    margin: 1% 35%;
+    margin-left: -10%;
+    animation: fromleft 2s ease forwards;
+    /* animation-duration: 2s; */
   }
 
-  .service-item:nth-child(odd) {
-    margin-left: 20px;
-  }
 
   .service-item:nth-child(even) {
-    margin-right: 20px;
+    margin: 1% 35%;
+    width: 80%;
+    margin-right: -9%;
+    animation: fromright 2s ease forwards;
+    /* animation-duration: 2s; */
+  }
+
+  .service-item:nth-child(2)>h3{
+    position: absolute;
+    left: 10%;
+    /* color: red; */
+  }
+
+
+  .service-item:nth-child(4)>h3{
+    position: absolute;
+    left: 50%;
+  }
+
+  .service-item:nth-child(5 )>h3{
+    position: absolute;
+    left: 35%;
+    
+  }
+
+  .service-item:nth-child(6)>p{
+    margin-top: 22%;
+  }
+
+  .services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

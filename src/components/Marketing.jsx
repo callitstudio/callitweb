@@ -12,7 +12,7 @@ export const Marketing = () => {
       <div className="market-cards">
 
         
-     <div className="market-card left mar-card pop-up left ">
+     <div className="market-card left mar-card pop-up right ">
       <Card title="MARKETING" />
      </div>
 
@@ -22,7 +22,7 @@ export const Marketing = () => {
             your audience through paid and organic methods."/>
         </div>
         
-<div className=" market-card  mar-card right ">
+<div className=" market-card  mar-card right left ">
           <Card img={Shoot} title="PRODUCT DESIGN" des="We create user-friendly, visually appealing product designs that align with your 
 brand’s identity. From concept to execution, we ensure your product designs stand 
 out in the competitive market" />

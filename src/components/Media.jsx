@@ -22,7 +22,7 @@ const Media = () => {
           </p>
         </div> */}
 
-        <div className='card  pop-up right left'>
+        <div className='card  pop-up left whiteColor '>
 
           <Card title="MEDIA" />
         </div>

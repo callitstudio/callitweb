@@ -19,7 +19,7 @@ const IT = () => {
         </div>
 
 
-        <div className="it-card right">
+        <div className="it-card left">
           <Card img={ITImage} title="WEB DEVELOPMENT" des="Our web development services create responsive, user-friendly websites tailored to your business needs. We deliver high-performing websites that enhance your brand's digital experience and drive growth." />
         </div>
 

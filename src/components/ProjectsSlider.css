@@ -68,15 +68,17 @@ body {
 }
 
 .heading {
+  /* margin-top: 10%; */
   font-size: 3rem;
   font-weight: bold;
-  color: #282828; /* Similar to the purple header in the image */
-  background: linear-gradient(180deg, #bb8fee, #dcdae2, #bb8fee); /* Three gradient colors */
+  /* color: #282828;  */
+  background: linear-gradient(180deg, #d6e6a6, #ecfa9c, #cecea4); /* Gentle yellow-green gradient */
+
   /* padding: 10px 0; */
   border-radius: 0; /* Remove rounded edges if needed */
-  width: 100vw; /* Make it full width */
+  width: auto; /* Make it full width */
   text-align: center; /* Center the text */
-  margin-left: calc(-50vw + 50%); /* Center the background gradient */
+  /* margin-left: calc(-50vw + 50%);  */
   position: relative;
   left: 50%;
   font-family: Montserrat;
