@@ -38,6 +38,16 @@ export const Services = () => {
           <h3>IT</h3>
           <p>We develop user-friendly websites and mobile applications tailored to meet your specific needs. We aim to create innovative IT solutions that streamline your buisness operations and boost your online presence.</p>
         </div>
+
+        <div className="service-item" data-number="5" onClick={() => handleNavigate('/studio')}>
+          <h3>Studio</h3>
+          <p>We can manage your social handle effeciently for you.</p>
+        </div>
+
+        <div className="service-item" data-number="6" onClick={() => handleNavigate('/events')}>
+          <h3>Event Management </h3>
+          <p>Get you important events manage by us .</p>
+        </div>
       </section>
     </section>
   </section>

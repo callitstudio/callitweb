@@ -10,11 +10,13 @@ import IT from './components/IT';
 import Media from './components/Media';
 import ContactUs from './components/ContactUs';
 import Courses from './components/Courses';
-import AboutUs from './components/AboutUs';
+import Events from "./components/Events"
+
 import './App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ContentWriting from './components/ContentWriting';
+import Studio from './components/Studio';
 
 function App() {
   return (
@@ -38,7 +40,8 @@ function App() {
           <Route path="/ContentWriting" element={<ContentWriting />} />
           <Route path="/contact_us" element={<ContactUs />} /> {/* Contact us page route */}
           <Route path="/courses" element={<Courses />} /> {/* Contact us page route */}
-          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/studio" element={<Studio />} />  
+          <Route path='/events' element={<Events/>}/> 
         </Routes>
 
         <Footer /> {/* The footer should stay on all pages */}

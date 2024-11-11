@@ -14,24 +14,24 @@ const ContentWriting = () => {
                 </div>
                 <div className="it-card left">
                     <Card img={ITImage}  //image url
-                     title="Engaging Content Creation"   //add title here
-                     //write description below
-                     des="WWe craft content that not only resonates with your audience but also encourages 
-interaction and sharing. Our content is customized to align with your brand’s goals 
+                        title="Engaging Content Creation"   //add title here
+                        //write description below
+                        des="WWe craft content that not only resonates with your audience but also encourages 
+                                interaction and sharing. Our content is customized to align with your brand’s goals 
 and values.
 Key Features:
 • Blogs, Articles, and Website Copy
 • Social Media Posts and Campaigns
 • Email Marketing Copy
-• Product Descriptions " 
-                      />
+• Product Descriptions "
+                    />
                 </div>
 
 
-                <div className="it-card right">
-                    <Card img={ITImage} 
-                    title="SEO-Optimized Writing" 
-                    des="We deliver SEO-optimized content that helps your website rank higher in search 
+                <div className="it-card right left">
+                    <Card img={ITImage}
+                        title="SEO-Optimized Writing"
+                        des="We deliver SEO-optimized content that helps your website rank higher in search 
 engine results. Our writers use targeted keywords and SEO best practices to 
 increase organic traffic and improve search rankings.
 Key Features:
@@ -39,7 +39,7 @@ Key Features:
 • On-Page SEO Optimization
 • Content for Landing Pages, Blog Posts, and Product Pages
 • Meta Descriptions and Title Tags"
-                     />
+                    />
                 </div>
 
                 <div className="it-card left">
@@ -54,7 +54,8 @@ Key Features:
                 </div>
 
                 <div className="it-card left">
-                    <Card img={ITImage} title="APP DEVELOPMENT" des="We develop custom mobile applications that offer seamless user experiences across devices. Our apps are designed to meet your specific requirements, ensuring functionality, performance, and scalability." />
+                    <Card img={ITImage} title="APP DEVELOPMENT" 
+                    des="We develop custom mobile applications that offer seamless user experiences across devices. Our apps are designed to meet your specific requirements, ensuring functionality, performance, and scalability." />
                 </div>
             </div>
 
