@@ -66,6 +66,8 @@ export const Header = () => {
           <li onClick={() => handleNavigate('/contact_us')}>ContactUs</li>
           <li onClick={() => { handleNavigate('#Services') }}>Services</li>
           <li onClick={() => handleNavigate('/courses')}>Courses</li>
+          <li onClick={() => handleNavigate('/aboutus')}>About Us</li>
+
           <li>Jobs</li>
         </ul>
       </nav>

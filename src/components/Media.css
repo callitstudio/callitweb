@@ -251,6 +251,7 @@
   .marketing-cards {
     display: flex;
     flex-direction: column;
+    margin-top: 15%;
     /* Ensures that the cards stack vertically */
   }
 
