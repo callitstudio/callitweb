@@ -94,3 +94,77 @@ export const Services = () => {
     </section>
   );
 };
+
+
+// import React, { useEffect, useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import { motion } from 'framer-motion';
+// import './Services.css';
+// import mediagif from '../assets/images/media.gif';
+// import contentgif from '../assets/images/content.gif';
+// import itgif from '../assets/images/it.gif';
+// import studiogif from '../assets/images/studio.gif';
+// import eventgif from '../assets/images/event.gif';
+// import marketinggif from '../assets/images/marketing.gif';
+
+// export const Services = () => {
+//   const navigate = useNavigate();
+//   const [loaded, setLoaded] = useState(false);
+
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setLoaded(true);
+//     }, 500);
+//   }, []);
+
+//   const handleNavigate = (path) => {
+//     navigate(path);
+//   };
+
+//   // Animation variants for motion elements
+//   const animationVariants = {
+//     initial: { x: 0, y: 0, opacity: 0 },
+//     animate: (custom) => ({
+//       x: custom.x,
+//       y: custom.y,
+//       opacity: 1,
+//       transition: { duration: 1, ease: 'easeInOut' },
+//     }),
+//   };
+
+//   // Service items data with images, paths, positions
+//   const services = [
+//     { id: 1, title: 'Media', description: 'We deliver creative media solutions that elevate your brand and captivate audience...', img: mediagif, path: '/media', x: -100, y: -50 },
+//     { id: 2, title: 'Content Writing', description: 'We craft narratives that inspire action...', img: contentgif, path: '/ContentWriting', x: 100, y: -50 },
+//     { id: 3, title: 'Marketing', description: 'We craft innovative marketing strategies...', img: marketinggif, path: '/marketing', x: -100, y: 50 },
+//     { id: 4, title: 'IT', description: 'We develop user-friendly websites...', img: itgif, path: '/it', x: 100, y: 50 },
+//     { id: 5, title: 'Studio', description: 'We can manage your social handle efficiently...', img: studiogif, path: '/studio', x: -150, y: 100 },
+//     { id: 6, title: 'Event Management', description: 'Get your important events managed by us...', img: eventgif, path: '/events', x: 150, y: 100 },
+//   ];
+
+//   return (
+//     <section id='Services'>
+//       <h2 className='heading'>SERVICES</h2>
+//       <section className="services">
+//         {services.map((service) => (
+//           <motion.div
+//             key={service.id}
+//             className={`service-item ${loaded ? 'loaded' : ''}`}
+//             data-number={service.id}
+//             onClick={() => handleNavigate(service.path)}
+//             initial="initial"
+//             animate={loaded ? 'animate' : ''}
+//             custom={{ x: service.x, y: service.y }}
+//             variants={animationVariants}
+//           >
+//             <h3>{service.title}</h3>
+//             <p>{service.description}</p>
+//             <img src={service.img} alt={service.title} />
+//           </motion.div>
+//         ))}
+//       </section>
+//     </section>
+//   );
+// };
+
+// export default Services;

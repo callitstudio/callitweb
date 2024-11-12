@@ -25,7 +25,7 @@
 .service-item:nth-child(odd)>img{
   position: absolute;
   top: 50%;
-  left: -50%;
+  left: -55%;
   transform: translate(-50%, -50%);
   width: 300px;
   height: 200px;
@@ -39,7 +39,7 @@
 .service-item:nth-child(even)>img{
   position: absolute;
   top: 50%;
-  left: 150%;
+  left: 155%;
   transform: translate(-50%, -50%);
   width: 300px;
   height: 200px;
@@ -330,14 +330,18 @@
   .service-item{
     height: 400px;
   }
-
+  
+  
   .service-item:nth-child(odd)>img{
     position: absolute;
     top: 70%;
     left: 50%;
     width: 90%;
     border: none;
-    /* border: 1px solid green; */
+    animation-name: popUp;
+    animation-duration: 1s;
+    animation-delay: 0s; 
+    /* border: 1px solid black; */
   }
   .service-item:nth-child(even)>img{
     position: absolute;
