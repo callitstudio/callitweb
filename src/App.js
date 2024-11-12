@@ -18,11 +18,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ContentWriting from './components/ContentWriting';
 import Studio from './components/Studio';
-<<<<<<< HEAD
 // import AboutUs from './components/AboutUs';
-=======
-
->>>>>>> 8bc740b0a4b1891fb66d52a0b67c9820aef1122e
 
 function App() {
   return (
