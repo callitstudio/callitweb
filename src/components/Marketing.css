@@ -13,7 +13,8 @@
   font-family: 'Arial', sans-serif;
   border: 1px solid #CDA0FF;
   text-align: center;
-  perspective: 1000px;  
+  perspective: 1000px; 
+  padding-top: 9%; 
 }
 
 /* Title Styling */
@@ -28,7 +29,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto); 
-  gap: 20px; /* Space between cards */
+  gap: 10px; /* Space between cards */
 }
 
 /* Card Styling */

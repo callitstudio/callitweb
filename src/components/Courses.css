@@ -1,13 +1,23 @@
 .courses-page {
-    padding: 20px;
-    background-color: #1f1f1f;
-    color: white;
-    font-family: Montserrat;
+  background-color: #1f1f1f;
+  color: white;
+  font-family: Montserrat;
+  width: 100%;
+  max-width: 1200px;
+  margin: 10% auto;
+  padding-top: 20%;
 
+  }
+
+  .courses-page>h2{
+    color: red;
+    z-index: 2;
+    position: relative;
+    top: 10%;
   }
   
   .search-section {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     padding: 20px 0;
@@ -50,10 +60,14 @@
   }
   
   .categories-grid {
+    background: #000;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto); 
+    gap: 20px; 
+    justify-content: center; 
+    padding-top: 50px;
+
   }
   
   .category-card {
@@ -115,3 +129,21 @@
     cursor: pointer;
   }
   
+
+  .featureCourse{
+    margin-top: 10%;
+  }
+
+
+  
+  
+  @media (max-width: 800px) {
+    .courseSection{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 16px;
+    }
+    
+  }

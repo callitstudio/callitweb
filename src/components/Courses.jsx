@@ -1,58 +1,77 @@
-import React from 'react';
-import './Courses.css';
+import React from "react";
+import FlipCard from "./FlipCard";
+import courseImg from "../assets/images/courseImg.jpeg"; 
 
-export default function Courses() {
+function Courses() {
+  // Define Categories with Default Descriptions and Images
   const categories = [
-    'Development', 'Painting', 'Writing', 'Videography', 'Marketing',
-    'Graphic Design', 'SEO', 'Data Science', 'Product Shoot', 'Branding'
-  ];
+    "Development",
+    "Painting",
+    "Writing",
+    "Videography",
+    "Marketing",
+    "Graphic Design",
+    "SEO",
+    "Data Science",
+    "Product Shoot",
+    "Branding",
+  ].map((category) => ({
+    title: category,
+    image: courseImg, // Use a default image for now
+    description: `Learn about ${category} and enhance your skills.`,
+  }));
 
+  // Define Featured Courses
   const featuredCourses = [
-    { title: 'Complete Web Development Course 2024', author: 'Hammad Khan', rating: 4.5 },
-    { title: 'Advanced SEO Strategies', author: 'Sara Ali', rating: 4.7 },
-    { title: 'Digital Marketing Mastery', author: 'John Doe', rating: 4.6 }
+    {
+      title: "Complete Web Development Course 2024",
+      image: courseImg,
+      description: "Learn full-stack web development from scratch.",
+    },
+    {
+      title: "Advanced SEO Strategies",
+      image: courseImg,
+      description: "Master the latest SEO techniques for better rankings.",
+    },
+    {
+      title: "Digital Marketing Mastery",
+      image: courseImg,
+      description: "Become a pro at digital marketing with hands-on projects.",
+    },
   ];
 
   return (
     <div className="courses-page">
-      {/* Search Section */}
-      <section className="search-section">
-        <input type="text" className="search-bar" placeholder="Search for courses" />
-        <div className="filters">
-          <button>Relevancy</button>
-          <button>Alphabetically</button>
-          <i className="filter-icon">🔍</i>
-        </div>
-      </section>
-
       {/* Course Categories */}
-      <section className="course-categories">
-        <h2>Course Categories</h2>
-        <div className="categories-grid">
-          {categories.map((category, index) => (
-            <div className="category-card" key={index}>{category}</div>
-          ))}
-        </div>
-      </section>
+      <h2>Course Categories</h2>
+      <div className="courseSection">
+        {categories.map((category, index) => (
+          <FlipCard
+            key={`category-${index}`}
+            title={category.title}
+            image={category.image}
+            description={category.description}
+          />
+        ))}
+      </div>
 
       {/* Featured Courses */}
-      <section className="featured-courses">
-        <h2>Featured Courses</h2>
-        <div className="courses-grid">
-          {featuredCourses.map((course, index) => (
-            <div className="course-card" key={index}>
-              <div className="badge">Beginners</div>
-              <h3>{course.title}</h3>
-              <p>By {course.author}</p>
-              <div className="rating">
-                {'⭐'.repeat(Math.floor(course.rating))}
-                {'☆'.repeat(5 - Math.floor(course.rating))}
-              </div>
-              <button className="start-learning-btn">Start Learning</button>
-            </div>
-          ))}
+      <div className="featureCourse">
+
+      <h2>Featured Courses</h2>
+      <div className="courseSection">
+        {featuredCourses.map((course, index) => (
+          <FlipCard
+          key={`featured-${index}`}
+          title={course.title}
+          image={course.image}
+          description={course.description}
+          />
+        ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 }
+
+export default Courses;
