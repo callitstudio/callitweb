@@ -57,7 +57,7 @@
 .left h1 {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 2rem;
   font-family: Montserrat;
   color: #201d1d; /* Darker text for contrast */
   letter-spacing: 1px; /* Slightly more spaced letters for better look */
@@ -65,7 +65,7 @@
 
 .left p {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: Montserrat;
   line-height: 1.8;
   color: #141111;

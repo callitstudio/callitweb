@@ -42,15 +42,18 @@
     /* border: 1px solid #CDA0FF; */
     text-align: center;
     perspective: 1000px;
-    padding-top: 15%;
+    padding-top: 5%;
   }
   
   .studio-cards {
-    padding-top: 5%;
+    padding-top: 2%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto); 
-    gap: 20px;
+    gap: 6px;
+    width: 94%;
+    margin:0  auto;
+    /* margin-right: auto; */
 
   }
   

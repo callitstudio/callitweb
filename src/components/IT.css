@@ -29,7 +29,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, auto); 
-  gap: 20px; /* Space between cards */
+  gap: 8px; /* Space between cards */
+  width: 88%;
+  margin: 8% 4%;
 }
 
 /* Card Styling */
