@@ -14,7 +14,7 @@
   background: var(--background-transparent);
   color: var(--text-color-default); 
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transition for scroll effect */
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -41,6 +41,7 @@
   align-items: center; /* Center items vertically */
   font-family: Montserrat;
   z-index: 2;
+  color: rgb(22, 20, 20);
 }
 
 .nav ul {
@@ -49,6 +50,7 @@
   list-style: none;
   text-align: justify;
   font-family: Montserrat;
+  color: rgb(22, 20, 20);
 }
 
 .nav li {
@@ -56,6 +58,7 @@
   font-weight: bold;
   font-size: large;
   font-family: Montserrat;
+  color: rgb(22, 20, 20);
   word-spacing: 10px; /* Adds spacing between words */
 }
 
