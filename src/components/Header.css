@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
-  background: #800000; /* Default maroon background */
+  background: transparent; /* Initial transparent background */
   color: white; /* White text for default */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for scroll effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transition for scroll effect */
   position: fixed;
   width: 100%;
   top: 0;
@@ -88,7 +88,7 @@
 
 /* Scroll effect when header changes color */
 .header.scrolled {
-  background: #cecea4 !important; /* Light grey background when scrolled */
+  background: #51090d !important; /* Maroon background when scrolled */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  color: black; /* Change text color to black */
+  color: white; /* Change text color to white when scrolled */
 }

@@ -5,10 +5,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const ContactUs = () => {
   return (
     <>
-      <div className='Contactheading'>
+      {/* <div className='Contactheading'>
         <h2>CONTACT US</h2>
         <p>Any question or remarks? Just write us a message!</p>
-      </div>
+      </div> */}
 
       <section className="contact-section">
         <div className="contact-container">

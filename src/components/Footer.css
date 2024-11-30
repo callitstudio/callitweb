@@ -8,12 +8,14 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  color: white; /* White text color for the entire footer */
 }
 
 .footer-section {
   flex: 1;
   margin: 10px;
   text-decoration: none;
+  color: white; /* Ensure the text is white in the sections */
 }
 
 .logo-footer {
@@ -31,10 +33,12 @@
   text-align: center;
   padding-top: 10px;
   border-top: 1px solid #ccc;
+  color: white; /* White text color for footer bottom */
 }
 
 ul {
   list-style-type: none;
+  color: white; /* White text color for the list items */
 }
 
 .email-input {
@@ -45,8 +49,8 @@ ul {
 }
 
 .quick-links li {
-  text-decoration: none; /* Removes the underline */
-  color: inherit;
+  text-decoration: none;
+  color: white; /* White text color for quick links */
 }
 
 .quick-links li:hover {
@@ -98,9 +102,10 @@ ul {
   .footer-content {
     display: flex;
     flex-direction: column;
+    color: white; /* White text color for mobile screens */
   }
 
   .footer-container {
-    background: linear-gradient(180deg, #800000, #4d4d4d, #1a1a1a); /* Maroon to dark gray-black */
+    background: linear-gradient(180deg, #51090d, #4d4d4d, #1a1a1a); /* Maroon to dark gray-black */
   }
 }
