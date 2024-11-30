@@ -59,28 +59,41 @@
   font-weight: bold;
   font-size: 3rem; /* Increased font size */
   font-family: Montserrat;
-  color: #800000; /* Maroon color for heading */
+  color: white; /* Maroon color for heading */
   letter-spacing: 1px; /* Slightly more spaced letters for better look */
 }
 
-.left p {
+/* .left p {
   font-weight: bold;
-  font-size: 1.2rem; /* Increased font size */
+  font-size: 1.2rem; 
   font-family: Montserrat;
   line-height: 1.8;
-  color: #4D4D4D; /* Dark gray text for better contrast */
+  color: white; 
+  margin-bottom: 30px;
+  transition: color 0.3s ease; 
+} */
+.slogen{
+  font-weight: bold;
+  font-size: 2.0rem; /* Increased font size */
+  font-family: Montserrat;
+  line-height: 1.8;
+  color: white; /* Dark gray text for better contrast */
   margin-bottom: 30px;
   transition: color 0.3s ease; /* Smooth text color change */
 }
 
-.left p:hover {
-  color: #800000; /* Change text color to maroon on hover */
+.slogen:hover{
+  color: #18c3a5;
   cursor: pointer;
 }
+/* .left p:hover {
+  color: #800000; 
+  cursor: pointer;
+} */
 
 /* Call to Action Button */
 .cta-btn {
-  background-color: #A52A2A; /* Darker maroon button */
+  background-color: #18c3a5; /* Darker maroon button */
   color: #FFFFFF; /* White text */
   padding: 20px 50px; /* Adjusted padding */
   border: none;
@@ -94,8 +107,8 @@
 }
 
 .cta-btn:hover {
-  background-color: #800000; /* Maroon hover color */
-  color: #D3D3D3; /* Light gray text */
+  background-color: #085b4c; /* Maroon hover color */
+  color: whitesmoke; /* Light gray text */
   transform: scale(1.05); /* Slight scale-up effect */
 }
 

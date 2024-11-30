@@ -16,7 +16,7 @@ export const MainSection = () => {
         <section className="row left">
           <div className="col-md-6 col-sm-12">
             <h1>CALL IT STUDIO</h1>
-            <p>Where Creativity Meets Technology to Craft Digital Excellence</p>
+            <p className='slogen'>Where Creativity Meets Technology to Craft Digital Excellence</p>
           </div>
           <button className="cta-btn" onClick={handleLearnMoreClick}>
             Learn More
