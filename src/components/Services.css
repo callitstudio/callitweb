@@ -1,5 +1,54 @@
-/* Services Section Styles */
+/* General Styles for Services Section */
+.services {
+  background-color: #F5F5DC;
+  color: rgb(34, 31, 31);
+  padding: 50px 0;
+  font-weight: bold;
+  font-size: 7rem;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
 
+/* Center Line */
+.services::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 90%;
+  background: linear-gradient(to bottom, #ceaea4, #cecea4, #cea4af);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 0 10px;
+  position: relative;
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 3px;
+  background-color: #cecea4;
+  transform: translateX(-50%);
+}
+
+/* Service Item Styles */
 .service-item {
   background-color: #cecea4;
   border: 2px solid #ceeea4;
@@ -7,22 +56,55 @@
   padding: 50px;
   margin: 20px 0;
   width: 40%;
+  text-align: left;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0; /* Start as invisible */
-  transform: scale(0.8); /* Start small */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for smooth effect */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Animation: Start invisible */
+  transform: scale(0.8);
 }
 
-/* When loaded, the item moves into place */
+/* Service Item Loaded Animation */
 .service-item.loaded {
-  opacity: 1; /* Make it visible */
-  transform: scale(1); /* Return to normal size */
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Image positioning */
+/* Hover Effects for Service Items */
+.service-item:hover {
+  transform: scale(1.05);
+  background-color: #ecfa9c;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
 
-.service-item:nth-child(odd)>img{
+/* Alternating Service Items */
+.service-item:nth-child(odd) {
+  left: 22%;
+}
+
+.service-item:nth-child(even) {
+  right: 22%;
+}
+
+/* Number Circle */
+.number-circle {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  background-color: #b4b47b;
+  color: #1c1b1f;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Images within Service Items */
+.service-item:nth-child(odd) > img {
   position: absolute;
   top: 50%;
   left: -55%;
@@ -30,13 +112,12 @@
   width: 300px;
   height: 200px;
   object-fit: cover;
-  opacity: 1;
   border: 2px solid black;
   border-radius: 10%;
-  transition: opacity 0.5s ease 0.5s; 
+  transition: opacity 0.5s ease 0.5s;
 }
 
-.service-item:nth-child(even)>img{
+.service-item:nth-child(even) > img {
   position: absolute;
   top: 50%;
   left: 155%;
@@ -44,215 +125,31 @@
   width: 300px;
   height: 200px;
   object-fit: cover;
-  opacity: 1;
   border: 2px solid black;
   border-radius: 10%;
-  transition: opacity 0.5s ease 0.5s; 
-}
-/* .service-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  opacity: 1;
-  transition: opacity 0.5s ease 0.5s; 
+  transition: opacity 0.5s ease 0.5s;
 }
 
-.service-image:nth-child(2){
-  position: absolute;
-  top: 10%;
-} */
-
-/* .service-image:nth-child(2){
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  opacity: 1;
-  z-index: 2;
-} */
-
-
-/* .service-image:nth-child(even) {
-  position: absolute;
-  top: 50%;
-  left: -50%;
-  transform: translate(-50%, -50%);
-  width: 50px; 
-  height: 50px;
-  object-fit: cover;
-  opacity: 1;
-  border: 3px solid black;
-  transition: opacity 0.5s ease 0.5s; 
-} */
-
-/* When loaded, images will fade in */
-.service-item.loaded .service-image {
-  opacity: 1;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .service-item {
-    width: 80%; 
-  }
-}
-/* General Styles for the Services Section */
-.heading {
-  font-size: 4rem; /* Large font size for emphasis */
-  font-weight: bold; /* Make the text bold */
-  color: #333333; /* Dark color for good contrast */
-  text-transform: uppercase; /* Transform text to uppercase for a clean look */
-  letter-spacing: 2px; /* Increase the letter spacing for better readability */
-  text-align: center; /* Center-align the heading */
-  /* margin-bottom: 20px;  */
-  position: relative; /* To position any decorative elements if needed */
-  padding: 0 10px; /* Padding to make it look more spacious */
-}
-
-/* Optional: Adding a decorative underline effect */
-.heading::after {
-  content: ''; /* Empty content for the underline */
-  position: absolute;
-  bottom: 0; /* Place the line at the bottom */
-  left: 50%; /* Align it to the center */
-  width: 60%; /* Set the width of the underline */
-  height: 3px; /* Height of the underline */
-  background-color: #cecea4; /* Color of the underline */
-  transform: translateX(-50%); /* Center the line */
-}
-
-.services {
-  background-color: #F5F5DC;
-  color: rgb(34, 31, 31);
-  padding: 50px 0;
-  font-weight: bold;
-  font-size: 7rem;
-  font-family: Montserrat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative; /* For positioning the center line */
-}
-/* .services h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #333333;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  position: relative; /* Ensure it's above pseudo-element 
-  z-index: 1; /* Set z-index higher than the pseudo-element 
-} */
-
-/* Increased font size for headings */
+/* Service Item Headings */
 .service-item h3 {
-  font-size: 3rem; /* Increase font size for service item heading */
+  font-size: 3rem;
   font-weight: bold;
   position: absolute;
   top: 10%;
   left: 25%;
-  /* margin-bottom: 5%;
-  padding-bottom: -10px; */
-  color: rgb(102, 95, 95);
   color: rgb(45, 53, 18);
-  margin-bottom: 20px;
 }
 
-/* Increased font size for paragraph */
+/* Paragraph Text in Service Items */
 .service-item p {
-  font-size: 1.6rem; /* Increased font size for the paragraph */
+  font-size: 1.6rem;
   line-height: 1.6;
-  color: #7f7f7f; /* Grey text */
-  /* padding-bottom: 29px; */
-  margin-top:11% ;
-  transition: color 0.3s ease; /* Smooth color change on hover */
+  color: #7f7f7f;
+  margin-top: 11%;
+  transition: color 0.3s ease;
 }
 
-/* Service Item Styling */
-.service-item {
-  background-color: #cecea4;
-  border: 2px solid #ceeea4;
-  border-radius: 10px;
-  padding: 50px;
-  margin: 20px 0;
-  width: 40%; /* Adjusted width */
-  padding-bottom: 5%;
-  text-align: left;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
-}
-
-/* Service Item Hover Effects */
-.service-item:hover {
-  transform: scale(1.05); /* Scale effect on hover */
-  background-color: #ecfa9c; /* Change background on hover */
-  color: #F5F5DC;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
-
-/* Number Circle Styling */
-.number-circle {
-  position: absolute;
-  top: 5%;
-  left: 8%;
-  background-color: #b4b47b;
-  color: #1c1b1f;
-  width: 50px; /* Increased size of circle */
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem; /* Larger font size inside the circle */
-  font-weight: bold;
-}
-
-/* Center line */
-.services::before {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 90%;
-  background: linear-gradient(to bottom,  #ceaea4,#cecea4, #cea4af);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
-/* Positioning of service items */
-.service-item:nth-child(odd) {
-  position: relative;
-  left: 22%;
-  z-index: 1;
-}
-
-.service-item:nth-child(even) {
-  position: relative;
-  right: 22%;
-  z-index: 1;
-}
-
-/* .service-item:nth-child(3) {
-  position: relative;
-  left: 22%;
-  z-index: 1;
-}
-
-.service-item:nth-child(4) {
-  position: relative;
-  right: 22%;
-  z-index: 1;
-} */
-
+/* Animations */
 @keyframes fromleft {
   0% {
     opacity: 0;
@@ -276,79 +173,42 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 710px) {
-
-  .services::before{
+@media (max-width: 768px) {
+  .services::before {
     display: none;
   }
-  
-  .service-item:nth-child(odd) {
-    width: 80%; 
-    margin: 1% 35%;
-    margin-left: -10%;
-    animation: fromleft 2s ease forwards;
-    
-  }
 
-
-  .service-item:nth-child(even) {
-    margin: 1% 35%;
+  .service-item {
     width: 80%;
-    margin-right: -9%;
-    animation: fromright 2s ease forwards;
-    
-  }
-  
-  .service-item:nth-child(2)>h3{
-    position: absolute;
-    left: 10%;
-    
-  }
-  
-  
-  .service-item:nth-child(4)>h3{
-    position: absolute;
-    left: 50%;
-  }
-  
-  .service-item:nth-child(5 )>h3{
-    position: absolute;
-    left: 35%;
-    
-  }
-  
-  .service-item:nth-child(6)>p{
-    margin-top: 22%;
-  }
-  
-  .services{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .service-item{
+    margin: 20px auto;
     height: 400px;
   }
-  
-  
-  .service-item:nth-child(odd)>img{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    width: 90%;
-    border: none;
-    animation-name: popUp;
-    animation-duration: 1s;
-    animation-delay: 0s; 
-    /* border: 1px solid black; */
+
+  .service-item:nth-child(odd),
+  .service-item:nth-child(even) {
+    margin: 20px auto;
+    animation: fromleft 2s ease forwards;
   }
-  .service-item:nth-child(even)>img{
+
+  .service-item:nth-child(even) {
+    animation: fromright 2s ease forwards;
+  }
+
+  .service-item h3 {
+    left: 10%;
+  }
+
+  .service-item p {
+    margin-top: 22%;
+  }
+
+  .service-item img {
     position: absolute;
     top: 70%;
     left: 50%;
     width: 90%;
+    transform: translate(-50%, -50%);
     border: none;
-    /* z-index: 2; */
+    animation: popUp 1s ease;
   }
 }

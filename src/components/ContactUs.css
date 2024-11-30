@@ -1,5 +1,5 @@
 .contact-section {
-  background-color: #1c1b1f;
+  background-color: #ddcbcb;
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
 
 .contact-container {
   display: flex;
-  background-color: #2d2c35;
+  background-color: #867f7f;
   padding: 0;
   border-radius: 20px;
   width: 80%;
@@ -18,7 +18,7 @@
 
 
 .contact-info {
-  background-color: #15151b;
+  background-color: #800000;
   padding: 50px 10px;
   border-radius: 20px 0 0 20px;
   flex: 0.9;

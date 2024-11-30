@@ -1,52 +1,48 @@
-
-
-
-
 .footer-container {
-  background-image: linear-gradient(150deg,  rgb(80, 39, 92),rgb(219, 206, 219));
+  background-image: linear-gradient(150deg, rgb(128, 0, 0), rgb(50, 50, 50));
   padding: 20px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-section {
-  flex: 1; 
+  flex: 1;
   margin: 10px;
   text-decoration: none;
 }
 
 .logo-footer {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo-img {
-  width: 50px; 
-  height: auto; 
-  margin-right: 10px; 
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 10px;
-  border-top: 1px solid #ccc; 
+  border-top: 1px solid #ccc;
 }
-ul{
-  list-style-type: none;
 
+ul {
+  list-style-type: none;
 }
-.email-input{
+
+.email-input {
   border-radius: 8px;
   height: 30px;
   border: none;
   width: 200px;
 }
-
 
 .quick-links li {
   text-decoration: none; /* Removes the underline */
@@ -56,11 +52,10 @@ ul{
 .quick-links li:hover {
   cursor: pointer;
   font-size: 2rem;
-  
 }
 
 .social-icons a[href*="instagram"] i {
-  color: red; /* Change Instagram icon color to red */
+  color: red; /* Instagram icon color */
 }
 
 /* Optional hover effect */
@@ -69,58 +64,43 @@ ul{
   scale: 1.2;
 }
 
-
 /* fb */
-
-
 .social-icons a[href*="facebook"] i {
-  color: blue;
+  color: #3b5998; /* Facebook icon color */
 }
-
 
 .social-icons a[href*="facebook"]:hover i {
-  color: darkblue; 
+  color: #2d4373; /* Darker Facebook color */
   scale: 1.2;
 }
-
 
 /* linked in */
-
 .social-icons a[href*="linkedin"] i {
-  color: darkblue;
+  color: #0077b5; /* LinkedIn icon color */
 }
 
-
 .social-icons a[href*="linkedin"]:hover i {
-  color: darkblue; 
+  color: #005582; /* Darker LinkedIn color */
   scale: 1.2;
 }
 
-
 /* github */
-
-
 .social-icons a[href*="github"] i {
   color: black;
 }
 
-
 .social-icons a[href*="github"]:hover i {
-  color: black; 
+  color: black;
   scale: 1.2;
 }
 
 @media (max-width: 800px) {
-  .footer-content{
+  .footer-content {
     display: flex;
     flex-direction: column;
-    /* background: ; */
   }
 
-  .footer-container{
-    /* background: #8c8c73; */
-    /* background: #8b8b70;  prefered*/
-    background: linear-gradient(180deg, #a9a98c, #8c8c73, #8b8b70);
-
+  .footer-container {
+    background: linear-gradient(180deg, #800000, #4d4d4d, #1a1a1a); /* Maroon to dark gray-black */
   }
-}  
+}

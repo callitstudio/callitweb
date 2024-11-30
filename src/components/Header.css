@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
-  /* background-image: linear-gradient(150deg, rgb(219, 206, 219), rgb(80, 39, 92));  */
-  color: white;
+  background: #800000; /* Default maroon background */
+  color: white; /* White text for default */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for scroll effect */
   position: fixed;
   width: 100%;
@@ -35,7 +35,6 @@
   align-items: center; /* Center items vertically */
   font-family: Montserrat;
   z-index: 2;
-
 }
 
 .nav ul {
@@ -54,9 +53,10 @@
   word-spacing: 10px; /* Adds spacing between words */
 }
 
-.nav li:hover{
+.nav li:hover {
   scale: 1.2;
 }
+
 /* Mobile Styles */
 .menu-icon {
   display: none; /* Hidden by default */
@@ -70,7 +70,7 @@
     display: none; /* Hide navigation links by default */
     flex-direction: column; /* Stack items vertically */
     position: absolute; /* Positioning for dropdown */
-    background: #cecea4; /* Background for dropdown */
+    background: #800000; /* Background for dropdown */
     top: 80px; /* Position below the header */
     right: 20px; /* Align to the right */
     width: 200px; /* Width of dropdown */
@@ -88,7 +88,7 @@
 
 /* Scroll effect when header changes color */
 .header.scrolled {
-background: #cecea4 !important; /* Change to grey when scrolled */
+  background: #cecea4 !important; /* Light grey background when scrolled */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  color: black;
+  color: black; /* Change text color to black */
 }

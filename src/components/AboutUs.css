@@ -1,13 +1,9 @@
 .about-section {
-  
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px;
-  background: linear-gradient(45deg, #e0d254, #8d7c78, #dfaa9c, #c0c26a);
-  background-size: 400% 400%;
-  z-index: -1;
-  animation: gradientAnimation 10s ease infinite;
+  background-color: #ddcbcb; /* Light grey background */
 }
 
 .about-content {
@@ -29,7 +25,7 @@
   height: auto;
   border-radius: 8px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
-  border: 5px solid #ddd; /* Add border */
+  border: 5px solid #D3D3D3; /* Add border */
   object-fit: cover;
 }
 
@@ -41,68 +37,61 @@
 .profile-name {
   font-size: 2em;
   font-weight: bold;
-  color: #333;
+  color: #800000; /* Maroon color */
   margin: 0;
 }
 
 .profile-role {
   font-size: 1.2em;
-  color: #555;
+  color: #4D4D4D; /* Dark gray */
   margin-top: 5px;
 }
 
 .blurb {
   margin: 20px 0;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #FFFFFF; /* White background */
   border-radius: 8px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Blurb shadow */
 }
 
 .blurb h3 {
   font-size: 1.5em;
-  color: #333;
+  color: #800000; /* Maroon color */
   margin-bottom: 10px;
 }
 
 .blurb p {
   font-size: 1em;
   line-height: 1.6;
-  color: #666;
+  color: #4D4D4D; /* Dark gray */
 }
-/* Motion background for the whole page */
+
+/* Static grey background for the whole page */
 .motion-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fcb69f);
-  background-size: 400% 400%;
+  background-color: #D3D3D3; /* Light grey background */
   z-index: -1;
-  animation: gradientAnimation 15s ease infinite;
 }
 
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+@media (max-width: 700px) {
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    order: -1;
+  }
 
-@media (max-width: 700px){
-.about-content{
-  display: flex;
-  flex-direction: column-reverse;
-  order: -1;
-}
+  .profile-name {
+    display: flex;
+    justify-content: center;
+  }
 
-.profile-name{
-  display: flex;
-  justify-content: center;
-}
-
-.profile-role{
-  display: flex;
-  justify-content: center;
-}
+  .profile-role {
+    display: flex;
+    justify-content: center;
+  }
 }

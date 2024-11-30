@@ -4,10 +4,10 @@
   padding: 0;
   height: 70vh; /* Full viewport height */
   background-image: url('../assets/images/mainbg.jpg'); /* Background image */
-  background-size: cover;  /* Make the image cover the entire screen */
+  background-size: cover; /* Make the image cover the entire screen */
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;  /* To control overlay */
+  position: relative; /* To control overlay */
   overflow: hidden; /* Prevents any unwanted overflow */
 }
 
@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay to fade background */
+  background: rgba(128, 128, 128, 0.7); /* Grey overlay for a neutral effect */
   z-index: 1;
 }
 
@@ -40,9 +40,9 @@
 /* Left Section (Text Container) */
 .left {
   flex: 1;
-  background-color: #dee6af6b; /* Lighter background for readability */
-  border-radius: 20px;  /* Rounded corners */
-  padding: 20px;
+  background-color: rgba(211, 211, 211, 0.8); /* Light gray background for readability */
+  border-radius: 20px; /* Rounded corners */
+  padding: 30px; /* Increased padding */
   text-align: center;
   backdrop-filter: blur(3px); /* Blur the background */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -57,57 +57,58 @@
 .left h1 {
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 3rem; /* Increased font size */
   font-family: Montserrat;
-  color: #201d1d; /* Darker text for contrast */
+  color: #800000; /* Maroon color for heading */
   letter-spacing: 1px; /* Slightly more spaced letters for better look */
 }
 
 .left p {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Increased font size */
   font-family: Montserrat;
   line-height: 1.8;
-  color: #141111;
+  color: #4D4D4D; /* Dark gray text for better contrast */
   margin-bottom: 30px;
   transition: color 0.3s ease; /* Smooth text color change */
 }
 
 .left p:hover {
-  color: white; /* Change text color on hover */
+  color: #800000; /* Change text color to maroon on hover */
   cursor: pointer;
 }
 
 /* Call to Action Button */
 .cta-btn {
-  background-color: #ecfa9c;
-  color: rgb(51, 45, 45);
-  padding: 18px 40px;
+  background-color: #A52A2A; /* Darker maroon button */
+  color: #FFFFFF; /* White text */
+  padding: 20px 50px; /* Adjusted padding */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.8rem; /* Increased font size */
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  width: 20%; /* Button width */
+  width: 30%; /* Adjusted button width */
   margin-top: 20px;
 }
 
 .cta-btn:hover {
-  background-color: white;
-  color: #869433;
-  transform: scale(1.05); /* Slight scale up effect */
+  background-color: #800000; /* Maroon hover color */
+  color: #D3D3D3; /* Light gray text */
+  transform: scale(1.05); /* Slight scale-up effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .intro {
-    /* flex-direction: row; */
     flex-wrap: wrap;
     gap: 10%;
   }
-  .container-fluid{
-  /* height: 90vh; */
+
+  .container-fluid {
+    height: 90vh;
+  }
 
   .left {
     flex: 100%;
@@ -116,23 +117,23 @@
     margin-left: 8%;
     margin-top: 20%;
   }
-  }
+
   .text-section h1 {
     font-size: 2.5em;
   }
+
   .intro {
-    /* flex-direction: column; */
     width: 100%;
   }
 
   .left p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Slightly smaller but consistent */
   }
 
   .cta-btn {
-    width: 100%;  /* Full width on smaller screens */
+    width: 100%; /* Full width on smaller screens */
     padding: 15px;
-    font-size: 1.4rem;
+    font-size: 1.6rem; /* Adjusted for smaller screens */
   }
 }
 
