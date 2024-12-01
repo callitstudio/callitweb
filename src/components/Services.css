@@ -66,6 +66,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   opacity: 0; /* Animation: Start invisible */
   transform: scale(0.8);
+  border-radius: 10%;
 }
 
 /* Service Item Loaded Animation */
@@ -187,13 +188,14 @@
 
   .service-item {
     width: 80%;
-    margin: 20px auto;
-    height: 400px;
+    /* margin: 20px auto; */
+    height: 430px;
   }
 
   .service-item:nth-child(odd),
   .service-item:nth-child(even) {
-    margin: 20px auto;
+    /* margin: 20px auto; */
+    left: 0%;
     animation: fromleft 2s ease forwards;
   }
 
@@ -212,10 +214,26 @@
   .service-item img {
     position: absolute;
     top: 70%;
-    left: 50%;
+    left: 0%;
     width: 90%;
     transform: translate(-50%, -50%);
     border: none;
     animation: popUp 1s ease;
+  }
+  .service-item:nth-child(odd) > img{
+    top: 75%;
+    left: 55%;
+  }
+
+  .service-item:nth-child(even) > img{
+    top: 75%;
+    left: 55%;
+  }
+
+  .number-circle{
+    /* display: none; */
+    top: 8%;
+  left: 1%;
+  margin-right: 4%;
   }
 }

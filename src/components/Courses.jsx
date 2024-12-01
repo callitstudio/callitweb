@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import FlipCard from "./FlipCard";
-import courseImg from "../assets/images/courseImg.jpeg"; 
+import courseImg from "../assets/images/courseImg.jpeg";
 
 function Courses() {
-  // Define Categories with Default Descriptions and Images
+  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
+  const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0);
+
   const categories = [
     "Development",
     "Painting",
@@ -17,11 +19,10 @@ function Courses() {
     "Branding",
   ].map((category) => ({
     title: category,
-    image: courseImg, // Use a default image for now
+    image: courseImg,
     description: `Learn about ${category} and enhance your skills.`,
   }));
 
-  // Define Featured Courses
   const featuredCourses = [
     {
       title: "Complete Web Development Course 2024",
@@ -40,35 +41,80 @@ function Courses() {
     },
   ];
 
+  const handleNext = (list, setter, currentIndex) => {
+    setter((currentIndex + 1) % list.length);
+  };
+
+  const handlePrev = (list, setter, currentIndex) => {
+    setter((currentIndex - 1 + list.length) % list.length);
+  };
+
   return (
     <div className="courses-page">
       {/* Course Categories */}
       <h2>Course Categories</h2>
-      <div className="courseSection">
-        {categories.map((category, index) => (
-          <FlipCard
-            key={`category-${index}`}
-            title={category.title}
-            image={category.image}
-            description={category.description}
-          />
-        ))}
+      <div className="slider-container">
+        <button
+          className="slider-button prev"
+          onClick={() => handlePrev(categories, setCurrentCategoryIndex, currentCategoryIndex)}
+        >
+          &#8249;
+        </button>
+        <div className="slider">
+          {categories.map((category, index) => (
+            <div
+              className={`slide ${
+                index === currentCategoryIndex ? "active" : "hidden"
+              }`}
+              key={`category-${index}`}
+            >
+              <FlipCard
+                title={category.title}
+                image={category.image}
+                description={category.description}
+              />
+            </div>
+          ))}
+        </div>
+        <button
+          className="slider-button next"
+          onClick={() => handleNext(categories, setCurrentCategoryIndex, currentCategoryIndex)}
+        >
+          &#8250;
+        </button>
       </div>
 
       {/* Featured Courses */}
-      <div className="featureCourse">
-
       <h2>Featured Courses</h2>
-      <div className="courseSection">
-        {featuredCourses.map((course, index) => (
-          <FlipCard
-          key={`featured-${index}`}
-          title={course.title}
-          image={course.image}
-          description={course.description}
-          />
-        ))}
+      <div className="slider-container">
+        <button
+          className="slider-button prev"
+          onClick={() => handlePrev(featuredCourses, setCurrentFeaturedIndex, currentFeaturedIndex)}
+        >
+          &#8249;
+        </button>
+        <div className="slider">
+          {featuredCourses.map((course, index) => (
+            <div
+              className={`slide ${
+                index === currentFeaturedIndex ? "active" : "hidden"
+              }`}
+              key={`featured-${index}`}
+            >
+              <FlipCard
+                title={course.title}
+                image={course.image}
+                description={course.description}
+              />
+            </div>
+          ))}
         </div>
+        <button
+          className="slider-button next"
+          onClick={() => handleNext(featuredCourses, setCurrentFeaturedIndex, currentFeaturedIndex)}
+        >
+          &#8250;
+        </button>
       </div>
     </div>
   );
