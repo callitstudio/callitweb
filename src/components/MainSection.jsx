@@ -11,24 +11,25 @@ export const MainSection = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="intro">
-        <section className="row left">
-          <div className="col-md-6 col-sm-12">
-            <h1>CALL IT STUDIO</h1>
-            <p>Where Creativity Meets Technology to Craft Digital Excellence</p>
-          </div>
-          <button className="cta-btn" onClick={handleLearnMoreClick}>
-            Learn More
-          </button>
-        </section>
+    <div className="main-section-container">
+       {/* Animated Circles */}
+  <div className="circle left"></div>
+  <div className="circle right"></div>
+  <div className="circle left  bottom"></div>
+  <div className="circle right  bottom"></div>
 
-      {/* Right Section */}
-      <div className="right-section">
-        <div className="image-frame">
-          <img src={rightImage} alt="Studio Visual" className="framed-image" />
-        </div>
+      {/* Left Section */}
+      <div className="left-section">
+        <h1 className="large-bold-text">CALL IT STUDIO</h1>
+        <p className="description-text">
+          Where Creativity Meets Technology to Craft Digital Excellence
+        </p>
+        <button className="cta-btn" onClick={handleLearnMoreClick}>
+          Learn More
+        </button>
       </div>
+
+     
     </div>
   );
 };

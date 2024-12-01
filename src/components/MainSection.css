@@ -2,28 +2,43 @@
 .main-section-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center all content horizontally */
+  justify-content: center; /* Center the content horizontally */
   height: 100vh;
   padding: 0 10%;
   background-color: #ffffff; /* Light background for contrast */
-  text-align: center; /* Center align text */
+  text-align: center; /* Center text horizontally */
   position: relative; /* Required for positioning circles */
   overflow: hidden; /* Prevent circles from overflowing the container */
 }
 
 /* Left Section Styling */
 .left-section {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center align items horizontally */
-  padding-right: 20px;
+  align-items: center; /* Center content vertically */
 }
 
-/* Right Section Styling (removed image and frame) */
-.right-section {
-  display: none; /* Remove right section with image and frame */
+
+
+.description-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: #51090d;
+  color: #fff;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #7c1a1a;
 }
 
 /* Circles Styling */
@@ -39,18 +54,17 @@
 .circle.left {
   width: 150px;
   height: 150px;
-  top: 70px;
+  top: 10px;
   left: -50px; /* Starts slightly offscreen */
   animation-delay: 0s;
 }
 .circle.left.bottom {
   width: 150px;
   height: 150px;
-  top: 200px;
-  left: -50px; /* Starts slightly offscreen */
+  top: 160px;
+  left: 10px; /* Starts slightly offscreen */
   animation-delay: 0s;
 }
-
 .circle.right {
   width: 200px;
   height: 200px;
@@ -58,14 +72,26 @@
   right: -50px; /* Starts slightly offscreen */
   animation-delay: 2s;
 }
-.circle.right.bottom{
+
+.circle.right.bottom {
   width: 200px;
   height: 200px;
   top: 500px;
   right: -50px; /* Starts slightly offscreen */
   animation-delay: 2s;
 }
-/* Large Bold Text with 3D Animation */
+
+/* Fade-In Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Modify large text to use fade-in animation */
 .large-bold-text {
   font-size: 10rem; /* Extra large font size */
   font-weight: bold;
@@ -77,91 +103,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for 3D effect */
 
   /* Animation */
-  animation: rotate3d 5s ease-out forwards; /* Runs once on load */
-  transform-origin: center; /* Set origin for 3D rotation */
-  perspective: 1000px; /* Adds depth to 3D */
-}
-/* Left Section (Text Container) */
-/* .left {
-  flex: 1;
-  background-color: rgba(211, 211, 211, 0.8); 
-  border-radius: 20px; 
-  padding: 30px;
-  text-align: center;
-  backdrop-filter: blur(3px); 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-  z-index: 3;
-  transition: transform 0.5s ease-out; /* Add transition effect */
-}
-
-.left:hover {
-  transform: translateY(-10px); /* Add hover effect for slight lift */
-}
-
-.left h1 {
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 3rem; /* Increased font size */
-  font-family: Montserrat;
-  color: #800000; /* Maroon color for heading */
-  letter-spacing: 1px; /* Slightly more spaced letters for better look */
-}
-
-.left p {
-  font-weight: bold;
-  font-size: 1.2rem; /* Increased font size */
-  font-family: Montserrat;
-  line-height: 1.8;
-  color: #4D4D4D; /* Dark gray text for better contrast */
-  margin-bottom: 30px;
-  transition: color 0.3s ease; /* Smooth text color change */
-}
-
-.left p:hover {
-  color: #800000; /* Change text color to maroon on hover */
-  cursor: pointer;
-}
-
-/* Call to Action Button */
-.cta-btn {
-  background-color: #18c3a5; /* Darker maroon button */
-  color: #FFFFFF; /* White text */
-  padding: 20px 50px; /* Adjusted padding */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: Montserrat;
-  font-size: 1.8rem; /* Increased font size */
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  width: 30%; /* Adjusted button width */
-  margin-top: 20px;
-}
-
-.cta-btn:hover {
-  background-color: #085b4c; /* Maroon hover color */
-  color: whitesmoke; /* Light gray text */
-  transform: scale(1.05); /* Slight scale-up effect */
-}
-
-
-/* 3D Rotation Keyframes */
-@keyframes rotate3d {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  25% {
-    transform: rotateX(0deg) rotateY(90deg);
-  }
-  50% {
-    transform: rotateX(180deg) rotateY(0deg);
-  }
-  75% {
-    transform: rotateX(0deg) rotateY(-90deg);
-  }
-  100% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
+  animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in */
 }
 
 /* Circle Movement Keyframes */
@@ -191,17 +133,8 @@
     padding: 20px;
   }
 
-  .left-section {
-    text-align: center;
-    padding: 0;
-  }
-
   .large-bold-text {
     font-size: 3rem; /* Adjust for smaller screens */
-  }
-
-  .right-section {
-    display: none; /* Hide the right section on smaller screens */
   }
 
   .circle.left {
