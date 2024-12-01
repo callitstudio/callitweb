@@ -5,7 +5,9 @@
   justify-content: center; /* Center the content horizontally */
   height: 100vh;
   padding: 0 10%;
-  background-color: #ffffff; /* Light background for contrast */
+  background-color: white;
+
+  /* background-color: #e4dfdf; */
   text-align: center; /* Center text horizontally */
   position: relative; /* Required for positioning circles */
   overflow: hidden; /* Prevent circles from overflowing the container */

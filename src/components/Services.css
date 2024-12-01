@@ -6,7 +6,7 @@
   padding: 50px 0;
   font-weight: bold;
   font-size: 7rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Montesrat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
   width: 3px;
   height: 90%;
   /* background: linear-gradient(to bottom, #ceaea4, #cecea4, #cea4af); */
-  background: linear-gradient(to bottom, #008080, #4c8c88, #39ff14);
+  background: linear-gradient(to bottom, #51090d, #e4dfe0, #51090d);
 
   left: 50%;
   transform: translateX(-50%);
@@ -54,7 +54,7 @@
 
 /* Service Item Styles */
 .service-item {
-  background-color: #62c7b4;
+  background-color: #51090d;
   border: 2px solid #ceeea4;
   border-radius: 10px;
   padding: 50px;
@@ -77,7 +77,7 @@
 /* Hover Effects for Service Items */
 .service-item:hover {
   transform: scale(1.05);
-  background-color:  #085b4c;
+  background-color:  #b91717;
   color: white;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -98,8 +98,8 @@
   position: absolute;
   top: 5%;
   left: 8%;
-  background-color: #b4b47b;
-  color: #1c1b1f;
+  background-color: #ffffff;
+  color: #1b0c0c;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -144,7 +144,7 @@
   position: absolute;
   top: 10%;
   left: 25%;
-  color: rgb(45, 53, 18);
+  color: rgb(255, 255, 255);
 }
 
 /* Paragraph Text in Service Items */
