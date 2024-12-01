@@ -1,91 +1,109 @@
-/* Full Page Background Image */
-.container-fluid {
-  margin: 0;
-  padding: 0;
-  height: 70vh; /* Full viewport height */
-  background-image: url('../assets/images/mainbg.jpg'); /* Background image */
-  background-size: cover; /* Make the image cover the entire screen */
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative; /* To control overlay */
-  overflow: hidden; /* Prevents any unwanted overflow */
-}
-
-/* Overlay to fade the background image */
-.container-fluid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(128, 128, 128, 0.7); /* Grey overlay for a neutral effect */
-  z-index: 1;
-}
-
-/* The Main Section containing the content */
-.intro {
+/* Main Container Styling */
+.main-section-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%; /* Full height of the viewport */
-  z-index: 2;
-  position: relative;
-  padding: 0 20px; /* Add some padding */
-  color: #ffffff; /* White text */
-  text-align: center;
-  animation: fadeIn 1s ease-out; /* Add fade-in animation */
+  justify-content: center; /* Center all content horizontally */
+  height: 100vh;
+  padding: 0 10%;
+  background-color: #ffffff; /* Light background for contrast */
+  text-align: center; /* Center align text */
+  position: relative; /* Required for positioning circles */
+  overflow: hidden; /* Prevent circles from overflowing the container */
 }
 
-/* Left Section (Text Container) */
-.left {
+/* Left Section Styling */
+.left-section {
   flex: 1;
-  background-color: rgba(211, 211, 211, 0.8); /* Light gray background for readability */
-  border-radius: 20px; /* Rounded corners */
-  padding: 30px; /* Increased padding */
-  text-align: center;
-  backdrop-filter: blur(3px); /* Blur the background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-  z-index: 3;
-  transition: transform 0.5s ease-out; /* Add transition effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center align items horizontally */
+  padding-right: 20px;
 }
 
-.left:hover {
-  transform: translateY(-10px); /* Add hover effect for slight lift */
+/* Right Section Styling (removed image and frame) */
+.right-section {
+  display: none; /* Remove right section with image and frame */
 }
 
-.left h1 {
+/* Circles Styling */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  animation: moveCircle 10s infinite linear;
+  z-index: 0; /* Ensures circles are behind content */
+}
+
+.circle.left {
+  width: 150px;
+  height: 150px;
+  top: 70px;
+  left: -50px; /* Starts slightly offscreen */
+  animation-delay: 0s;
+}
+.circle.left.bottom {
+  width: 150px;
+  height: 150px;
+  top: 200px;
+  left: -50px; /* Starts slightly offscreen */
+  animation-delay: 0s;
+}
+
+.circle.right {
+  width: 200px;
+  height: 200px;
+  top: 20px;
+  right: -50px; /* Starts slightly offscreen */
+  animation-delay: 2s;
+}
+.circle.right.bottom{
+  width: 200px;
+  height: 200px;
+  top: 500px;
+  right: -50px; /* Starts slightly offscreen */
+  animation-delay: 2s;
+}
+/* Large Bold Text with 3D Animation */
+.large-bold-text {
+  font-size: 10rem; /* Extra large font size */
+  font-weight: bold;
+  letter-spacing: 5px; /* Increased letter spacing */
+  color: #51090d; /* Dark color for text */
   margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 3rem; /* Increased font size */
-  font-family: Montserrat;
-  color: #800000; /* Maroon color for heading */
-  letter-spacing: 1px; /* Slightly more spaced letters for better look */
-}
+  font-family: Montesrat;
+  text-transform: uppercase; /* Makes text uppercase */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for 3D effect */
 
-.left p {
-  font-weight: bold;
-  font-size: 1.2rem; /* Increased font size */
-  font-family: Montserrat;
-  line-height: 1.8;
-  color: #4D4D4D; /* Dark gray text for better contrast */
-  margin-bottom: 30px;
-  transition: color 0.3s ease; /* Smooth text color change */
+  /* Animation */
+  animation: rotate3d 5s ease-out forwards; /* Runs once on load */
+  transform-origin: center; /* Set origin for 3D rotation */
+  perspective: 1000px; /* Adds depth to 3D */
 }
+/* Left Section (Text Container) */
+/* .left {
+  flex: 1;
+  background-color: rgba(211, 211, 211, 0.8); 
+  border-radius: 20px; 
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(3px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  z-index: 3;
+  position: relative;
+} */
 
-.left p:hover {
-  color: #800000; /* Change text color to maroon on hover */
-  cursor: pointer;
-}
 
 /* Call to Action Button */
 .cta-btn {
-  background-color: #A52A2A; /* Darker maroon button */
+  background-color: #51090d; /* Darker maroon button */
   color: #FFFFFF; /* White text */
   padding: 20px 50px; /* Adjusted padding */
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Montserrat;
   font-size: 1.8rem; /* Increased font size */
   font-weight: bold;
   transition: all 0.3s ease-in-out;
@@ -99,52 +117,73 @@
   transform: scale(1.05); /* Slight scale-up effect */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .intro {
-    flex-wrap: wrap;
-    gap: 10%;
-  }
 
-  .container-fluid {
-    height: 90vh;
+/* 3D Rotation Keyframes */
+@keyframes rotate3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
   }
-
-  .left {
-    flex: 100%;
-    text-align: center;
-    padding: 30px;
-    margin-left: 8%;
-    margin-top: 20%;
+  25% {
+    transform: rotateX(0deg) rotateY(90deg);
   }
-
-  .text-section h1 {
-    font-size: 2.5em;
+  50% {
+    transform: rotateX(180deg) rotateY(0deg);
   }
-
-  .intro {
-    width: 100%;
+  75% {
+    transform: rotateX(0deg) rotateY(-90deg);
   }
-
-  .left p {
-    font-size: 1.2rem; /* Slightly smaller but consistent */
-  }
-
-  .cta-btn {
-    width: 100%; /* Full width on smaller screens */
-    padding: 15px;
-    font-size: 1.6rem; /* Adjusted for smaller screens */
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
   }
 }
 
-/* Fade-in animation for intro section */
-@keyframes fadeIn {
+/* Circle Movement Keyframes */
+@keyframes moveCircle {
   0% {
-    opacity: 0;
-    transform: translateY(20px); /* Start slightly below */
+    transform: translate(0, 0) rotate3d(1, 1, 0, 0deg);
+  }
+  25% {
+    transform: translate(50px, -50px) rotate3d(1, 1, 0, 90deg);
+  }
+  50% {
+    transform: translate(0, 50px) rotate3d(1, 1, 0, 180deg);
+  }
+  75% {
+    transform: translate(-50px, -50px) rotate3d(1, 1, 0, 270deg);
   }
   100% {
-    opacity: 1;
-    transform: translateY(0); /* Move to normal position */
+    transform: translate(0, 0) rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-section-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left-section {
+    text-align: center;
+    padding: 0;
+  }
+
+  .large-bold-text {
+    font-size: 3rem; /* Adjust for smaller screens */
+  }
+
+  .right-section {
+    display: none; /* Hide the right section on smaller screens */
+  }
+
+  .circle.left {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle.right {
+    width: 120px;
+    height: 120px;
   }
 }

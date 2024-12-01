@@ -71,8 +71,8 @@ body {
   /* margin-top: 10%; */
   font-size: 3rem;
   font-weight: bold;
-  /* color: #282828;  */
-  background: linear-gradient(180deg, #d6e6a6, #ecfa9c, #cecea4); /* Gentle yellow-green gradient */
+   color: #ffffff;  
+  background: #51090d; /* Gentle yellow-green gradient */
 
   /* padding: 10px 0; */
   border-radius: 0; /* Remove rounded edges if needed */
