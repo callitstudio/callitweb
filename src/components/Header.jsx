@@ -54,7 +54,7 @@ export const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo" onClick={() => handleNavigate('/')}>
         <img src={logo} alt="CALL IT STUDIO Logo" className="logo-img" />
-        CALL IT STUDIO
+        {/* CALL IT STUDIO */}
       </div>
       <nav className={`nav ${menuActive ? 'active' : ''}`}>
         <div className="menu-icon" onClick={toggleMenu}>

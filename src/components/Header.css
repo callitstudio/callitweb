@@ -1,10 +1,18 @@
-/* Default header styles */
+:root {
+  --primary-color: #18c3a5; 
+  /* --primary-color:#00008b; */
+  --secondary-color: #800000; 
+  --text-color-default: white; 
+  --background-transparent: transparent; 
+  --shadow-color: rgba(0, 0, 0, 0.1); 
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
-  background: transparent; /* Initial transparent background */
-  color: black; /* Text color set to black when the background is transparent */
+  background: var(--background-transparent);
+  color: var(--text-color-default); 
   transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Transition for scroll effect */
   position: absolute;
   width: 100%;
@@ -13,7 +21,6 @@
   z-index: 1000; /* Ensure the header is always on top */
 }
 
-/* Logo styles */
 .logo {
   font-weight: bold;
   font-size: large;
@@ -24,12 +31,11 @@
 }
 
 .logo-img {
-  width: 40px; /* Adjust size as needed */
+  width: 50px; /* Adjust size as needed */
   height: auto;
   margin-right: 10px; /* Space between logo and text */
 }
 
-/* Navigation styles */
 .nav {
   display: flex;
   align-items: center; /* Center items vertically */
@@ -60,7 +66,6 @@
   scale: 1.2;
 }
 
-/* Mobile Styles */
 .menu-icon {
   display: none; /* Hidden by default */
   font-size: 24px;
@@ -70,14 +75,14 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav ul {
-    display: none; /* Hide navigation links by default */
-    flex-direction: column; /* Stack items vertically */
-    position: absolute; /* Positioning for dropdown */
-    background: #800000; /* Background for dropdown */
-    top: 80px; /* Position below the header */
-    right: 20px; /* Align to the right */
-    width: 200px; /* Width of dropdown */
-    padding: 10px; /* Padding inside dropdown */
+    display: none; 
+    flex-direction: column;
+    position: absolute; 
+    background: var(--primary-color); 
+    top: 80px; 
+    right: 20px; 
+    width: 200px; 
+    padding: 10px;
   }
 
   .nav.active ul {
@@ -91,7 +96,7 @@
 
 /* Scroll effect when header changes color */
 .header.scrolled {
-  background: #51090d !important; /* Maroon background when scrolled */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  color: white; /* Change text color to white when scrolled */
+  background: var(--primary-color) !important; /* Teal background when scrolled */
+  box-shadow: 0 4px 6px var(--shadow-color); /* Add shadow for depth */
+  color: var(--text-color-default); /* Change text color to white when scrolled */
 }
