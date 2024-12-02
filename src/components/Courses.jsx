@@ -1,120 +1,110 @@
-import React, { useState } from "react";
+import React from "react";
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./Courses.css";
+
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import FlipCard from "./FlipCard";
 import courseImg from "../assets/images/courseImg.jpeg";
 
-function Courses() {
-  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
-  const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0);
+const categories = [
+  { title: "Development", description: "Learn about Development and enhance your skills." },
+  { title: "Painting", description: "Learn about Painting and enhance your skills." },
+  { title: "Writing", description: "Learn about Writing and enhance your skills." },
+  { title: "Videography", description: "Learn about Videography and enhance your skills." },
+  { title: "Marketing", description: "Learn about Marketing and enhance your skills." },
+  { title: "Graphic Design", description: "Learn about Graphic Design and enhance your skills." },
+  { title: "SEO", description: "Learn about SEO and enhance your skills." },
+  { title: "Data Science", description: "Learn about Data Science and enhance your skills." },
+  { title: "Product Shoot", description: "Learn about Product Shoot and enhance your skills." },
+  { title: "Branding", description: "Learn about Branding and enhance your skills." },
+].map((category) => ({ ...category, image: courseImg }));
 
-  const categories = [
-    "Development",
-    "Painting",
-    "Writing",
-    "Videography",
-    "Marketing",
-    "Graphic Design",
-    "SEO",
-    "Data Science",
-    "Product Shoot",
-    "Branding",
-  ].map((category) => ({
-    title: category,
+const featuredCourses = [
+  {
+    title: "Complete Web Development Course 2024",
+    description: "Learn full-stack web development from scratch.",
     image: courseImg,
-    description: `Learn about ${category} and enhance your skills.`,
-  }));
+  },
+  {
+    title: "Advanced SEO Strategies",
+    description: "Master the latest SEO techniques for better rankings.",
+    image: courseImg,
+  },
+  {
+    title: "Digital Marketing Mastery",
+    description: "Become a pro at digital marketing with hands-on projects.",
+    image: courseImg,
+  },
+];
 
-  const featuredCourses = [
-    {
-      title: "Complete Web Development Course 2024",
-      image: courseImg,
-      description: "Learn full-stack web development from scratch.",
-    },
-    {
-      title: "Advanced SEO Strategies",
-      image: courseImg,
-      description: "Master the latest SEO techniques for better rankings.",
-    },
-    {
-      title: "Digital Marketing Mastery",
-      image: courseImg,
-      description: "Become a pro at digital marketing with hands-on projects.",
-    },
-  ];
-
-  const handleNext = (list, setter, currentIndex) => {
-    setter((currentIndex + 1) % list.length);
-  };
-
-  const handlePrev = (list, setter, currentIndex) => {
-    setter((currentIndex - 1 + list.length) % list.length);
-  };
-
+function Courses() {
   return (
-    <div className="courses-page">
-      {/* Course Categories */}
-      <h2>Course Categories</h2>
-      <div className="slider-container">
-        <button
-          className="slider-button prev"
-          onClick={() => handlePrev(categories, setCurrentCategoryIndex, currentCategoryIndex)}
+    <div>
+    <div className="Blur"></div>
+      <div className="courses-page">
+        {/* Course Categories Section */}
+        <h2>Course Categories</h2>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper-container"
         >
-          &#8249;
-        </button>
-        <div className="slider">
           {categories.map((category, index) => (
-            <div
-              className={`slide ${
-                index === currentCategoryIndex ? "active" : "hidden"
-              }`}
-              key={`category-${index}`}
-            >
+            <SwiperSlide key={`category-${index}`} className="swiper-slide">
               <FlipCard
                 title={category.title}
                 image={category.image}
                 description={category.description}
               />
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
-        <button
-          className="slider-button next"
-          onClick={() => handleNext(categories, setCurrentCategoryIndex, currentCategoryIndex)}
-        >
-          &#8250;
-        </button>
-      </div>
+        </Swiper>
 
-      {/* Featured Courses */}
-      <h2>Featured Courses</h2>
-      <div className="slider-container">
-        <button
-          className="slider-button prev"
-          onClick={() => handlePrev(featuredCourses, setCurrentFeaturedIndex, currentFeaturedIndex)}
+        {/* Featured Courses Section */}
+        <h2>Featured Courses</h2>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper-container"
         >
-          &#8249;
-        </button>
-        <div className="slider">
           {featuredCourses.map((course, index) => (
-            <div
-              className={`slide ${
-                index === currentFeaturedIndex ? "active" : "hidden"
-              }`}
-              key={`featured-${index}`}
-            >
+            <SwiperSlide key={`featured-${index}`} className="swiper-slide">
               <FlipCard
                 title={course.title}
                 image={course.image}
                 description={course.description}
               />
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
-        <button
-          className="slider-button next"
-          onClick={() => handleNext(featuredCourses, setCurrentFeaturedIndex, currentFeaturedIndex)}
-        >
-          &#8250;
-        </button>
+        </Swiper>
       </div>
     </div>
   );

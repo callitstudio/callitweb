@@ -1,87 +1,112 @@
-.courses-page {
-  background-color: #1f1f1f;
-  color: white;
-  font-family: Montserrat, sans-serif;
-  max-width: 1200px;
-  margin: auto;
-  padding: 50px 20px;
+/* Blur Background */
+.Blur {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: #51090d;
+  position: fixed; /* Ensures it stays in place while scrolling */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Keeps it behind other content */
+  filter: blur(12px); /* Adjust the blur intensity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent any scroll issues */
 }
 
+/* Overlay Content */
+.courses-page {
+  position: relative; /* Ensure it sits above the Blur */
+  z-index: 1; /* Higher z-index to appear above the background */
+  background-color: #51090d;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  max-width: 1220px;
+  margin: auto;
+  padding: 50px 20px;
+  border-radius: 10px; /* Optional: Add some rounding for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+/* Headings */
 .courses-page > h2 {
   color: #e63946;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
-.slider-container {
+/* Swiper Adjustments */
+.swiper-container {
+  padding: 20px 0;
+  height: 450px;
+}
+
+.swiper-slide {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: blur(5px);
 }
 
-.slider {
-  width: 80%;
-  overflow: hidden;
-  position: relative;
+.swiper-slide-active {
+  filter: blur(0);
 }
 
-.slide {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transform: scale(0.8);
+.swiper-slide-prev,
+.swiper-slide-next {
+  filter: blur(3px);
 }
 
-.slide.active {
-  opacity: 1;
-  transform: scale(1);
-  position: relative;
-}
-
-.slide.hidden {
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
   display: none;
 }
 
-.slider-button {
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 10;
-}
-
-.slider-button:hover {
+/* Slider Controls */
+.slider-controler .swiper-button-prev,
+.slider-controler .swiper-button-next {
   color: #e63946;
+  font-size: 2rem;
 }
 
-.prev {
-  position: absolute;
-  left: 10px;
+.slider-controler .swiper-pagination-bullet {
+  background-color: white;
 }
 
-.next {
-  position: absolute;
-  right: 10px;
+.slider-controler .swiper-pagination-bullet-active {
+  background-color: #e63946;
 }
 
-@media (max-width: 800px) {
-  .courses-page > h2 {
-    font-size: 1.5rem;
+.swiper-pagination {
+  display: none;
+  /* position: absolute; */
+  /* bottom: 0px;  */
+  /* left: 50%; */
+  /* transform: translateX(-50%);  */
+  /* z-index: 2; 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .swiper-container {
+
+    height: 420px;
   }
 
-  .slider-container {
-    flex-direction: column;
+  .swiper-slide {
+    width: 250px;
+    height: 250px;
   }
 
-  .slider-button {
-    font-size: 1.5rem;
+  .courses-page{
+    width: 400px;
   }
 }
