@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center; /* Center the content horizontally */
-  height: 100vh;
+  height: 90vh;
   padding: 0 10%;
   background-color: rgb(255, 255, 255);
 
@@ -93,7 +93,8 @@
   .main-section-container {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding-top: 80px;
+    height: 65vh;
   }
 
   .large-bold-text {

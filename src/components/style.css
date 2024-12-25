@@ -1,14 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
-.banner{
+.banner {
     width: 100%;
     height: 100vh;
     text-align: center;
     overflow: hidden;
     position: relative;
+    border-radius: 35%;
 }
-.banner .slider{
+
+.banner .slider {
     position: absolute;
     width: 200px;
     height: 250px;
@@ -19,27 +21,62 @@
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
-@keyframes autoRun{
-    from{
+
+.Center-text {
+    position: relative;
+    top: 40%;
+    z-index: 3;
+    color: #25283B;
+    animation: none; /* Remove any animation */
+}
+
+.Center-text h1 {
+    font-family: 'ICA Rubrik', sans-serif;
+    font-size: 2.5em;
+}
+
+.Center-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@keyframes autoRun {
+    from {
         transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-    }to{
+    }
+    to {
         transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
 }
 
-.banner .slider .item{
+.banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
     transform: 
-        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
         translateZ(550px);
 }
-.banner .slider .item img{
+
+.banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.banner .content{
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'ICA Rubrik', sans-serif;
+    font-size: 2em;
+    color: #25283B;
+    text-align: center;
+    z-index: 3;
+}
+
+.banner .content {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -53,14 +90,16 @@
     align-items: center;
     z-index: 1;
 }
-.banner .content h1{
-    font-family: 'ICA Rubrik';
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik', sans-serif;
     font-size: 16em;
     line-height: 1em;
     color: #25283B;
     position: relative;
 }
-.banner .content h1::after{
+
+.banner .content h1::after {
     position: absolute;
     inset: 0 0 0 0;
     content: attr(data-content);
@@ -68,16 +107,18 @@
     -webkit-text-stroke: 2px #d2d2d2;
     color: transparent;
 }
-.banner .content .author{
-    font-family: Poppins;
+
+.banner .content .author {
+    font-family: 'Poppins', sans-serif;
     text-align: right;
     max-width: 200px;
 }
-.banner .content h2{
+
+.banner .content h2 {
     font-size: 3em;
 }
-.banner .content .model{
-  
+
+.banner .content .model {
     width: 100%;
     height: 75vh;
     position: absolute;
@@ -88,24 +129,33 @@
     background-position: top center;
     z-index: 1;
 }
+
+/* Media Queries for Responsive Design */
 @media screen and (max-width: 1023px) {
-    .banner .slider{
+    .banner .slider {
         width: 160px;
         height: 200px;
         left: calc(50% - 80px);
     }
-    .banner .slider .item{
+    .banner .slider .item {
         transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(300px);
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(400px); /* Adjust for a slightly smaller radius */
     }
-    .banner .content h1{
+    .Center-text {
+        top: 45%;
+        font-size: 1.5em;
+    }
+    .Center-text > p {
+        display: none;
+    }
+    .banner .content h1 {
         text-align: center;
         width: 100%;
         text-shadow: 0 10px 20px #000;
         font-size: 7em;
     }
-    .banner .content .author{
+    .banner .content .author {
         color: #fff;
         padding: 20px;
         text-shadow: 0 10px 20px #000;
@@ -116,18 +166,26 @@
         padding: 0 30px;
     }
 }
+
 @media screen and (max-width: 767px) {
-    .banner .slider{
-        width: 100px;
+    .banner .slider {
+        width: 120px;
         height: 150px;
-        left: calc(50% - 50px);
+        left: calc(50% - 60px);
+        top: 15%;
     }
-    .banner .slider .item{
+    .banner {
+        border-radius: 0%;
+    }
+    .banner .slider .item {
         transform: 
-            rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-            translateZ(180px);
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(300px); /* Increase the circle radius */
     }
-    .banner .content h1{
-        font-size: 5em;
+    .Center-text h1 {
+        font-size: 1.8em;
+    }
+    .Center-text p {
+        font-size: 1em;
     }
 }
