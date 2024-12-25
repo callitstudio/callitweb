@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MainSection.css';
 import rightImage from '../assets/images/mainbg1.jpg'; // Replace with your image path
-
+import Banner from './Banner';
 export const MainSection = () => {
   const navigate = useNavigate();
 
@@ -11,12 +11,14 @@ export const MainSection = () => {
   };
 
   return (
+    
     <div className="main-section-container">
-       {/* Animated Circles */}
+      <Banner />
+       {/* Animated Circles
   <div className="circle left"></div>
   <div className="circle right"></div>
   <div className="circle left  bottom"></div>
-  <div className="circle right  bottom"></div>
+  <div className="circle right  bottom"></div> */}
 
       {/* Left Section */}
       <div className="left-section">
