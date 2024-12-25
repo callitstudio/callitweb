@@ -134,6 +134,7 @@
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1023px) {
     .banner .slider {
+        
         width: 160px;
         height: 200px;
         left: calc(50% - 80px);
@@ -144,7 +145,7 @@
             translateZ(400px); /* Adjust for a slightly smaller radius */
     }
     .Center-text {
-        top: 45%;
+        top: 25%;
         font-size: 1.5em;
     }
     .Center-text > p {

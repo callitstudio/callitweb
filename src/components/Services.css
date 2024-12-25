@@ -57,27 +57,27 @@
 }
 
 .service-item:nth-child(1).loaded {
-  animation-delay: 0.2s;
-}
-
-.service-item:nth-child(2).loaded {
-  animation-delay: 0.4s;
-}
-
-.service-item:nth-child(3).loaded {
-  animation-delay: 0.6s;
-}
-
-.service-item:nth-child(4).loaded {
-  animation-delay: 0.8s;
-}
-
-.service-item:nth-child(5).loaded {
   animation-delay: 1s;
 }
 
+.service-item:nth-child(2).loaded {
+  animation-delay: 1.4s;
+}
+
+.service-item:nth-child(3).loaded {
+  animation-delay: 2s;
+}
+
+.service-item:nth-child(4).loaded {
+  animation-delay: 2.5s;
+}
+
+.service-item:nth-child(5).loaded {
+  animation-delay: 3s;
+}
+
 .service-item:nth-child(6).loaded {
-  animation-delay: 1.2s;
+  animation-delay: 3.5s;
 }
 
 /* Hover Effects */
