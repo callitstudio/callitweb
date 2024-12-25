@@ -21,7 +21,7 @@ export const MainSection = () => {
   <div className="circle right  bottom"></div> */}
 
       {/* Left Section */}
-      <div className="left-section">
+      {/* <div className="left-section">
         <h1 className="large-bold-text">CALL IT STUDIO</h1>
         <p className="description-text">
           Where Creativity Meets Technology to Craft Digital Excellence
@@ -31,7 +31,7 @@ export const MainSection = () => {
         </button>
       </div>
 
-     
+      */}
     </div>
   );
 };
