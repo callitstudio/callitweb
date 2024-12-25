@@ -76,7 +76,7 @@ export const Services = () => {
 
   return (
     <section id="Services">
-      <h2 className="heading">SERVICES</h2>
+      {/* <h2 className="heading">SERVICES</h2> */}
       <section className="services">
         {services.map((service) => (
           <div
