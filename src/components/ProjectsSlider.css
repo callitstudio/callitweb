@@ -71,17 +71,18 @@ body {
   /* margin-top: 10%; */
   font-size: 3rem;
   font-weight: bold;
-   color: #ffffff;  
-  background: #51090d; /* Gentle yellow-green gradient */
+   color: #0e0000;  
+  /* background: #51090d;  */
 
-  /* padding: 10px 0; */
+  padding: 80px 0;
   border-radius: 0; /* Remove rounded edges if needed */
   width: auto; /* Make it full width */
   text-align: center; /* Center the text */
   /* margin-left: calc(-50vw + 50%);  */
   position: relative;
   left: 50%;
-  font-family: Montserrat;
+  font-family: 'ICA Rubrik', sans-serif;
+
 
   transform: translateX(-50%);
   z-index: 1; /* Ensure it's above other content */

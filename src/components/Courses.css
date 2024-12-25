@@ -2,7 +2,7 @@
 .Blur {
   width: 100%;
   height: 100vh; /* Full viewport height */
-  background: #fcf7cd;
+  background-color: (243, 228, 228);
   position: fixed; /* Ensures it stays in place while scrolling */
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
 .courses-page {
   position: relative; /* Ensure it sits above the Blur */
   z-index: 1; /* Higher z-index to appear above the background */
-  background-color: #fcf7cd;
+  background-color: (243, 228, 228);
   color: rgb(24, 23, 23);
   font-family: Montserrat;
   max-width: 1220px;

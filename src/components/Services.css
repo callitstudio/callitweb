@@ -1,7 +1,7 @@
 /* General Styles for Services Section */
 .services {
-  background-color: white;
-  color: rgb(34, 31, 31);
+  background-color: (243, 228, 228);
+    color: rgb(34, 31, 31);
   padding: 15px 5%;
   font-family: Montesrat;
   display: grid;
@@ -49,7 +49,8 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
-  width: 91%;
+  width: 80%;
+  height: 80%;
 }
 
 .service-item.loaded {
@@ -83,7 +84,7 @@
 /* Hover Effects */
 .service-item:hover {
   transform: scale(1.05);
-  background-color: #b91717;
+  background-color: #7e000065;
   color: white;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -91,7 +92,7 @@
 
 /* Service Item Content */
 .service-item img {
-  width: 100%;
+  width: 60%;
   height: 60%;
   object-fit: cover;
   border-radius: 10px;
