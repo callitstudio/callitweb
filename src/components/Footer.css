@@ -1,6 +1,8 @@
 .footer-container {
   background-image: linear-gradient(150deg, rgb(128, 0, 0), rgb(50, 50, 50));
   padding: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-content {

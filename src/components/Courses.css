@@ -1,149 +1,112 @@
-.courses-page {
-  background-color: #1f1f1f;
-  color: white;
-  font-family: Montserrat;
+/* Blur Background */
+.Blur {
   width: 100%;
-  max-width: 1200px;
-  margin: 10% auto;
-  padding-top: 20%;
+  height: 100vh; /* Full viewport height */
+  background: #51090d;
+  position: fixed; /* Ensures it stays in place while scrolling */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Keeps it behind other content */
+  filter: blur(12px); /* Adjust the blur intensity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent any scroll issues */
+}
 
+/* Overlay Content */
+.courses-page {
+  position: relative; /* Ensure it sits above the Blur */
+  z-index: 1; /* Higher z-index to appear above the background */
+  background-color: #51090d;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  max-width: 1220px;
+  margin: auto;
+  padding: 50px 20px;
+  border-radius: 10px; /* Optional: Add some rounding for a modern look */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+/* Headings */
+.courses-page > h2 {
+  color: #e63946;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Swiper Adjustments */
+.swiper-container {
+  padding: 20px 0;
+  height: 450px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: blur(5px);
+}
+
+.swiper-slide-active {
+  filter: blur(0);
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  filter: blur(3px);
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+/* Slider Controls */
+.slider-controler .swiper-button-prev,
+.slider-controler .swiper-button-next {
+  color: #e63946;
+  font-size: 2rem;
+}
+
+.slider-controler .swiper-pagination-bullet {
+  background-color: white;
+}
+
+.slider-controler .swiper-pagination-bullet-active {
+  background-color: #e63946;
+}
+
+.swiper-pagination {
+  display: none;
+  /* position: absolute; */
+  /* bottom: 0px;  */
+  /* left: 50%; */
+  /* transform: translateX(-50%);  */
+  /* z-index: 2; 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .swiper-container {
+
+    height: 420px;
   }
 
-  .courses-page>h2{
-    color: red;
-    z-index: 2;
-    position: relative;
-    top: 10%;
-  }
-  
-  .search-section {
-    
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-  }
-  
-  .search-bar {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .filters {
-    display: flex;
-    margin-left: 10px;
-  }
-  
-  .filters button {
-    margin: 0 5px;
-    padding: 10px;
-    background-color: #555;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .filter-icon {
-    margin-left: 10px;
-    cursor: pointer;
-  }
-  
-  .course-categories {
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .course-categories h2 {
-    font-size: 28px;
-  }
-  
-  .categories-grid {
-    background: #000;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, auto); 
-    gap: 20px; 
-    justify-content: center; 
-    padding-top: 50px;
-
-  }
-  
-  .category-card {
-    background-color: #aa75e0;
-    padding: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .category-card:hover {
-    background-color: #bb6bd9;
-  }
-  
-  .featured-courses {
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .featured-courses h2 {
-    font-size: 28px;
-  }
-  
-  .courses-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .course-card {
-    background-color: #4f4f4f;
-    padding: 20px;
-    border-radius: 10px;
+  .swiper-slide {
     width: 250px;
-    text-align: center;
-    margin: 10px;
-  }
-  
-  .badge {
-    background-color: #4fa9ff;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    display: inline-block;
-  }
-  
-  .rating {
-    color: #f4d35e;
-    margin: 10px 0;
-  }
-  
-  .start-learning-btn {
-    padding: 10px 20px;
-    background-color: #bb6bd9;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-  }
-  
-
-  .featureCourse{
-    margin-top: 10%;
+    height: 250px;
   }
 
-
-  
-  
-  @media (max-width: 800px) {
-    .courseSection{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 16px;
-    }
-    
+  .courses-page{
+    width: 400px;
   }
+}

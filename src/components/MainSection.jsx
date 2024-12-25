@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MainSection.css';
 import rightImage from '../assets/images/mainbg1.jpg'; // Replace with your image path
-import Banner from './Banner';
+
 export const MainSection = () => {
   const navigate = useNavigate();
 
