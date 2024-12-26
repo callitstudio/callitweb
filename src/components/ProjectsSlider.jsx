@@ -21,7 +21,7 @@ export function ProjectsSlider() {
     <section id='Projects'>
 
     <div className="container" >
-      <h1 className="heading">Projects</h1>
+      <h1 className="project-heading">Projects</h1>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}

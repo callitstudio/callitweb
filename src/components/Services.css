@@ -35,19 +35,12 @@
   height: 3px;
   background-color: #d1e7e0;
   transform: translateX(-50%);
+  margin-bottom: -8px;
 }
 
 /* Service Item Styles */
 .service-item {
-  /* background-color: #51090d; */
-  
-  /* background: linear-gradient(to right, #51090d, black); */
-  /* background: linear-gradient(to right, #51090d, #9e0a0a, black); */
-  /* background: linear-gradient(to right, #8b0b0b, #b30000, #1d1d1d); */
-
   background: linear-gradient(to right, #51090d, #702121, #3b0e0e);
-
-  /* border: 2px solid #ceeea4; */
   border: 2px solid white;
   border-radius: 10px;
   padding: 20px;
@@ -64,6 +57,7 @@
 .service-item.loaded {
   animation: fadeInUp 0.5s ease forwards;
 }
+
 
 .service-item:nth-child(1).loaded {
   animation-delay: 1s;

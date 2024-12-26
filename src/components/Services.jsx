@@ -182,7 +182,7 @@ export const Services = () => {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5, delay: service.number * 0.1 }}
           >
-            <div className="number-circle">{service.number}</div>
+            {/* <div className="number-circle">{service.number}</div> */}
             <h3>{service.title}</h3>
             <p>{service.description}</p>
             <img src={service.image} alt={service.alt} className="service-image" />
