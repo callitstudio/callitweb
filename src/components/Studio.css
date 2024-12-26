@@ -35,7 +35,10 @@
   
   .studio-section {
     padding: 10px;
-    background-color: #F5F5DC;
+    /* background-color: #F5F5DC; */
+    
+  background-color: (243, 228, 228);
+  
     
     color: white;
     font-family: 'Arial', sans-serif;
@@ -58,7 +61,8 @@
   }
   
   .studiocard {
-    background-color: #cecea4;
+    /* background-color: #cecea4; */
+    background: linear-gradient(to right, #51090d, #702121, #3b0e0e);
   border: 2px solid #ceeea4;
     border-radius: 10px;
     opacity: 0;

@@ -33,7 +33,8 @@
   /* Card Styling */
   .cw-card {
     /* color: red; */
-    background-color: #505050;
+    /* background-color: #505050; */
+    background: linear-gradient(to right, #51090d, #702121, #3b0e0e);
     border: 2px solid #bb8fee;
     border-radius: 10px;
     opacity: 0; 
