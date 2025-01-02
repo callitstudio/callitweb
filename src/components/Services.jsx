@@ -103,11 +103,11 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Services.css';
 import mediagif from '../assets/images/media.gif';
-import contentgif from '../assets/images/media.gif';
-import itgif from '../assets/images/media.gif';
-import studiogif from '../assets/images/media.gif';
-import eventgif from '../assets/images/media.gif';
-import marketinggif from '../assets/images/media.gif';
+import contentgif from '../assets/images/content.gif';
+import itgif from '../assets/images/it.gif';
+import studiogif from '../assets/images/studio.gif';
+import eventgif from '../assets/images/event.gif';
+import marketinggif from '../assets/images/marketing.gif';
 
 export const Services = () => {
   const navigate = useNavigate();
