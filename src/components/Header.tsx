@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Logo />
         <nav className="hidden md:flex space-x-4">
-          {/* <Link href="/" className="text-gray-600 hover:text-primary">
+          <Link href="/" className="text-gray-600 hover:text-primary">
             Home
           </Link>
           <Link href="/projects" className="text-gray-600 hover:text-primary">
@@ -19,7 +19,7 @@ const Header = () => {
           </Link>
           <Link href="/courses" className="text-gray-600 hover:text-primary">
             Courses
-          </Link> */}
+          </Link>
           <Link href="/about" className="text-gray-600 hover:text-primary">
             About
           </Link>
