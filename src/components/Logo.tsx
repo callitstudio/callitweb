@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Infinity } from 'lucide-react';
 import Image from 'next/image';
 
 const Logo = () => {

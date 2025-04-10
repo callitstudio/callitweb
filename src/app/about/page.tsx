@@ -84,7 +84,7 @@ export default function AboutPage() {
           <p className="text-gray-600 mb-4">
             Call IT Studio was established with a vision to bridge the gap
             between complex technology and business needs. Starting as a small
-            team of passionate IT professionals, we've grown into a full-service
+            team of passionate IT professionals, we`&apos;`ve grown into a full-service
             IT solutions provider trusted by businesses across various
             industries.
           </p>
@@ -92,7 +92,7 @@ export default function AboutPage() {
             Growing Strong
           </h3>
           <p className="text-gray-600 mb-4">
-            Over the years, we've expanded our services, embraced new
+            Over the years, we`&apos;`ve expanded our services, embraced new
             technologies, and built a reputation for delivering reliable,
             scalable, and innovative IT solutions. Our commitment to client
             success and continuous learning has been the cornerstone of our
@@ -103,7 +103,7 @@ export default function AboutPage() {
           </h3>
           <p className="text-gray-600">
             As we continue to evolve, we remain dedicated to staying at the
-            forefront of technology trends, investing in our team's skills, and
+            forefront of technology trends, investing in our team`&apos;`s skills, and
             providing our clients with the tools they need to thrive in the
             digital age.
           </p>

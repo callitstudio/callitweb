@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+import Image from "next/image"
 
 const reviews = [
   {
@@ -53,8 +54,10 @@ const Reviews = () => {
                 <p className="text-gray-700 mb-4">{review.review}</p>
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <img
+                    <Image
                       className="h-10 w-10 rounded-full"
+                      width={50}
+                      height={50}
                       src={review.image}
                       alt={review.name}
                     />
