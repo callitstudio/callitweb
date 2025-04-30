@@ -4,12 +4,96 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import Logo from './Logo';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState, useRef } from 'react';
 
 const Header = () => {
   const pathname = usePathname();
+  // Initialize with null to ensure Home is active by default on homepage
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const initialRenderRef = useRef(true);
+
+  // Check URL hash on component mount and when pathname changes
+  useEffect(() => {
+    // On first render, set Home as active by default
+    if (initialRenderRef.current && pathname === '/') {
+      initialRenderRef.current = false;
+      setActiveSection(null); // null means Home is active
+    }
+
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      setActiveSection(hash);
+    } else if (pathname === '/') {
+      // If we're at the homepage with no hash, activate Home
+      setActiveSection(null);
+    }
+
+    // Set up intersection observer to detect which section is in view
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      // Only process if we're on the homepage
+      if (pathname !== '/') return;
+      
+      // Find the most visible section
+      entries.forEach(entry => {
+        // Update active section only if it's more than 50% visible
+        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+          // Only update if we're not at the very top of the page
+          if (window.scrollY > 100) {
+            setActiveSection(entry.target.id);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      // This configuration is crucial for proper section detection
+      rootMargin: "-50px 0px -300px 0px",
+      threshold: [0.5, 0.7, 0.9]
+    });
+
+    // Observe all sections that can be scrolled to
+    const sections = ['services', 'projects'];
+    sections.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    // Check scroll position to highlight Home when at the top
+    const handleScroll = () => {
+      if (pathname === '/') {
+        if (window.scrollY < 100) {
+          setActiveSection(null);
+        } else {
+          // Let the intersection observer handle section detection
+          // when scrolling below the top area
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    // Call handleScroll once to set initial state based on scroll position
+    handleScroll();
+
+    return () => {
+      // Clean up observer on unmount
+      sections.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [pathname]);
   
   const NavLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
-    const isActive = pathname === href;
+    // Home is active when on homepage and no section is active
+    const isActive = href === '/' 
+      ? (pathname === '/' && activeSection === null) 
+      : pathname === href;
     
     return (
       <Link 
@@ -31,6 +115,7 @@ const Header = () => {
   const ScrollLink = ({ sectionId, children }: { sectionId: string, children: React.ReactNode }) => {
     const isHomePage = pathname === '/';
     const href = isHomePage ? `#${sectionId}` : `/#${sectionId}`;
+    const isActive = isHomePage && activeSection === sectionId;
     
     const handleClick = (e: React.MouseEvent) => {
       if (isHomePage) {
@@ -38,6 +123,7 @@ const Header = () => {
         const element = document.getElementById(sectionId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
+          setActiveSection(sectionId);
         }
       }
     };
@@ -46,9 +132,16 @@ const Header = () => {
       <Link 
         href={href} 
         onClick={handleClick}
-        className="text-gray-600 hover:text-primary transition-colors duration-300"
+        className={`relative transition-colors duration-300 ${
+          isActive 
+            ? 'text-primary font-medium' 
+            : 'text-gray-600 hover:text-primary'
+        }`}
       >
         {children}
+        {isActive && (
+          <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full animate-fadeIn"></span>
+        )}
       </Link>
     );
   };
