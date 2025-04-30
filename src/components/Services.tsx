@@ -65,28 +65,35 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gray-100">
+    <section id="services" className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
           Our Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden">
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={300}
-                height={200}
-                className="w-full object-cover"
-              />
-              <CardHeader>
-                <service.icon className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{service.description}</CardDescription>
-              </CardContent>
+            <Card
+              key={index}
+              className="overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-[0_12px_30px_-5px_hsl(var(--primary)/0.2),_0_6px_12px_-6px_hsl(var(--primary)/0.15)] hover:-translate-y-2"
+            >
+              <div className="relative w-full h-48">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <CardHeader className="p-0 pb-4">
+                  <service.icon className="h-8 w-8 text-primary mb-3" />
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 flex-grow">
+                  <CardDescription>{service.description}</CardDescription>
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>

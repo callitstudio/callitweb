@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -28,16 +28,20 @@ const Hero = () => {
       </div>
 
       <div className="container relative mx-auto px-4 flex flex-col lg:flex-row items-center justify-between z-10">
-        <div className={`lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div
+          className={`lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+        >
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
             Call IT Studio
           </h1>
           <p className="text-xl mb-8 text-gray-600">
-            Top-quality service and expert management for every project need.
+            Complete Creative & Tech Solutions Under One Roof.
           </p>
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-700 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-            <Button 
-              size="lg" 
+          <div
+            className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-700 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+          >
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all"
               onClick={handleGetStarted}
             >
@@ -52,7 +56,9 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className={`lg:w-1/2 flex justify-center transition-all duration-700 delay-150 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+        <div
+          className={`lg:w-1/2 flex justify-center transition-all duration-700 delay-150 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}
+        >
           <div className="relative w-64 h-64 md:w-96 md:h-96 animate-pulse">
             <div className="absolute inset-0 bg-primary/5 rounded-full blur-xl"></div>
             <Image
