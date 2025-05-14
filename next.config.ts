@@ -2,7 +2,10 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    domains: ['images.unsplash.com'],
+  },
   typescript: {
     // This will ignore TypeScript errors during build - not ideal but helps us get past the build error
     ignoreBuildErrors: true,

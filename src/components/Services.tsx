@@ -25,12 +25,14 @@ const Services = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
           Our Services
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Link href={`/services/${service.slug}`} key={index} className="block">
-              <Card
-                className="overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-[0_12px_30px_-5px_hsl(var(--primary)/0.2),_0_6px_12px_-6px_hsl(var(--primary)/0.15)] hover:-translate-y-2 h-full cursor-pointer"
-              >
+            <Link
+              href={`/services/${service.slug}`}
+              key={index}
+              className="block"
+            >
+              <Card className="overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-[0_12px_30px_-5px_hsl(var(--primary)/0.2),_0_6px_12px_-6px_hsl(var(--primary)/0.15)] hover:-translate-y-2 h-full cursor-pointer">
                 <div className="relative w-full h-48">
                   <Image
                     src={service.image}

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState, useRef } from 'react';
@@ -11,6 +11,7 @@ const Header = () => {
   // Initialize with null to ensure Home is active by default on homepage
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const initialRenderRef = useRef(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Check URL hash on component mount and when pathname changes
   useEffect(() => {
@@ -32,9 +33,9 @@ const Header = () => {
     const observerCallback: IntersectionObserverCallback = (entries) => {
       // Only process if we're on the homepage
       if (pathname !== '/') return;
-      
+
       // Find the most visible section
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         // Update active section only if it's more than 50% visible
         if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
           // Only update if we're not at the very top of the page
@@ -47,13 +48,13 @@ const Header = () => {
 
     const observer = new IntersectionObserver(observerCallback, {
       // This configuration is crucial for proper section detection
-      rootMargin: "-50px 0px -300px 0px",
-      threshold: [0.5, 0.7, 0.9]
+      rootMargin: '-50px 0px -300px 0px',
+      threshold: [0.5, 0.7, 0.9],
     });
 
     // Observe all sections that can be scrolled to
     const sections = ['services', 'projects'];
-    sections.forEach(id => {
+    sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) {
         observer.observe(element);
@@ -73,13 +74,13 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     // Call handleScroll once to set initial state based on scroll position
     handleScroll();
 
     return () => {
       // Clean up observer on unmount
-      sections.forEach(id => {
+      sections.forEach((id) => {
         const element = document.getElementById(id);
         if (element) {
           observer.unobserve(element);
@@ -88,19 +89,31 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [pathname]);
-  
-  const NavLink = ({ href, children }: { href: string, children: React.ReactNode }) => {
+
+  // Close mobile menu when changing pages
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  const NavLink = ({
+    href,
+    children,
+  }: {
+    href: string;
+    children: React.ReactNode;
+  }) => {
     // Home is active when on homepage and no section is active
-    const isActive = href === '/' 
-      ? (pathname === '/' && activeSection === null) 
-      : pathname === href;
-    
+    const isActive =
+      href === '/'
+        ? pathname === '/' && activeSection === null
+        : pathname === href;
+
     return (
-      <Link 
-        href={href} 
+      <Link
+        href={href}
         className={`relative transition-colors duration-300 ${
-          isActive 
-            ? 'text-primary font-medium' 
+          isActive
+            ? 'text-primary font-medium'
             : 'text-gray-600 hover:text-primary'
         }`}
       >
@@ -112,11 +125,17 @@ const Header = () => {
     );
   };
 
-  const ScrollLink = ({ sectionId, children }: { sectionId: string, children: React.ReactNode }) => {
+  const ScrollLink = ({
+    sectionId,
+    children,
+  }: {
+    sectionId: string;
+    children: React.ReactNode;
+  }) => {
     const isHomePage = pathname === '/';
     const href = isHomePage ? `#${sectionId}` : `/#${sectionId}`;
     const isActive = isHomePage && activeSection === sectionId;
-    
+
     const handleClick = (e: React.MouseEvent) => {
       if (isHomePage) {
         e.preventDefault();
@@ -127,14 +146,14 @@ const Header = () => {
         }
       }
     };
-    
+
     return (
-      <Link 
-        href={href} 
+      <Link
+        href={href}
         onClick={handleClick}
         className={`relative transition-colors duration-300 ${
-          isActive 
-            ? 'text-primary font-medium' 
+          isActive
+            ? 'text-primary font-medium'
             : 'text-gray-600 hover:text-primary'
         }`}
       >
@@ -157,10 +176,31 @@ const Header = () => {
           <NavLink href="/about">About</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </nav>
-        <button className="md:hidden">
-          <Menu className="h-6 w-6 text-gray-600" />
+        <button
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? (
+            <X className="h-6 w-6 text-gray-600" />
+          ) : (
+            <Menu className="h-6 w-6 text-gray-600" />
+          )}
         </button>
       </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden px-4 py-3 bg-white border-t shadow-inner">
+          <nav className="flex flex-col space-y-4 py-2">
+            <NavLink href="/">Home</NavLink>
+            <ScrollLink sectionId="services">Services</ScrollLink>
+            <ScrollLink sectionId="projects">Projects</ScrollLink>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
