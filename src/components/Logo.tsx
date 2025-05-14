@@ -7,9 +7,9 @@ const Logo = () => {
       <Image
         src={'/logo.png'}
         alt={'Call IT Studio Logo'}
-        width={60}
-        height={60}
-        className="h-8 w-8 text-primary mr-2"
+        width={70}
+        height={70}
+        className="h-10 w-10 text-primary mr-2"
       />
       {/* <span className="text-2xl font-bold text-primary">Call IT Studio</span> */}
     </Link>

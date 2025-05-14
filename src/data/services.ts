@@ -31,13 +31,13 @@ export const services = [
     icon: Presentation,
     image: '/services/marketing.webp?height=200&width=300',
   },
-  {
-    title: 'Web Development',
-    slug: 'web-development',
-    description: 'Create powerful web applications for the web.',
-    icon: Smartphone,
-    image: '/services/web_development.png?height=200&width=300',
-  },
+  // {
+  //   title: 'Web Development',
+  //   slug: 'web-development',
+  //   description: 'Create powerful web applications for the web.',
+  //   icon: Smartphone,
+  //   image: '/services/web_development.png?height=200&width=300',
+  // },
   {
     title: 'IT Consulting',
     slug: 'it-consulting',
@@ -60,4 +60,4 @@ export const services = [
     icon: Calendar,
     image: '/services/event_management.jpg?height=200&width=300',
   },
-]; 
+];
