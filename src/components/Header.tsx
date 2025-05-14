@@ -167,38 +167,44 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Logo />
-        <nav className="hidden md:flex space-x-4">
-          <NavLink href="/">Home</NavLink>
-          <ScrollLink sectionId="services">Services</ScrollLink>
-          <ScrollLink sectionId="projects">Projects</ScrollLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
-        </nav>
-        <button
-          className="md:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6 text-gray-600" />
-          ) : (
-            <Menu className="h-6 w-6 text-gray-600" />
-          )}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden px-4 py-3 bg-white border-t shadow-inner">
-          <nav className="flex flex-col space-y-4 py-2">
+      <div className="container mx-auto px-4 py-4">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <Logo />
+          <nav className="hidden md:flex space-x-4">
             <NavLink href="/">Home</NavLink>
             <ScrollLink sectionId="services">Services</ScrollLink>
             <ScrollLink sectionId="projects">Projects</ScrollLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </nav>
+          <button
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6 text-gray-600" />
+            ) : (
+              <Menu className="h-6 w-6 text-gray-600" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white border-t shadow-inner">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <nav className="flex flex-col space-y-4 py-2">
+                <NavLink href="/">Home</NavLink>
+                <ScrollLink sectionId="services">Services</ScrollLink>
+                <ScrollLink sectionId="projects">Projects</ScrollLink>
+                <NavLink href="/about">About</NavLink>
+                <NavLink href="/contact">Contact</NavLink>
+              </nav>
+            </div>
+          </div>
         </div>
       )}
     </header>
