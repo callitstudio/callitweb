@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-gray-100 to-gray-200 relative overflow-hidden">
+    <section className="py-20 md:py-24 bg-gradient-to-b from-gray-100 to-gray-200 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-40">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -26,8 +26,9 @@ const Hero = () => {
         <div className="absolute bottom-0 right-1/3 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 relative z-10 xl:max-w-7xl 2xl:max-w-screen-2xl">
+        {' '}
+        <div className="mx-auto flex flex-col lg:flex-row items-center justify-between">
           <div
             className={`lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
           >

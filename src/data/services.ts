@@ -15,21 +15,21 @@ export const services = [
     description:
       'Elevate your brand and captivate your target audience with our media solutions.',
     icon: MonitorPlay,
-    image: '/services/media.jpeg?height=200&width=300',
+    image: '/services/new_media.png',
   },
   {
     title: 'Content Writing',
     slug: 'content-writing',
     description: 'Create narratives that inspire for action.',
     icon: PenLine,
-    image: '/services/content_writer.webp?height=200&width=300',
+    image: '/services/new_contant_writing.png',
   },
   {
     title: 'Marketing',
     slug: 'marketing',
     description: 'Revolutionize marketing with innovative strategies.',
     icon: Presentation,
-    image: '/services/marketing.webp?height=200&width=300',
+    image: '/services/new_marketing.png',
   },
   // {
   //   title: 'Web Development',
@@ -43,14 +43,14 @@ export const services = [
     slug: 'it-consulting',
     description: 'Expert advice to align your IT strategy with business goals.',
     icon: Zap,
-    image: '/services/it_consulting.webp?height=200&width=300',
+    image: '/services/new_it.png',
   },
   {
     title: 'Studio',
     slug: 'studio',
     description: 'We can manage your social handle effciently.',
     icon: KeyboardMusic,
-    image: '/services/studio.webp?height=200&width=300',
+    image: '/services/new_studio.png',
   },
   {
     title: 'Event Management',
@@ -58,6 +58,6 @@ export const services = [
     description:
       'Get your important events professionally planned, managed and executed by us.',
     icon: Calendar,
-    image: '/services/event_management.jpg?height=200&width=300',
+    image: '/services/new_event_managment.png',
   },
 ];

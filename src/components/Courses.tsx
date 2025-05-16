@@ -106,11 +106,13 @@ const courses = [
 
 const Courses = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">
-          Our Courses
-        </h2>
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 xl:max-w-7xl 2xl:max-w-screen-2xl">
+        {' '}
+        <h2 className="text-3xl font-bold text-center mb-16 text-primary">
+          {' '}
+          Our Courses{' '}
+        </h2>{' '}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
             <Card key={index} className="overflow-hidden">

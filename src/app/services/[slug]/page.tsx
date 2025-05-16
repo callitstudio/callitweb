@@ -95,7 +95,7 @@ export default function ServicePage({ params }: ServicePageProps) {
     <>
       {/* Hero section */}
       <div className="bg-primary/5 py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 xl:max-w-7xl 2xl:max-w-screen-2xl">
           <Link
             href="/#services"
             className="inline-flex items-center text-primary hover:text-primary-dark mb-8 transition-colors"
@@ -152,7 +152,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       </div>
 
       {/* Related services section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 py-16 xl:max-w-7xl 2xl:max-w-screen-2xl">
         <h2 className="text-2xl font-semibold mb-8 text-gray-800">
           Specialized Services
         </h2>

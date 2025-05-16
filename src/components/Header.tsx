@@ -167,44 +167,52 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Logo />
+      {' '}
+      <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 py-4 xl:max-w-7xl 2xl:max-w-screen-2xl">
+        {' '}
+        <div className="mx-auto flex justify-between items-center">
+          {' '}
+          <Logo />{' '}
           <nav className="hidden md:flex space-x-4">
-            <NavLink href="/">Home</NavLink>
-            <ScrollLink sectionId="services">Services</ScrollLink>
-            <ScrollLink sectionId="projects">Projects</ScrollLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
-          </nav>
+            {' '}
+            <NavLink href="/">Home</NavLink>{' '}
+            <ScrollLink sectionId="services">Services</ScrollLink>{' '}
+            <ScrollLink sectionId="projects">Projects</ScrollLink>{' '}
+            <NavLink href="/about">About</NavLink>{' '}
+            <NavLink href="/contact">Contact</NavLink>{' '}
+          </nav>{' '}
           <button
             className="md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
+            {' '}
             {mobileMenuOpen ? (
               <X className="h-6 w-6 text-gray-600" />
             ) : (
               <Menu className="h-6 w-6 text-gray-600" />
-            )}
-          </button>
-        </div>
+            )}{' '}
+          </button>{' '}
+        </div>{' '}
       </div>
-
-      {/* Mobile menu */}
+      {/* Mobile menu */}{' '}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t shadow-inner">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+          {' '}
+          <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 xl:max-w-7xl 2xl:max-w-screen-2xl">
+            {' '}
+            <div className="mx-auto">
+              {' '}
               <nav className="flex flex-col space-y-4 py-2">
-                <NavLink href="/">Home</NavLink>
-                <ScrollLink sectionId="services">Services</ScrollLink>
-                <ScrollLink sectionId="projects">Projects</ScrollLink>
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/contact">Contact</NavLink>
-              </nav>
-            </div>
-          </div>
+                {' '}
+                <NavLink href="/">Home</NavLink>{' '}
+                <ScrollLink sectionId="services">Services</ScrollLink>{' '}
+                <ScrollLink sectionId="projects">Projects</ScrollLink>{' '}
+                <NavLink href="/about">About</NavLink>{' '}
+                <NavLink href="/contact">Contact</NavLink>{' '}
+              </nav>{' '}
+            </div>{' '}
+          </div>{' '}
         </div>
       )}
     </header>

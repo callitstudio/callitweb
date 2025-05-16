@@ -23,8 +23,8 @@ const Footer = () => {
     setEmail('');
   };
   return (
-    <footer className="footer-container  text-white py-8">
-      <div className="container mx-auto px-4">
+    <footer className="footer-container  text-white py-12 md:py-16">
+      <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 xl:max-w-7xl 2xl:max-w-screen-2xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">About Us</h3>

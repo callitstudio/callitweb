@@ -28,12 +28,14 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section className="py-16 md:py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-          Client Reviews
-        </h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="py-20 md:py-28 bg-gray-100">
+      <div className="container mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 xl:max-w-7xl 2xl:max-w-screen-2xl">
+        {' '}
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-primary">
+          {' '}
+          Client Reviews{' '}
+        </h2>{' '}
+        <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
