@@ -121,9 +121,9 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p>&copy; {currentYear} Call IT Studio. All rights reserved.</p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 mt-4 justify-center">
             <a
-              href="https://www.linkedin.com/company/call-it-studio"
+              href="https://www.linkedin.com/company/call-it-studio/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -131,7 +131,7 @@ const Footer = () => {
               <Linkedin className="h-6 w-6 text-gray-300 hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://www.facebook.com/callitstudio"
+              href="https://www.facebook.com/share/1Ap2mhJdnS/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -139,7 +139,7 @@ const Footer = () => {
               <Facebook className="h-6 w-6 text-gray-300 hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://www.instagram.com/callitstudio"
+              href="https://www.instagram.com/callitstudio?igsh=MWd6eGlvZnV0ZHZlNg=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

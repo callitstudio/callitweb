@@ -22,24 +22,41 @@ const ContactSection = () => {
                   <Phone className="h-6 w-6 text-primary" />
                   <div>
                     <p className="text-sm text-gray-600">Call Us</p>
-                    <p className="text-lg font-semibold">+1 (555) 123-4567</p>
+                    <a 
+                      href="tel:+9204236827666"
+                      className="text-lg font-semibold hover:text-primary transition-colors cursor-pointer"
+                    >
+                      04236827666
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <Mail className="h-6 w-6 text-primary" />
                   <div>
                     <p className="text-sm text-gray-600">Email Us</p>
-                    <p className="text-lg font-semibold">
-                      contact@callitstudio.com
-                    </p>
+                    <a 
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@callit-studio.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-semibold hover:text-primary transition-colors cursor-pointer"
+                    >
+                      contact@callit-studio.com
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <MapPin className="h-6 w-6 text-primary" />
                   <div>
                     <p className="text-sm text-gray-600">Visit Us</p>
-                    <p className="text-lg font-semibold">123 Business Street</p>
-                    <p className="text-gray-600">Lahore, Pakistan</p>
+                    <a 
+                      href="https://www.google.com/maps/dir//H96C+9XM,+Peer+Muhammad+Sadiq+Rd,+Mughalpura,+Lahore,+54840"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-semibold hover:text-primary transition-colors cursor-pointer"
+                    >
+                      H96C+9XM, Peer Muhammad Sadiq Rd
+                    </a>
+                    <p className="text-gray-600">Mughalpura, Lahore, 54840</p>
                   </div>
                 </div>
               </div>
@@ -61,6 +78,21 @@ const ContactSection = () => {
                 </div>
               </div>
             </Card>
+            {/* <Card className="p-6 bg-white">
+              <h3 className="text-xl font-semibold mb-4">Our Location</h3>
+              <div className="w-full h-64 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.1234567890123!2d74.12345678901234!3d31.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA3JzM0LjQiTiA3NMKwMDcnMzQuNCJF!5e0!3m2!1sen!2spk!4v1234567890123"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Call IT Studio Location"
+                ></iframe>
+              </div>
+            </Card> */}
           </div>
           <Card className="p-8 bg-white">
             <h3 className="text-2xl font-bold mb-6 text-gray-800">
